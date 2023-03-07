@@ -1,0 +1,82 @@
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
+
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/python/tags/
+image: python:3.10
+
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# Pip's cache doesn't store the python packages
+# https://pip.pypa.io/en/stable/topics/caching/
+#
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+tox:
+  script:
+    - pip install tox
+    - tox
+    -
+'.review':
+  before_script:
+    - 'python -m pip install tox'
+  script:
+    - 'export TOXENV="${CI_JOB_NAME##review}"'
+    - 'tox'
+
+
+'review py36':
+  extends: '.review'
+  image: 'python:3.8'
+
+'review py37':
+  extends: '.review'
+  image: 'python:3.8'
+
+'review py38':
+  extends: '.review'
+  image: 'python:3.8'
+
+'review py39':
+  extends: '.review'
+  image: 'python:3.9'
+
+'review py39':
+  extends: '.review'
+  image: 'python:3.9'
+
+'review py310':
+  extends: '.review'
+  image: 'python:3.10'
+
+'review py311':
+  extends: '.review'
+  image: 'python:3.10'
+
+pages:
+  script:
+    - pip install sphinx sphinx_material
+    - cd docs
+    - make clean
+    # Autosummary should be dynamically generated
+    - rm -rf api/_autosummary
+    - make html
+    - mv build/html/ ../public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+
+

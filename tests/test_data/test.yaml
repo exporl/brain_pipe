@@ -1,0 +1,24 @@
+
+dataloaders:
+    - callable: "MockDataLoader"
+      name: a
+    - callable: "MockDataLoader"
+      name: b
+
+config:
+    runner:
+      callable: MockRunner
+    parser:
+      extra_paths:
+        - {{extra_path}}
+pipelines:
+    -  callable: "MockPipeline"
+       steps:
+        - callable: "MockPipelineStep"
+          a: 1
+       data_from: a
+
+    -
+      callable: "MockPipeline"
+      steps: [{"callable": "MockPipelineStep", "a": 2}]
+      data_from: "b"
