@@ -8,9 +8,9 @@ Welcome to Brain Pipe's documentation!
 
 
 .. _brain-pipe-figure:
-.. figure:: /_images/brain_pipe.svg
+.. figure:: /_images/brain_pipe_github.svg
     :align: center
-    :width: 500px
+    :width: 100%
 
     **Brain pipe** : Preprocess brain imaging datasets efficiently and extensibly in Python3.
 
