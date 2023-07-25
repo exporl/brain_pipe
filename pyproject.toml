@@ -27,4 +27,4 @@ brain_pipe = "brain_pipe:cli_entrypoint"
 
 [tool.setuptools.dynamic]
 name = {file = "README.md", content-type = "text/markdown"}
-description = {file = "README.md", content-type = "text/markdown"}
+description = {file = "README.md"}
