@@ -4,6 +4,5 @@ numpy
 scipy
 mne>=1.3.0
 librosa
-pybids
 pyyaml
 jinja2

@@ -39,7 +39,7 @@ pipelines:
             - stimuli
             - eeg
       - callable: LoadEEGNumpy
-        unit_multiplier: 1e-6
+        unit_multiplier: 0.000001
         channels_to_select:
         {% for channel in range(64) %}
           - {{ channel }}
@@ -74,6 +74,7 @@ pipelines:
         filename_fn:
           callable: bids_filename_fn
           is_pointer: true
+        clear_output: true
 
 config:
   parser:
