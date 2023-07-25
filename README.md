@@ -12,7 +12,7 @@ Brain Pipe
 [![Repository](https://img.shields.io/badge/Repository-https%3A%2F%2Fgithub.com%2Fexporl%2Fbrain__pipe-purple)](https://github.com/exporl/brain_pipe)
 
 
-![Brain Pipe](docs/source/_images/brain_pipe_github.svg)
+![Brain Pipe:](docs/source/_images/brain_pipe_github.svg)
 
 Preprocess brain imaging datasets in a fast and re-usable way.
 
