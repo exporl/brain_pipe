@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: |
           cd docs; make clean; make html
-          cd .
+          cd ..
           cp -r docs/build/html public
 
       - name: Deploy
