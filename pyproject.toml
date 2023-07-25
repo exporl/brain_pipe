@@ -7,10 +7,8 @@ find={}
 
 [project]
 name = "brain_pipe"
-readme = "README.rst"
 requires-python = ">=3.6"
 keywords = ["Brain imaging processing", "EEG", "SparrKULee"]
-dynamic = ["version"]
 dependencies = [
     "brian2",
     "brian2hears",
@@ -21,6 +19,8 @@ dependencies = [
     "pyyaml",
     "jinja2"
 ]
+version = "0.0.0"
+dynamic = ["readme", "description"]
 
 [project.scripts]
 brain_pipe = "brain_pipe:cli_entrypoint"

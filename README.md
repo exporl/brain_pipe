@@ -9,21 +9,24 @@ Brain Pipe
 [![Static Badge](https://img.shields.io/badge/docs-https%3A%2F%2Fexporl.github.io%2Fbrain_pipe%2F-green)](https://exporl.github.io/brain_pipe/)
 ![Tests](https://github.com/exporl/brain_pipe/actions/workflows/ci.yaml/badge.svg)
 
-<p align="center" width="100%">
-  <img src="docs/source/_images/brain_pipe.svg" width="400px" />
-</p>
+![Brain Pipe](docs/source/_images/brain_pipe_github.svg)
 
 Preprocess brain imaging datasets in a fast and re-usable way.
 
 Motivation
 -----------
-This repository contains code to efficiently preprocess brain imaging datasets in python3, predominantly for machine learning downstream tasks. 
 
-The initial goal of this code was to preprocess the public EEG dataset of the [ICASSP 2023 Auditory EEG challenge](https://exporl.github.io/auditory-eeg-challenge-2023/) called [SparrKULee](https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/K3VSND).
+This repository contains code to efficiently preprocess brain imaging datasets in
+python3, predominantly for machine learning downstream tasks.
+
+The initial goal of this code was to preprocess the public EEG dataset of the
+[ICASSP 2023 Auditory EEG challenge](https://exporl.github.io/auditory-eeg-challenge-2023/) called
+[SparrKULee](https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/K3VSND).
 
 Parts of this code were translated from our internal matlab codebase at ExpORL,
-maintained primarily by [Jonas Vanthornhout](https://gbiomed.kuleuven.be/english/research/50000666/50000672/people/members/00077061) and [Marlies Gillis](https://gbiomed.kuleuven.be/english/research/50000666/50000672/people/members/00123908)
-
+maintained primarily by
+[Jonas Vanthornhout](https://gbiomed.kuleuven.be/english/research/50000666/50000672/people/members/00077061)
+and [Marlies Gillis](https://gbiomed.kuleuven.be/english/research/50000666/50000672/people/members/00123908)
 
 Installation
 ------------
@@ -38,19 +41,18 @@ How to use
 ----------
 
 You can write your own preprocessing script, see [the docs](public/pipeline.html#small-example),
-or you can use the [cli](public/cli.html) with [configuration files](public/configuration.html) to preprocess your data.
+or you can use the [cli](public/cli.html) with
+[configuration files](public/configuration.html) to preprocess your data.
 
 ```bash
 brain_pipe config_file.extension
 # e.g. brain_pipe sparrKULee.yaml
 ```
 
-
 Requirements
 ------------
 
 Python >= 3.7
-
 
 Contributing
 ------------
@@ -66,7 +68,3 @@ Read the [docs](public/index.html) for a more detailed explanation of the pipeli
 
 For a simple example, see [the docs](public/pipeline.html##small-example).
 For a more elaborate example, see [examples/exporl/sparrKULee.py](examples/exporl/sparrKULee.py)
-
-
-
-
