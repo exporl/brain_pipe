@@ -2,13 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="353.3233mm"
+   width="192.45335mm"
    height="150mm"
-   viewBox="0 0 353.3233 150"
+   viewBox="0 0 192.45335 150"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   sodipodi:docname="brain_pipe.svg"
+   sodipodi:docname="brain_pipe_v2.svg"
+   inkscape:export-filename="/home/bernd/Downloads/brain_pipe.png"
+   inkscape:export-xdpi="108.40836"
+   inkscape:export-ydpi="108.40836"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +28,11 @@
      showgrid="false"
      inkscape:zoom="0.43584431"
      inkscape:cx="753.70951"
-     inkscape:cy="400.37233"
-     inkscape:window-width="1920"
-     inkscape:window-height="1016"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:cy="401.51952"
+     inkscape:window-width="2560"
+     inkscape:window-height="1403"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -114,7 +117,7 @@
     <g
        style="fill:#000000"
        id="g928"
-       transform="matrix(0,8.3333333,8.3333333,0,142.86332,-25)">
+       transform="matrix(0,4.0770513,4.0770513,0,29.465445,20.301731)">
       <path
          id="primary"
          d="M 19,21 H 15 V 14 H 9 A 4,4 0 0 1 5,10 V 3 h 4 v 7 h 6 a 4,4 0 0 1 4,4 z"
