@@ -1,6 +1,7 @@
 """Base class for preprocessing steps."""
 import abc
 import copy
+import typing
 
 from collections import OrderedDict
 from typing import Sequence, Any, Dict, Union, Mapping
@@ -78,7 +79,7 @@ class PipelineStep(abc.ABC):
         key: Union[str, Sequence[str], Mapping[str, str]],
         name="key",
         require_ordered_dict=False,
-    ) -> OrderedDict[str, str]:
+    ) -> typing.OrderedDict[str, str]:
         """Parse a key or a sequence of keys.
 
         Parameters
