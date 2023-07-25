@@ -2,7 +2,7 @@
 Brain Pipe
 ==========
 
-![Static Badge](https://img.shields.io/badge/Python%20version-3.6%2C%203.7%2C%203.8%2C%203.9%2C%203.10%2C%203.11-blue)
+![Static Badge](https://img.shields.io/badge/Python%20version-3.7%2C%203.8%2C%203.9%2C%203.10%2C%203.11-blue)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://black.readthedocs.io/en/stable/)
 [![flake8 code style](https://img.shields.io/badge/code%20style-flake8-blue.svg)](https://flake8.pycqa.org/en/latest/)
@@ -49,7 +49,7 @@ brain_pipe config_file.extension
 Requirements
 ------------
 
-Python > 3.6
+Python >= 3.7
 
 
 Contributing

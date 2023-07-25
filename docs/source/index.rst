@@ -49,7 +49,7 @@ can use the command line interface (see also :ref:`cli` and :ref:`configuration`
 Requirements
 ------------
 
-Python > 3.6
+Python >= 3.7
 
 
 Contributing
