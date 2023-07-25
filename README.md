@@ -2,18 +2,18 @@
 Brain Pipe
 ==========
 
-![Static Badge](https://img.shields.io/badge/Python%20version-3.7%2C%203.8%2C%203.9%2C%203.10%2C%203.11-blue)
+![Static Badge](https://img.shields.io/badge/Python%20version-3.7%2C%203.8%2C%203.9%2C%203.10%2C%203.11-orange)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://black.readthedocs.io/en/stable/)
 [![flake8 code style](https://img.shields.io/badge/code%20style-flake8-blue.svg)](https://flake8.pycqa.org/en/latest/)
-[![Static Badge](https://img.shields.io/badge/docs-https%3A%2F%2Fexporl.github.io%2Fbrain_pipe%2F-blue)](https://exporl.github.io/brain_pipe/)
-![Tests](https://github.com/exporl/brain_pipe/actions/workflows/ci.yml/badge.svg)
+[![Static Badge](https://img.shields.io/badge/docs-https%3A%2F%2Fexporl.github.io%2Fbrain_pipe%2F-green)](https://exporl.github.io/brain_pipe/)
+![Tests](https://github.com/exporl/brain_pipe/actions/workflows/ci.yaml/badge.svg)
 
-<p align="center">
+<p align="center" width="100%">
   <img src="docs/source/_images/brain_pipe.svg" width="400px" />
-  Preprocess brain imaging datasets in a fast and re-usable way.
 </p>
 
+Preprocess brain imaging datasets in a fast and re-usable way.
 
 Motivation
 -----------

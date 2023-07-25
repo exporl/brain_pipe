@@ -105,7 +105,7 @@ class BasenameComparisonFn:
         Optional[str]
             The processed path or None if the path is not valid.
         """
-        if not isinstance(path, Union[str, pathlib.Path]):
+        if not isinstance(path, (str, pathlib.Path)):
             return None
         if self.ignore_extension:
             return ".".join(os.path.basename(path).split(".")[:-1])
