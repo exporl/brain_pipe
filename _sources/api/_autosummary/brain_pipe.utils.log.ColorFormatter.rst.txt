@@ -1,0 +1,53 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.log.ColorFormatter
+====================================
+
+.. currentmodule:: brain_pipe.utils.log
+
+.. autoclass:: ColorFormatter
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ColorFormatter.COLOR_MAPPING
+      ~ColorFormatter.bold_red
+      ~ColorFormatter.default_format
+      ~ColorFormatter.default_msec_format
+      ~ColorFormatter.default_time_format
+      ~ColorFormatter.grey
+      ~ColorFormatter.red
+      ~ColorFormatter.reset
+      ~ColorFormatter.yellow
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~ColorFormatter.__init__
+      ~ColorFormatter.converter
+      ~ColorFormatter.format
+      ~ColorFormatter.formatException
+      ~ColorFormatter.formatMessage
+      ~ColorFormatter.formatStack
+      ~ColorFormatter.formatTime
+      ~ColorFormatter.usesTime
+
+   
+   
+

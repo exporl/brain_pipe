@@ -1,0 +1,39 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.stimulus.load.LoadStimuli
+===================================================
+
+.. currentmodule:: brain_pipe.preprocessing.stimulus.load
+
+.. autoclass:: LoadStimuli
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LoadStimuli.DEFAULT_LOAD_FNS
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~LoadStimuli.__init__
+      ~LoadStimuli.parse_dict_keys
+
+   
+   
+

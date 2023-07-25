@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.path.BIDSPathGenerator
+========================================
+
+.. currentmodule:: brain_pipe.utils.path
+
+.. autoclass:: BIDSPathGenerator
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~BIDSPathGenerator.__init__
+      ~BIDSPathGenerator.select_paths
+
+   
+   
+

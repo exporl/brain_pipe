@@ -1,0 +1,6 @@
+brain\_pipe.preprocessing.brain.link.default\_multiprocessing\_key\_fn
+======================================================================
+
+.. currentmodule:: brain_pipe.preprocessing.brain.link
+
+.. autofunction:: default_multiprocessing_key_fn

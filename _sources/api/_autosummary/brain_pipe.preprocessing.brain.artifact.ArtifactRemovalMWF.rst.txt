@@ -1,0 +1,40 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF
+===========================================================
+
+.. currentmodule:: brain_pipe.preprocessing.brain.artifact
+
+.. autoclass:: ArtifactRemovalMWF
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~ArtifactRemovalMWF.__init__
+      ~ArtifactRemovalMWF.apply_mwf
+      ~ArtifactRemovalMWF.check_symmetric
+      ~ArtifactRemovalMWF.compute_mwf
+      ~ArtifactRemovalMWF.fix_symmetric
+      ~ArtifactRemovalMWF.get_artifact_segments
+      ~ArtifactRemovalMWF.parse_dict_keys
+      ~ArtifactRemovalMWF.sort_evd
+      ~ArtifactRemovalMWF.stack_delayed
+
+   
+   
+

@@ -1,0 +1,45 @@
+.. include:: /macros.hrst
+
+brain\_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline
+================================================================
+
+.. currentmodule:: brain_pipe.pipeline.cache.pipeline
+
+.. autoclass:: CachingPreprocessingPipeline
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CachingPreprocessingPipeline.CONTINUE
+      ~CachingPreprocessingPipeline.ON_ERROR
+      ~CachingPreprocessingPipeline.RAISE
+      ~CachingPreprocessingPipeline.STOP
+      ~CachingPreprocessingPipeline.on_error
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~CachingPreprocessingPipeline.__init__
+      ~CachingPreprocessingPipeline.iterate_over_steps
+      ~CachingPreprocessingPipeline.parse_dict_keys
+      ~CachingPreprocessingPipeline.run_step
+
+   
+   
+

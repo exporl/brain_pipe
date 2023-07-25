@@ -1,0 +1,6 @@
+brain\_pipe.cli.cli\_entrypoint
+===============================
+
+.. currentmodule:: brain_pipe.cli
+
+.. autofunction:: cli_entrypoint

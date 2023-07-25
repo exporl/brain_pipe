@@ -1,0 +1,42 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.link
+====================================
+
+.. automodule:: brain_pipe.preprocessing.brain.link
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      default_multiprocessing_key_fn
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      BIDSStimulusInfoExtractor
+      BasenameComparisonFn
+      LinkStimulusToBrainResponse
+   
+   
+
+   
+   
+   
+
+
+

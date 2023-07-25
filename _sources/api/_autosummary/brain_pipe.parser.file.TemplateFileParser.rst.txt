@@ -1,0 +1,62 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.file.TemplateFileParser
+==========================================
+
+.. currentmodule:: brain_pipe.parser.file
+
+.. autoclass:: TemplateFileParser
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TemplateFileParser.ARGS_STR
+      ~TemplateFileParser.CALLABLE_STR
+      ~TemplateFileParser.CONFIG_STR
+      ~TemplateFileParser.DATALOADERS_STR
+      ~TemplateFileParser.DATA_FROM_STR
+      ~TemplateFileParser.DEFAULT_ENVIRONMENT_KWARGS
+      ~TemplateFileParser.EXTRA_PATHS_STR
+      ~TemplateFileParser.FILEDIR_STR
+      ~TemplateFileParser.FILE_STR
+      ~TemplateFileParser.NAME_STR
+      ~TemplateFileParser.PARSER_STR
+      ~TemplateFileParser.PIPELINES_STR
+      ~TemplateFileParser.POINTER_STR
+      ~TemplateFileParser.READ_MODE
+      ~TemplateFileParser.RUNNER_CLASS_STR
+      ~TemplateFileParser.RUNNER_STR
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~TemplateFileParser.__init__
+      ~TemplateFileParser.apply_config
+      ~TemplateFileParser.get_additional_kwargs
+      ~TemplateFileParser.get_runner_from_parsed_config
+      ~TemplateFileParser.link_loader_to_pipeline
+      ~TemplateFileParser.load_file
+      ~TemplateFileParser.parse_all
+      ~TemplateFileParser.parse_text_to_dict
+      ~TemplateFileParser.recursive_parse
+      ~TemplateFileParser.set_additional_kwargs
+
+   
+   
+

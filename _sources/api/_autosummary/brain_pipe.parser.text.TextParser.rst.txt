@@ -1,0 +1,57 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.text.TextParser
+==================================
+
+.. currentmodule:: brain_pipe.parser.text
+
+.. autoclass:: TextParser
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TextParser.ARGS_STR
+      ~TextParser.CALLABLE_STR
+      ~TextParser.CONFIG_STR
+      ~TextParser.DATALOADERS_STR
+      ~TextParser.DATA_FROM_STR
+      ~TextParser.EXTRA_PATHS_STR
+      ~TextParser.NAME_STR
+      ~TextParser.PARSER_STR
+      ~TextParser.PIPELINES_STR
+      ~TextParser.POINTER_STR
+      ~TextParser.RUNNER_CLASS_STR
+      ~TextParser.RUNNER_STR
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~TextParser.__init__
+      ~TextParser.apply_config
+      ~TextParser.get_additional_kwargs
+      ~TextParser.get_runner_from_parsed_config
+      ~TextParser.link_loader_to_pipeline
+      ~TextParser.parse_all
+      ~TextParser.parse_text_to_dict
+      ~TextParser.recursive_parse
+      ~TextParser.set_additional_kwargs
+
+   
+   
+

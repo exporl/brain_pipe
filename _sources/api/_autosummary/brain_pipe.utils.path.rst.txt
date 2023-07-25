@@ -1,0 +1,34 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.path
+======================
+
+.. automodule:: brain_pipe.utils.path
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      BIDSPathGenerator
+      BIDSStimulusGrouper
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,32 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.multiprocess.SimpleCallbackFn
+===============================================
+
+.. currentmodule:: brain_pipe.utils.multiprocess
+
+.. autoclass:: SimpleCallbackFn
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~SimpleCallbackFn.__init__
+
+   
+   
+

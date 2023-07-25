@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.transpose.Transpose
+=============================================
+
+.. currentmodule:: brain_pipe.preprocessing.transpose
+
+.. autoclass:: Transpose
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~Transpose.__init__
+      ~Transpose.parse_dict_keys
+
+   
+   
+

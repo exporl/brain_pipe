@@ -1,0 +1,35 @@
+.. include:: /macros.hrst
+
+brain\_pipe.dataloaders
+=======================
+
+.. automodule:: brain_pipe.dataloaders
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   brain_pipe.dataloaders.base
+   brain_pipe.dataloaders.path
+

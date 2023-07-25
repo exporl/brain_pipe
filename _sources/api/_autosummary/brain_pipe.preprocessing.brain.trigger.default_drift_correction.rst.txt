@@ -1,0 +1,6 @@
+brain\_pipe.preprocessing.brain.trigger.default\_drift\_correction
+==================================================================
+
+.. currentmodule:: brain_pipe.preprocessing.brain.trigger
+
+.. autofunction:: default_drift_correction

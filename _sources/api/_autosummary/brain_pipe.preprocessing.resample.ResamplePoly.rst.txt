@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.resample.ResamplePoly
+===============================================
+
+.. currentmodule:: brain_pipe.preprocessing.resample
+
+.. autoclass:: ResamplePoly
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~ResamplePoly.__init__
+      ~ResamplePoly.parse_dict_keys
+
+   
+   
+

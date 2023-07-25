@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.pipeline.base.PipelineStep
+======================================
+
+.. currentmodule:: brain_pipe.pipeline.base
+
+.. autoclass:: PipelineStep
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~PipelineStep.__init__
+      ~PipelineStep.parse_dict_keys
+
+   
+   
+

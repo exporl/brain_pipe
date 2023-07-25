@@ -1,0 +1,6 @@
+brain\_pipe.utils.list.flatten
+==============================
+
+.. currentmodule:: brain_pipe.utils.list
+
+.. autofunction:: flatten

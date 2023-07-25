@@ -1,0 +1,32 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.eeg.biosemi
+===========================================
+
+.. automodule:: brain_pipe.preprocessing.brain.eeg.biosemi
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      biosemi_trigger_processing_fn
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

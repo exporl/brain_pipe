@@ -1,0 +1,42 @@
+﻿.. include:: /macros.hrst
+
+brain\_pipe
+===========
+
+.. automodule:: brain_pipe
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   brain_pipe.cli
+   brain_pipe.dataloaders
+   brain_pipe.parser
+   brain_pipe.pipeline
+   brain_pipe.preprocessing
+   brain_pipe.runner
+   brain_pipe.save
+   brain_pipe.split
+   brain_pipe.utils
+

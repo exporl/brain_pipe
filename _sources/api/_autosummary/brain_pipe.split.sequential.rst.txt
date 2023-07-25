@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.split.sequential
+============================
+
+.. automodule:: brain_pipe.split.sequential
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      SequentialSplit
+   
+   
+
+   
+   
+   
+
+
+

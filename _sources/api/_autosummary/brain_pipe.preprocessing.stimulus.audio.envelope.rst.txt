@@ -1,0 +1,34 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.stimulus.audio.envelope
+=================================================
+
+.. automodule:: brain_pipe.preprocessing.stimulus.audio.envelope
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      EnvelopeFromGammatone
+      GammatoneEnvelope
+   
+   
+
+   
+   
+   
+
+
+

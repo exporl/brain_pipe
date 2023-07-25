@@ -1,0 +1,6 @@
+brain\_pipe.pipeline.default.default\_error\_handler\_fn
+========================================================
+
+.. currentmodule:: brain_pipe.pipeline.default
+
+.. autofunction:: default_error_handler_fn

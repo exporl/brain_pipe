@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.split.operations.base.SplitterOperation
+===================================================
+
+.. currentmodule:: brain_pipe.split.operations.base
+
+.. autoclass:: SplitterOperation
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~SplitterOperation.__init__
+      ~SplitterOperation.reset
+
+   
+   
+

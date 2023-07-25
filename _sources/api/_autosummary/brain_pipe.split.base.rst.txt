@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.split.base
+======================
+
+.. automodule:: brain_pipe.split.base
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      Splitter
+   
+   
+
+   
+   
+   
+
+
+

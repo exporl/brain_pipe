@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.rereference.CommonAverageRereference
+====================================================================
+
+.. currentmodule:: brain_pipe.preprocessing.brain.rereference
+
+.. autoclass:: CommonAverageRereference
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~CommonAverageRereference.__init__
+      ~CommonAverageRereference.parse_dict_keys
+
+   
+   
+

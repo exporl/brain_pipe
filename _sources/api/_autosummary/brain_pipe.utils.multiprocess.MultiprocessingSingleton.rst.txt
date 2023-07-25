@@ -1,0 +1,41 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.multiprocess.MultiprocessingSingleton
+=======================================================
+
+.. currentmodule:: brain_pipe.utils.multiprocess
+
+.. autoclass:: MultiprocessingSingleton
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MultiprocessingSingleton.manager
+      ~MultiprocessingSingleton.to_clean
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~MultiprocessingSingleton.__init__
+      ~MultiprocessingSingleton.clean
+      ~MultiprocessingSingleton.get_map_fn
+
+   
+   
+

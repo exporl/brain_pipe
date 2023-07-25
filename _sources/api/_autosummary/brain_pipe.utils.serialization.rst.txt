@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.serialization
+===============================
+
+.. automodule:: brain_pipe.utils.serialization
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      pickle_dump_wrapper
+      pickle_load_wrapper
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

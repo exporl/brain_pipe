@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.artifact.InterpolateArtifacts
+=============================================================
+
+.. currentmodule:: brain_pipe.preprocessing.brain.artifact
+
+.. autoclass:: InterpolateArtifacts
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~InterpolateArtifacts.__init__
+      ~InterpolateArtifacts.parse_dict_keys
+
+   
+   
+

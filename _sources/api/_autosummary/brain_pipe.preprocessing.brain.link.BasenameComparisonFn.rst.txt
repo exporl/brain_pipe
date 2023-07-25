@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.link.BasenameComparisonFn
+=========================================================
+
+.. currentmodule:: brain_pipe.preprocessing.brain.link
+
+.. autoclass:: BasenameComparisonFn
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~BasenameComparisonFn.__init__
+      ~BasenameComparisonFn.process_path
+
+   
+   
+

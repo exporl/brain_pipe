@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.link.BIDSStimulusInfoExtractor
+==============================================================
+
+.. currentmodule:: brain_pipe.preprocessing.brain.link
+
+.. autoclass:: BIDSStimulusInfoExtractor
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~BIDSStimulusInfoExtractor.__init__
+      ~BIDSStimulusInfoExtractor.read_events
+
+   
+   
+

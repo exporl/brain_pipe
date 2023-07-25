@@ -1,0 +1,32 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.list
+======================
+
+.. automodule:: brain_pipe.utils.list
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      flatten
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

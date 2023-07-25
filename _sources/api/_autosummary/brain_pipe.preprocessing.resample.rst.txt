@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.resample
+==================================
+
+.. automodule:: brain_pipe.preprocessing.resample
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      ResamplePoly
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,58 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.template\_text.TemplateTextParser
+====================================================
+
+.. currentmodule:: brain_pipe.parser.template_text
+
+.. autoclass:: TemplateTextParser
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TemplateTextParser.ARGS_STR
+      ~TemplateTextParser.CALLABLE_STR
+      ~TemplateTextParser.CONFIG_STR
+      ~TemplateTextParser.DATALOADERS_STR
+      ~TemplateTextParser.DATA_FROM_STR
+      ~TemplateTextParser.DEFAULT_ENVIRONMENT_KWARGS
+      ~TemplateTextParser.EXTRA_PATHS_STR
+      ~TemplateTextParser.NAME_STR
+      ~TemplateTextParser.PARSER_STR
+      ~TemplateTextParser.PIPELINES_STR
+      ~TemplateTextParser.POINTER_STR
+      ~TemplateTextParser.RUNNER_CLASS_STR
+      ~TemplateTextParser.RUNNER_STR
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~TemplateTextParser.__init__
+      ~TemplateTextParser.apply_config
+      ~TemplateTextParser.get_additional_kwargs
+      ~TemplateTextParser.get_runner_from_parsed_config
+      ~TemplateTextParser.link_loader_to_pipeline
+      ~TemplateTextParser.parse_all
+      ~TemplateTextParser.parse_text_to_dict
+      ~TemplateTextParser.recursive_parse
+      ~TemplateTextParser.set_additional_kwargs
+
+   
+   
+

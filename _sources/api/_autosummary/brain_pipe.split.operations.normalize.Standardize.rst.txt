@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.split.operations.normalize.Standardize
+==================================================
+
+.. currentmodule:: brain_pipe.split.operations.normalize
+
+.. autoclass:: Standardize
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~Standardize.__init__
+      ~Standardize.reset
+
+   
+   
+

@@ -1,0 +1,6 @@
+brain\_pipe.utils.log.default\_logging
+======================================
+
+.. currentmodule:: brain_pipe.utils.log
+
+.. autofunction:: default_logging

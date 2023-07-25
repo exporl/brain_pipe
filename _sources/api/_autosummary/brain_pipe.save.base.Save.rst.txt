@@ -1,0 +1,36 @@
+.. include:: /macros.hrst
+
+brain\_pipe.save.base.Save
+==========================
+
+.. currentmodule:: brain_pipe.save.base
+
+.. autoclass:: Save
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~Save.__init__
+      ~Save.is_already_done
+      ~Save.is_reloadable
+      ~Save.parse_dict_keys
+      ~Save.reload
+
+   
+   
+

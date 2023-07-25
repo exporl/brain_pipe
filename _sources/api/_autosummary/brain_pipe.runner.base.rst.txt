@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.runner.base
+=======================
+
+.. automodule:: brain_pipe.runner.base
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      Runner
+   
+   
+
+   
+   
+   
+
+
+

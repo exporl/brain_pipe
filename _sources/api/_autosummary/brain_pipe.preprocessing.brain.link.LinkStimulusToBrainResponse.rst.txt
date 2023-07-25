@@ -1,0 +1,40 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.link.LinkStimulusToBrainResponse
+================================================================
+
+.. currentmodule:: brain_pipe.preprocessing.brain.link
+
+.. autoclass:: LinkStimulusToBrainResponse
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LinkStimulusToBrainResponse.multiprocessing_condition
+      ~LinkStimulusToBrainResponse.multiprocessing_dict
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~LinkStimulusToBrainResponse.__init__
+      ~LinkStimulusToBrainResponse.parse_dict_keys
+
+   
+   
+

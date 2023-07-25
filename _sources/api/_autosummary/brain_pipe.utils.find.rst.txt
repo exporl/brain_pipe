@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.find
+======================
+
+.. automodule:: brain_pipe.utils.find
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      Finder
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.simple\_dict
+===============================
+
+.. automodule:: brain_pipe.parser.simple_dict
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      SimpleDictParser
+   
+   
+
+   
+   
+   
+
+
+

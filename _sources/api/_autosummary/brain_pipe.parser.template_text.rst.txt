@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.template\_text
+=================================
+
+.. automodule:: brain_pipe.parser.template_text
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      TemplateTextParser
+   
+   
+
+   
+   
+   
+
+
+

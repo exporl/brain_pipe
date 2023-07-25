@@ -1,0 +1,34 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.artifact
+========================================
+
+.. automodule:: brain_pipe.preprocessing.brain.artifact
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      ArtifactRemovalMWF
+      InterpolateArtifacts
+   
+   
+
+   
+   
+   
+
+
+

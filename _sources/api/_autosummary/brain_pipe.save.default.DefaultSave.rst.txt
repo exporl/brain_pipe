@@ -1,0 +1,45 @@
+.. include:: /macros.hrst
+
+brain\_pipe.save.default.DefaultSave
+====================================
+
+.. currentmodule:: brain_pipe.save.default
+
+.. autoclass:: DefaultSave
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DefaultSave.DEFAULT_RELOAD_FUNCTIONS
+      ~DefaultSave.DEFAULT_SAVE_FUNCTIONS
+      ~DefaultSave.lock
+      ~DefaultSave.overwrite
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~DefaultSave.__init__
+      ~DefaultSave.is_already_done
+      ~DefaultSave.is_reloadable
+      ~DefaultSave.parse_dict_keys
+      ~DefaultSave.reload
+
+   
+   
+

@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.ObjectsWithConfig
+===================================
+
+.. currentmodule:: brain_pipe.utils
+
+.. autoclass:: ObjectsWithConfig
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~ObjectsWithConfig.__init__
+      ~ObjectsWithConfig.apply_config
+
+   
+   
+

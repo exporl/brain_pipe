@@ -1,0 +1,37 @@
+.. include:: /macros.hrst
+
+brain\_pipe.cli.base.CLI
+========================
+
+.. currentmodule:: brain_pipe.cli.base
+
+.. autoclass:: CLI
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~CLI.__init__
+      ~CLI.get_parser
+      ~CLI.get_run_options
+      ~CLI.parse_cli_arguments
+      ~CLI.parse_cli_arguments_for_parser
+      ~CLI.run
+
+   
+   
+

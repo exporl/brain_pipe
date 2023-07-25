@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.eeg.load
+========================================
+
+.. automodule:: brain_pipe.preprocessing.brain.eeg.load
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      LoadEEGNumpy
+   
+   
+
+   
+   
+   
+
+
+

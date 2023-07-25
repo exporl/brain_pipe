@@ -1,0 +1,38 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing
+=========================
+
+.. automodule:: brain_pipe.preprocessing
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   brain_pipe.preprocessing.brain
+   brain_pipe.preprocessing.filter
+   brain_pipe.preprocessing.resample
+   brain_pipe.preprocessing.stimulus
+   brain_pipe.preprocessing.transpose
+

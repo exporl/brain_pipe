@@ -1,0 +1,6 @@
+brain\_pipe.cli.cli\_factory
+============================
+
+.. currentmodule:: brain_pipe.cli
+
+.. autofunction:: cli_factory

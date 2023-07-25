@@ -1,0 +1,56 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.simple\_dict.SimpleDictParser
+================================================
+
+.. currentmodule:: brain_pipe.parser.simple_dict
+
+.. autoclass:: SimpleDictParser
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SimpleDictParser.ARGS_STR
+      ~SimpleDictParser.CALLABLE_STR
+      ~SimpleDictParser.CONFIG_STR
+      ~SimpleDictParser.DATALOADERS_STR
+      ~SimpleDictParser.DATA_FROM_STR
+      ~SimpleDictParser.EXTRA_PATHS_STR
+      ~SimpleDictParser.NAME_STR
+      ~SimpleDictParser.PARSER_STR
+      ~SimpleDictParser.PIPELINES_STR
+      ~SimpleDictParser.POINTER_STR
+      ~SimpleDictParser.RUNNER_CLASS_STR
+      ~SimpleDictParser.RUNNER_STR
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~SimpleDictParser.__init__
+      ~SimpleDictParser.apply_config
+      ~SimpleDictParser.get_additional_kwargs
+      ~SimpleDictParser.get_runner_from_parsed_config
+      ~SimpleDictParser.link_loader_to_pipeline
+      ~SimpleDictParser.parse_all
+      ~SimpleDictParser.recursive_parse
+      ~SimpleDictParser.set_additional_kwargs
+
+   
+   
+

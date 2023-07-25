@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.runner.base.Runner
+==============================
+
+.. currentmodule:: brain_pipe.runner.base
+
+.. autoclass:: Runner
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~Runner.__init__
+      ~Runner.run
+
+   
+   
+

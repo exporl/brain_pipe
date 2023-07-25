@@ -1,0 +1,57 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.yaml.YAMLTextParser
+======================================
+
+.. currentmodule:: brain_pipe.parser.yaml
+
+.. autoclass:: YAMLTextParser
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~YAMLTextParser.ARGS_STR
+      ~YAMLTextParser.CALLABLE_STR
+      ~YAMLTextParser.CONFIG_STR
+      ~YAMLTextParser.DATALOADERS_STR
+      ~YAMLTextParser.DATA_FROM_STR
+      ~YAMLTextParser.EXTRA_PATHS_STR
+      ~YAMLTextParser.NAME_STR
+      ~YAMLTextParser.PARSER_STR
+      ~YAMLTextParser.PIPELINES_STR
+      ~YAMLTextParser.POINTER_STR
+      ~YAMLTextParser.RUNNER_CLASS_STR
+      ~YAMLTextParser.RUNNER_STR
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~YAMLTextParser.__init__
+      ~YAMLTextParser.apply_config
+      ~YAMLTextParser.get_additional_kwargs
+      ~YAMLTextParser.get_runner_from_parsed_config
+      ~YAMLTextParser.link_loader_to_pipeline
+      ~YAMLTextParser.parse_all
+      ~YAMLTextParser.parse_text_to_dict
+      ~YAMLTextParser.recursive_parse
+      ~YAMLTextParser.set_additional_kwargs
+
+   
+   
+

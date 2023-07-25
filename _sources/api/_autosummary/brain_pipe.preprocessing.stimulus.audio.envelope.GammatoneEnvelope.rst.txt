@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.stimulus.audio.envelope.GammatoneEnvelope
+===================================================================
+
+.. currentmodule:: brain_pipe.preprocessing.stimulus.audio.envelope
+
+.. autoclass:: GammatoneEnvelope
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~GammatoneEnvelope.__init__
+      ~GammatoneEnvelope.parse_dict_keys
+
+   
+   
+

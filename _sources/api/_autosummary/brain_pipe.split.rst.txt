@@ -1,0 +1,37 @@
+.. include:: /macros.hrst
+
+brain\_pipe.split
+=================
+
+.. automodule:: brain_pipe.split
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   brain_pipe.split.base
+   brain_pipe.split.mid
+   brain_pipe.split.operations
+   brain_pipe.split.sequential
+

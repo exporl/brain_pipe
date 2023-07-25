@@ -1,0 +1,41 @@
+.. include:: /macros.hrst
+
+brain\_pipe.save.default
+========================
+
+.. automodule:: brain_pipe.save.default
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      default_filename_fn
+      default_metadata_key_fn
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      DefaultSave
+   
+   
+
+   
+   
+   
+
+
+

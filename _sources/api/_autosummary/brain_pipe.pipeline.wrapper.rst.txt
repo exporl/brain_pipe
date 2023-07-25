@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.pipeline.wrapper
+============================
+
+.. automodule:: brain_pipe.pipeline.wrapper
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      Wrapper
+   
+   
+
+   
+   
+   
+
+
+

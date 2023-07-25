@@ -1,0 +1,59 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.file.FileParser
+==================================
+
+.. currentmodule:: brain_pipe.parser.file
+
+.. autoclass:: FileParser
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FileParser.ARGS_STR
+      ~FileParser.CALLABLE_STR
+      ~FileParser.CONFIG_STR
+      ~FileParser.DATALOADERS_STR
+      ~FileParser.DATA_FROM_STR
+      ~FileParser.EXTRA_PATHS_STR
+      ~FileParser.NAME_STR
+      ~FileParser.PARSER_STR
+      ~FileParser.PIPELINES_STR
+      ~FileParser.POINTER_STR
+      ~FileParser.READ_MODE
+      ~FileParser.RUNNER_CLASS_STR
+      ~FileParser.RUNNER_STR
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~FileParser.__init__
+      ~FileParser.apply_config
+      ~FileParser.get_additional_kwargs
+      ~FileParser.get_runner_from_parsed_config
+      ~FileParser.link_loader_to_pipeline
+      ~FileParser.load_file
+      ~FileParser.parse_all
+      ~FileParser.parse_text_to_dict
+      ~FileParser.recursive_parse
+      ~FileParser.set_additional_kwargs
+
+   
+   
+

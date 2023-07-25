@@ -1,0 +1,40 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.trigger
+=======================================
+
+.. automodule:: brain_pipe.preprocessing.brain.trigger
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      default_drift_correction
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      AlignPeriodicBlockTriggers
+   
+   
+
+   
+   
+   
+
+
+

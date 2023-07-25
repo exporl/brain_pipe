@@ -1,0 +1,40 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.file.FileLoadMixin
+=====================================
+
+.. currentmodule:: brain_pipe.parser.file
+
+.. autoclass:: FileLoadMixin
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FileLoadMixin.READ_MODE
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~FileLoadMixin.__init__
+      ~FileLoadMixin.get_additional_kwargs
+      ~FileLoadMixin.load_file
+
+   
+   
+

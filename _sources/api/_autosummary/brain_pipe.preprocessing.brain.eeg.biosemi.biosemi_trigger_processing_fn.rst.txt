@@ -1,0 +1,6 @@
+brain\_pipe.preprocessing.brain.eeg.biosemi.biosemi\_trigger\_processing\_fn
+============================================================================
+
+.. currentmodule:: brain_pipe.preprocessing.brain.eeg.biosemi
+
+.. autofunction:: biosemi_trigger_processing_fn

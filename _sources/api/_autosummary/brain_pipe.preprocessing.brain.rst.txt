@@ -1,0 +1,40 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain
+===============================
+
+.. automodule:: brain_pipe.preprocessing.brain
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   brain_pipe.preprocessing.brain.artifact
+   brain_pipe.preprocessing.brain.eeg
+   brain_pipe.preprocessing.brain.epochs
+   brain_pipe.preprocessing.brain.link
+   brain_pipe.preprocessing.brain.load
+   brain_pipe.preprocessing.brain.rereference
+   brain_pipe.preprocessing.brain.trigger
+

@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.cli.default
+=======================
+
+.. automodule:: brain_pipe.cli.default
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      DefaultCLI
+   
+   
+
+   
+   
+   
+
+
+

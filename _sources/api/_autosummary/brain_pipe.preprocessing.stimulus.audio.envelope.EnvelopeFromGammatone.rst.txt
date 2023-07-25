@@ -1,0 +1,49 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone
+=======================================================================
+
+.. currentmodule:: brain_pipe.preprocessing.stimulus.audio.envelope
+
+.. autoclass:: EnvelopeFromGammatone
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EnvelopeFromGammatone.duration
+      ~EnvelopeFromGammatone.nchannels
+      ~EnvelopeFromGammatone.samplerate
+      ~EnvelopeFromGammatone.source
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~EnvelopeFromGammatone.__init__
+      ~EnvelopeFromGammatone.buffer_apply
+      ~EnvelopeFromGammatone.buffer_fetch
+      ~EnvelopeFromGammatone.buffer_fetch_next
+      ~EnvelopeFromGammatone.buffer_init
+      ~EnvelopeFromGammatone.change_source
+      ~EnvelopeFromGammatone.get_duration
+      ~EnvelopeFromGammatone.process
+      ~EnvelopeFromGammatone.set_duration
+
+   
+   
+

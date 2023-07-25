@@ -1,0 +1,49 @@
+.. include:: /macros.hrst
+
+brain\_pipe.cli.default.DefaultCLI
+==================================
+
+.. currentmodule:: brain_pipe.cli.default
+
+.. autoclass:: DefaultCLI
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DefaultCLI.BRAIN_PIPE_STRS
+      ~DefaultCLI.DEFAULT_PARSERS
+      ~DefaultCLI.INPUT_STR
+      ~DefaultCLI.PARSER_FILES_STR
+      ~DefaultCLI.PARSER_STR
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~DefaultCLI.__init__
+      ~DefaultCLI.add_arguments_to_argparser
+      ~DefaultCLI.get_argparser
+      ~DefaultCLI.get_parser
+      ~DefaultCLI.get_run_options
+      ~DefaultCLI.parse_cli_arguments
+      ~DefaultCLI.parse_cli_arguments_for_parser
+      ~DefaultCLI.run
+
+   
+   
+

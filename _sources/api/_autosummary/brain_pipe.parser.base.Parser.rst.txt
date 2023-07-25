@@ -1,0 +1,35 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.base.Parser
+==============================
+
+.. currentmodule:: brain_pipe.parser.base
+
+.. autoclass:: Parser
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~Parser.__init__
+      ~Parser.get_additional_kwargs
+      ~Parser.link_loader_to_pipeline
+      ~Parser.set_additional_kwargs
+
+   
+   
+

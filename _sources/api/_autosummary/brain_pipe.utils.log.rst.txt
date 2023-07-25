@@ -1,0 +1,41 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.log
+=====================
+
+.. automodule:: brain_pipe.utils.log
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      default_logging
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      ColorFormatter
+      DefaultFormatter
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,46 @@
+.. include:: /macros.hrst
+
+brain\_pipe.pipeline.cache.base.PipelineCache
+=============================================
+
+.. currentmodule:: brain_pipe.pipeline.cache.base
+
+.. autoclass:: PipelineCache
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~PipelineCache.__init__
+      ~PipelineCache.find_existing_cache_from_data_dict
+      ~PipelineCache.find_existing_cache_from_previous_filename
+      ~PipelineCache.get_cache_dict
+      ~PipelineCache.get_existing_cache_paths
+      ~PipelineCache.get_filename
+      ~PipelineCache.get_foldername
+      ~PipelineCache.get_path
+      ~PipelineCache.load
+      ~PipelineCache.load_from_data_dict
+      ~PipelineCache.predict_filenames_from_data_dict
+      ~PipelineCache.predict_filenames_from_previous_filename
+      ~PipelineCache.predict_paths_from_data_dict
+      ~PipelineCache.predict_paths_from_previous_filename
+      ~PipelineCache.save
+
+   
+   
+

@@ -1,0 +1,62 @@
+.. include:: /macros.hrst
+
+brain\_pipe.parser.yaml.YAMLTemplateFileParser
+==============================================
+
+.. currentmodule:: brain_pipe.parser.yaml
+
+.. autoclass:: YAMLTemplateFileParser
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~YAMLTemplateFileParser.ARGS_STR
+      ~YAMLTemplateFileParser.CALLABLE_STR
+      ~YAMLTemplateFileParser.CONFIG_STR
+      ~YAMLTemplateFileParser.DATALOADERS_STR
+      ~YAMLTemplateFileParser.DATA_FROM_STR
+      ~YAMLTemplateFileParser.DEFAULT_ENVIRONMENT_KWARGS
+      ~YAMLTemplateFileParser.EXTRA_PATHS_STR
+      ~YAMLTemplateFileParser.FILEDIR_STR
+      ~YAMLTemplateFileParser.FILE_STR
+      ~YAMLTemplateFileParser.NAME_STR
+      ~YAMLTemplateFileParser.PARSER_STR
+      ~YAMLTemplateFileParser.PIPELINES_STR
+      ~YAMLTemplateFileParser.POINTER_STR
+      ~YAMLTemplateFileParser.READ_MODE
+      ~YAMLTemplateFileParser.RUNNER_CLASS_STR
+      ~YAMLTemplateFileParser.RUNNER_STR
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~YAMLTemplateFileParser.__init__
+      ~YAMLTemplateFileParser.apply_config
+      ~YAMLTemplateFileParser.get_additional_kwargs
+      ~YAMLTemplateFileParser.get_runner_from_parsed_config
+      ~YAMLTemplateFileParser.link_loader_to_pipeline
+      ~YAMLTemplateFileParser.load_file
+      ~YAMLTemplateFileParser.parse_all
+      ~YAMLTemplateFileParser.parse_text_to_dict
+      ~YAMLTemplateFileParser.recursive_parse
+      ~YAMLTemplateFileParser.set_additional_kwargs
+
+   
+   
+

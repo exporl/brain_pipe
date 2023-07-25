@@ -1,0 +1,45 @@
+.. include:: /macros.hrst
+
+brain\_pipe.pipeline.default.DefaultPipeline
+============================================
+
+.. currentmodule:: brain_pipe.pipeline.default
+
+.. autoclass:: DefaultPipeline
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DefaultPipeline.CONTINUE
+      ~DefaultPipeline.ON_ERROR
+      ~DefaultPipeline.RAISE
+      ~DefaultPipeline.STOP
+      ~DefaultPipeline.on_error
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~DefaultPipeline.__init__
+      ~DefaultPipeline.iterate_over_steps
+      ~DefaultPipeline.parse_dict_keys
+      ~DefaultPipeline.run_step
+
+   
+   
+

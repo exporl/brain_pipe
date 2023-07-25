@@ -1,0 +1,47 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.log.DefaultFormatter
+======================================
+
+.. currentmodule:: brain_pipe.utils.log
+
+.. autoclass:: DefaultFormatter
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DefaultFormatter.default_format
+      ~DefaultFormatter.default_msec_format
+      ~DefaultFormatter.default_time_format
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~DefaultFormatter.__init__
+      ~DefaultFormatter.converter
+      ~DefaultFormatter.format
+      ~DefaultFormatter.formatException
+      ~DefaultFormatter.formatMessage
+      ~DefaultFormatter.formatStack
+      ~DefaultFormatter.formatTime
+      ~DefaultFormatter.usesTime
+
+   
+   
+

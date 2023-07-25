@@ -1,0 +1,36 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.find.Finder
+=============================
+
+.. currentmodule:: brain_pipe.utils.find
+
+.. autoclass:: Finder
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~Finder.__init__
+      ~Finder.filter
+      ~Finder.filter_fn
+      ~Finder.load_from_path
+      ~Finder.predicate_fn
+
+   
+   
+

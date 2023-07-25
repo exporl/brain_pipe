@@ -1,0 +1,6 @@
+brain\_pipe.save.default.default\_metadata\_key\_fn
+===================================================
+
+.. currentmodule:: brain_pipe.save.default
+
+.. autofunction:: default_metadata_key_fn

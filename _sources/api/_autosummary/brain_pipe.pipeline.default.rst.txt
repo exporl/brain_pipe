@@ -1,0 +1,40 @@
+.. include:: /macros.hrst
+
+brain\_pipe.pipeline.default
+============================
+
+.. automodule:: brain_pipe.pipeline.default
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      default_error_handler_fn
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      DefaultPipeline
+   
+   
+
+   
+   
+   
+
+
+

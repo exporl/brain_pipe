@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.brain.epochs
+======================================
+
+.. automodule:: brain_pipe.preprocessing.brain.epochs
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      SplitEpochs
+   
+   
+
+   
+   
+   
+
+
+

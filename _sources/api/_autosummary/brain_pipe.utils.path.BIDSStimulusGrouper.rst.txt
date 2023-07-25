@@ -1,0 +1,32 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.path.BIDSStimulusGrouper
+==========================================
+
+.. currentmodule:: brain_pipe.utils.path
+
+.. autoclass:: BIDSStimulusGrouper
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~BIDSStimulusGrouper.__init__
+
+   
+   
+

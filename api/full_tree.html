@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+    <link rel="apple-touch-icon" href="../_static/_images/brain_pipe.svg"/>
+  
+  
+    <title>Full Tree &#8212; Brain Pipe</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=e7352e39" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=59a2fb49" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="brain_pipe.utils.serialization.pickle_load_wrapper" href="_autosummary/brain_pipe.utils.serialization.pickle_load_wrapper.html" />
+  
+    <link rel="apple-touch-icon" href="../_static/_images/brain_pipe.svg"/>
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue data-md-color-accent=light-blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#api/full_tree" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="Brain Pipe"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">Brain Pipe</span>
+          <span class="md-header-nav__topic"> Full Tree </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            <a href="https://github.com/exporl/brain_pipe" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Brain Pipe
+  </div>
+</a>
+          </div>
+        </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">Brain Pipe</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="Brain Pipe" class="md-nav__button md-logo">
+      
+        <img src="../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="Brain Pipe">Brain Pipe</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/exporl/brain_pipe" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Brain Pipe
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+    
+      <a href="../pipeline.html" class="md-nav__link">Overview</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="../pipeline.html#concept" class="md-nav__link">Concept</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../pipeline.html#convenient-classes" class="md-nav__link">Convenient classes</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../pipeline.html#additional-considerations" class="md-nav__link">Additional considerations</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../pipeline.html#writing-your-own-pipelinestep" class="md-nav__link">Writing your own <code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../pipeline.html#small-example" class="md-nav__link">Small Example</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../configuration.html" class="md-nav__link">Defining and running Pipelines through configuration files</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="../configuration.html#running-pipelines-from-configuration-files" class="md-nav__link">Running pipelines from configuration files</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../configuration.html#background" class="md-nav__link">Background</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../configuration.html#typical-structure-for-simpledictparsers" class="md-nav__link">Typical structure for SimpleDictParsers</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../configuration.html#specifying-the-parser" class="md-nav__link">Specifying the parser</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../cli.html" class="md-nav__link">Command Line Interface</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="../cli.html#api" class="md-nav__link">API</a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="api.html" class="md-nav__link">API Reference</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="_autosummary/brain_pipe.html" class="md-nav__link">brain_pipe</a>
+      
+    
+    </li></ul>
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/api/full_tree.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="full-tree">
+<span id="api-full-tree"></span><h1 id="api-full-tree--page-root">Full Tree<a class="headerlink" href="#api-full-tree--page-root" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">BIDS preprocessing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/brain_pipe.html">brain_pipe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/brain_pipe.cli.html">brain_pipe.cli</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.cli.cli_entrypoint.html">brain_pipe.cli.cli_entrypoint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.cli.cli_entrypoint.html#brain_pipe.cli.cli_entrypoint"><code class="docutils literal notranslate"><span class="pre">cli_entrypoint()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.cli.cli_factory.html">brain_pipe.cli.cli_factory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.cli.cli_factory.html#brain_pipe.cli.cli_factory"><code class="docutils literal notranslate"><span class="pre">cli_factory()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.cli.base.html">brain_pipe.cli.base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.cli.base.CLI.html">brain_pipe.cli.base.CLI</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.cli.base.CLI.html#brain_pipe.cli.base.CLI"><code class="docutils literal notranslate"><span class="pre">CLI</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.base.CLI.html#brain_pipe.cli.base.CLI.__init__"><code class="docutils literal notranslate"><span class="pre">CLI.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.base.CLI.html#brain_pipe.cli.base.CLI.get_parser"><code class="docutils literal notranslate"><span class="pre">CLI.get_parser()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.base.CLI.html#brain_pipe.cli.base.CLI.get_run_options"><code class="docutils literal notranslate"><span class="pre">CLI.get_run_options()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.base.CLI.html#brain_pipe.cli.base.CLI.parse_cli_arguments"><code class="docutils literal notranslate"><span class="pre">CLI.parse_cli_arguments()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.base.CLI.html#brain_pipe.cli.base.CLI.parse_cli_arguments_for_parser"><code class="docutils literal notranslate"><span class="pre">CLI.parse_cli_arguments_for_parser()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.base.CLI.html#brain_pipe.cli.base.CLI.run"><code class="docutils literal notranslate"><span class="pre">CLI.run()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.html">brain_pipe.cli.default</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html">brain_pipe.cli.default.DefaultCLI</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html#brain_pipe.cli.default.DefaultCLI"><code class="docutils literal notranslate"><span class="pre">DefaultCLI</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html#brain_pipe.cli.default.DefaultCLI.__init__"><code class="docutils literal notranslate"><span class="pre">DefaultCLI.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html#brain_pipe.cli.default.DefaultCLI.add_arguments_to_argparser"><code class="docutils literal notranslate"><span class="pre">DefaultCLI.add_arguments_to_argparser()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html#brain_pipe.cli.default.DefaultCLI.get_argparser"><code class="docutils literal notranslate"><span class="pre">DefaultCLI.get_argparser()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html#brain_pipe.cli.default.DefaultCLI.get_parser"><code class="docutils literal notranslate"><span class="pre">DefaultCLI.get_parser()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html#brain_pipe.cli.default.DefaultCLI.get_run_options"><code class="docutils literal notranslate"><span class="pre">DefaultCLI.get_run_options()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html#brain_pipe.cli.default.DefaultCLI.parse_cli_arguments"><code class="docutils literal notranslate"><span class="pre">DefaultCLI.parse_cli_arguments()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html#brain_pipe.cli.default.DefaultCLI.parse_cli_arguments_for_parser"><code class="docutils literal notranslate"><span class="pre">DefaultCLI.parse_cli_arguments_for_parser()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.cli.default.DefaultCLI.html#brain_pipe.cli.default.DefaultCLI.run"><code class="docutils literal notranslate"><span class="pre">DefaultCLI.run()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.html">brain_pipe.dataloaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.base.html">brain_pipe.dataloaders.base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.base.DataLoader.html">brain_pipe.dataloaders.base.DataLoader</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader"><code class="docutils literal notranslate"><span class="pre">DataLoader</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader.__init__"><code class="docutils literal notranslate"><span class="pre">DataLoader.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader.compute_length"><code class="docutils literal notranslate"><span class="pre">DataLoader.compute_length()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.path.html">brain_pipe.dataloaders.path</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.path.GlobLoader.html">brain_pipe.dataloaders.path.GlobLoader</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.path.GlobLoader.html#brain_pipe.dataloaders.path.GlobLoader"><code class="docutils literal notranslate"><span class="pre">GlobLoader</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.path.GlobLoader.html#brain_pipe.dataloaders.path.GlobLoader.__init__"><code class="docutils literal notranslate"><span class="pre">GlobLoader.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.path.GlobLoader.html#brain_pipe.dataloaders.path.GlobLoader.compute_length"><code class="docutils literal notranslate"><span class="pre">GlobLoader.compute_length()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.dataloaders.path.GlobLoader.html#brain_pipe.dataloaders.path.GlobLoader.path_to_data_dict"><code class="docutils literal notranslate"><span class="pre">GlobLoader.path_to_data_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/brain_pipe.parser.html">brain_pipe.parser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.parser.base.html">brain_pipe.parser.base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.base.Parser.html">brain_pipe.parser.base.Parser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.base.Parser.html#brain_pipe.parser.base.Parser"><code class="docutils literal notranslate"><span class="pre">Parser</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.base.Parser.html#brain_pipe.parser.base.Parser.__init__"><code class="docutils literal notranslate"><span class="pre">Parser.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.base.Parser.html#brain_pipe.parser.base.Parser.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">Parser.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.base.Parser.html#brain_pipe.parser.base.Parser.link_loader_to_pipeline"><code class="docutils literal notranslate"><span class="pre">Parser.link_loader_to_pipeline()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.base.Parser.html#brain_pipe.parser.base.Parser.set_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">Parser.set_additional_kwargs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.html">brain_pipe.parser.file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileLoadMixin.html">brain_pipe.parser.file.FileLoadMixin</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileLoadMixin.html#brain_pipe.parser.file.FileLoadMixin"><code class="docutils literal notranslate"><span class="pre">FileLoadMixin</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileLoadMixin.html#brain_pipe.parser.file.FileLoadMixin.__init__"><code class="docutils literal notranslate"><span class="pre">FileLoadMixin.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileLoadMixin.html#brain_pipe.parser.file.FileLoadMixin.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">FileLoadMixin.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileLoadMixin.html#brain_pipe.parser.file.FileLoadMixin.load_file"><code class="docutils literal notranslate"><span class="pre">FileLoadMixin.load_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html">brain_pipe.parser.file.FileParser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser"><code class="docutils literal notranslate"><span class="pre">FileParser</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.__init__"><code class="docutils literal notranslate"><span class="pre">FileParser.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.apply_config"><code class="docutils literal notranslate"><span class="pre">FileParser.apply_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">FileParser.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.get_runner_from_parsed_config"><code class="docutils literal notranslate"><span class="pre">FileParser.get_runner_from_parsed_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.link_loader_to_pipeline"><code class="docutils literal notranslate"><span class="pre">FileParser.link_loader_to_pipeline()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.load_file"><code class="docutils literal notranslate"><span class="pre">FileParser.load_file()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.parse_all"><code class="docutils literal notranslate"><span class="pre">FileParser.parse_all()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.parse_text_to_dict"><code class="docutils literal notranslate"><span class="pre">FileParser.parse_text_to_dict()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.recursive_parse"><code class="docutils literal notranslate"><span class="pre">FileParser.recursive_parse()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.FileParser.html#brain_pipe.parser.file.FileParser.set_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">FileParser.set_additional_kwargs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html">brain_pipe.parser.file.TemplateFileParser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.__init__"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.apply_config"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.apply_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.get_runner_from_parsed_config"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.get_runner_from_parsed_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.link_loader_to_pipeline"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.link_loader_to_pipeline()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.load_file"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.load_file()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.parse_all"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.parse_all()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.parse_text_to_dict"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.parse_text_to_dict()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.recursive_parse"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.recursive_parse()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.file.TemplateFileParser.html#brain_pipe.parser.file.TemplateFileParser.set_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">TemplateFileParser.set_additional_kwargs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.html">brain_pipe.parser.simple_dict</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html">brain_pipe.parser.simple_dict.SimpleDictParser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser"><code class="docutils literal notranslate"><span class="pre">SimpleDictParser</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser.__init__"><code class="docutils literal notranslate"><span class="pre">SimpleDictParser.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser.apply_config"><code class="docutils literal notranslate"><span class="pre">SimpleDictParser.apply_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">SimpleDictParser.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser.get_runner_from_parsed_config"><code class="docutils literal notranslate"><span class="pre">SimpleDictParser.get_runner_from_parsed_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser.link_loader_to_pipeline"><code class="docutils literal notranslate"><span class="pre">SimpleDictParser.link_loader_to_pipeline()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser.parse_all"><code class="docutils literal notranslate"><span class="pre">SimpleDictParser.parse_all()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser.recursive_parse"><code class="docutils literal notranslate"><span class="pre">SimpleDictParser.recursive_parse()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser.set_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">SimpleDictParser.set_additional_kwargs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.html">brain_pipe.parser.template_text</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html">brain_pipe.parser.template_text.TemplateTextParser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser.__init__"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser.apply_config"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser.apply_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser.get_runner_from_parsed_config"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser.get_runner_from_parsed_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser.link_loader_to_pipeline"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser.link_loader_to_pipeline()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser.parse_all"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser.parse_all()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser.parse_text_to_dict"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser.parse_text_to_dict()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser.recursive_parse"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser.recursive_parse()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.template_text.TemplateTextParser.html#brain_pipe.parser.template_text.TemplateTextParser.set_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">TemplateTextParser.set_additional_kwargs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.html">brain_pipe.parser.text</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html">brain_pipe.parser.text.TextParser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser"><code class="docutils literal notranslate"><span class="pre">TextParser</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser.__init__"><code class="docutils literal notranslate"><span class="pre">TextParser.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser.apply_config"><code class="docutils literal notranslate"><span class="pre">TextParser.apply_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">TextParser.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser.get_runner_from_parsed_config"><code class="docutils literal notranslate"><span class="pre">TextParser.get_runner_from_parsed_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser.link_loader_to_pipeline"><code class="docutils literal notranslate"><span class="pre">TextParser.link_loader_to_pipeline()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser.parse_all"><code class="docutils literal notranslate"><span class="pre">TextParser.parse_all()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser.parse_text_to_dict"><code class="docutils literal notranslate"><span class="pre">TextParser.parse_text_to_dict()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser.recursive_parse"><code class="docutils literal notranslate"><span class="pre">TextParser.recursive_parse()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser.set_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">TextParser.set_additional_kwargs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.html">brain_pipe.parser.yaml</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html">brain_pipe.parser.yaml.YAMLFileParser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.__init__"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.apply_config"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.apply_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.get_runner_from_parsed_config"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.get_runner_from_parsed_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.link_loader_to_pipeline"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.link_loader_to_pipeline()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.load_file"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.load_file()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.parse_all"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.parse_all()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.parse_text_to_dict"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.parse_text_to_dict()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.recursive_parse"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.recursive_parse()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLFileParser.html#brain_pipe.parser.yaml.YAMLFileParser.set_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">YAMLFileParser.set_additional_kwargs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLMixin.html">brain_pipe.parser.yaml.YAMLMixin</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLMixin.html#brain_pipe.parser.yaml.YAMLMixin"><code class="docutils literal notranslate"><span class="pre">YAMLMixin</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLMixin.html#brain_pipe.parser.yaml.YAMLMixin.__init__"><code class="docutils literal notranslate"><span class="pre">YAMLMixin.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLMixin.html#brain_pipe.parser.yaml.YAMLMixin.parse_text_to_dict"><code class="docutils literal notranslate"><span class="pre">YAMLMixin.parse_text_to_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html">brain_pipe.parser.yaml.YAMLTemplateFileParser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.__init__"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.apply_config"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.apply_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.get_runner_from_parsed_config"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.get_runner_from_parsed_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.link_loader_to_pipeline"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.link_loader_to_pipeline()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.load_file"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.load_file()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.parse_all"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.parse_all()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.parse_text_to_dict"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.parse_text_to_dict()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.recursive_parse"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.recursive_parse()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser.set_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">YAMLTemplateFileParser.set_additional_kwargs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html">brain_pipe.parser.yaml.YAMLTextParser</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser.__init__"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser.apply_config"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser.apply_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser.get_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser.get_additional_kwargs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser.get_runner_from_parsed_config"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser.get_runner_from_parsed_config()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser.link_loader_to_pipeline"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser.link_loader_to_pipeline()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser.parse_all"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser.parse_all()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser.parse_text_to_dict"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser.parse_text_to_dict()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser.recursive_parse"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser.recursive_parse()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.parser.yaml.YAMLTextParser.html#brain_pipe.parser.yaml.YAMLTextParser.set_additional_kwargs"><code class="docutils literal notranslate"><span class="pre">YAMLTextParser.set_additional_kwargs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.html">brain_pipe.pipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.base.html">brain_pipe.pipeline.base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.base.Pipeline.html">brain_pipe.pipeline.base.Pipeline</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline"><code class="docutils literal notranslate"><span class="pre">Pipeline</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline.__init__"><code class="docutils literal notranslate"><span class="pre">Pipeline.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">Pipeline.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.base.PipelineStep.html">brain_pipe.pipeline.base.PipelineStep</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep"><code class="docutils literal notranslate"><span class="pre">PipelineStep</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep.__init__"><code class="docutils literal notranslate"><span class="pre">PipelineStep.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">PipelineStep.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.html">brain_pipe.pipeline.cache</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.html">brain_pipe.pipeline.cache.base</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html">brain_pipe.pipeline.cache.base.PipelineCache</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache"><code class="docutils literal notranslate"><span class="pre">PipelineCache</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.__init__"><code class="docutils literal notranslate"><span class="pre">PipelineCache.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.find_existing_cache_from_data_dict"><code class="docutils literal notranslate"><span class="pre">PipelineCache.find_existing_cache_from_data_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.find_existing_cache_from_previous_filename"><code class="docutils literal notranslate"><span class="pre">PipelineCache.find_existing_cache_from_previous_filename()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.get_cache_dict"><code class="docutils literal notranslate"><span class="pre">PipelineCache.get_cache_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.get_existing_cache_paths"><code class="docutils literal notranslate"><span class="pre">PipelineCache.get_existing_cache_paths()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.get_filename"><code class="docutils literal notranslate"><span class="pre">PipelineCache.get_filename()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.get_foldername"><code class="docutils literal notranslate"><span class="pre">PipelineCache.get_foldername()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.get_path"><code class="docutils literal notranslate"><span class="pre">PipelineCache.get_path()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.load"><code class="docutils literal notranslate"><span class="pre">PipelineCache.load()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.load_from_data_dict"><code class="docutils literal notranslate"><span class="pre">PipelineCache.load_from_data_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.predict_filenames_from_data_dict"><code class="docutils literal notranslate"><span class="pre">PipelineCache.predict_filenames_from_data_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.predict_filenames_from_previous_filename"><code class="docutils literal notranslate"><span class="pre">PipelineCache.predict_filenames_from_previous_filename()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.predict_paths_from_data_dict"><code class="docutils literal notranslate"><span class="pre">PipelineCache.predict_paths_from_data_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.predict_paths_from_previous_filename"><code class="docutils literal notranslate"><span class="pre">PipelineCache.predict_paths_from_previous_filename()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.base.PipelineCache.html#brain_pipe.pipeline.cache.base.PipelineCache.save"><code class="docutils literal notranslate"><span class="pre">PipelineCache.save()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.html">brain_pipe.pipeline.cache.default</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html">brain_pipe.pipeline.cache.default.DefaultPipelineCache</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.__init__"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.find_existing_cache_from_data_dict"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.find_existing_cache_from_data_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.find_existing_cache_from_previous_filename"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.find_existing_cache_from_previous_filename()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.get_cache_dict"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.get_cache_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.get_existing_cache_paths"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.get_existing_cache_paths()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.get_filename"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.get_filename()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.get_foldername"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.get_foldername()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.get_path"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.get_path()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.load"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.load()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.load_from_data_dict"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.load_from_data_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.predict_filenames_from_data_dict"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.predict_filenames_from_data_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.predict_filenames_from_previous_filename"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.predict_filenames_from_previous_filename()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.predict_paths_from_data_dict"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.predict_paths_from_data_dict()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.predict_paths_from_previous_filename"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.predict_paths_from_previous_filename()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.default.DefaultPipelineCache.html#brain_pipe.pipeline.cache.default.DefaultPipelineCache.save"><code class="docutils literal notranslate"><span class="pre">DefaultPipelineCache.save()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.pipeline.html">brain_pipe.pipeline.cache.pipeline</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.html">brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.html#brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline"><code class="docutils literal notranslate"><span class="pre">CachingPreprocessingPipeline</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.html#brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.__init__"><code class="docutils literal notranslate"><span class="pre">CachingPreprocessingPipeline.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.html#brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.iterate_over_steps"><code class="docutils literal notranslate"><span class="pre">CachingPreprocessingPipeline.iterate_over_steps()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.html#brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.on_error"><code class="docutils literal notranslate"><span class="pre">CachingPreprocessingPipeline.on_error</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.html#brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">CachingPreprocessingPipeline.parse_dict_keys()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.html#brain_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline.run_step"><code class="docutils literal notranslate"><span class="pre">CachingPreprocessingPipeline.run_step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.html">brain_pipe.pipeline.default</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.default_error_handler_fn.html">brain_pipe.pipeline.default.default_error_handler_fn</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.default_error_handler_fn.html#brain_pipe.pipeline.default.default_error_handler_fn"><code class="docutils literal notranslate"><span class="pre">default_error_handler_fn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.DefaultPipeline.html">brain_pipe.pipeline.default.DefaultPipeline</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.DefaultPipeline.html#brain_pipe.pipeline.default.DefaultPipeline"><code class="docutils literal notranslate"><span class="pre">DefaultPipeline</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.DefaultPipeline.html#brain_pipe.pipeline.default.DefaultPipeline.__init__"><code class="docutils literal notranslate"><span class="pre">DefaultPipeline.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.DefaultPipeline.html#brain_pipe.pipeline.default.DefaultPipeline.iterate_over_steps"><code class="docutils literal notranslate"><span class="pre">DefaultPipeline.iterate_over_steps()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.DefaultPipeline.html#brain_pipe.pipeline.default.DefaultPipeline.on_error"><code class="docutils literal notranslate"><span class="pre">DefaultPipeline.on_error</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.DefaultPipeline.html#brain_pipe.pipeline.default.DefaultPipeline.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">DefaultPipeline.parse_dict_keys()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.default.DefaultPipeline.html#brain_pipe.pipeline.default.DefaultPipeline.run_step"><code class="docutils literal notranslate"><span class="pre">DefaultPipeline.run_step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.wrapper.html">brain_pipe.pipeline.wrapper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.wrapper.Wrapper.html">brain_pipe.pipeline.wrapper.Wrapper</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.wrapper.Wrapper.html#brain_pipe.pipeline.wrapper.Wrapper"><code class="docutils literal notranslate"><span class="pre">Wrapper</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.wrapper.Wrapper.html#brain_pipe.pipeline.wrapper.Wrapper.__init__"><code class="docutils literal notranslate"><span class="pre">Wrapper.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.pipeline.wrapper.Wrapper.html#brain_pipe.pipeline.wrapper.Wrapper.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">Wrapper.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.html">brain_pipe.preprocessing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.html">brain_pipe.preprocessing.brain</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.html">brain_pipe.preprocessing.brain.artifact</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html">brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.__init__"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.apply_mwf"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF.apply_mwf()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.check_symmetric"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF.check_symmetric()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.compute_mwf"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF.compute_mwf()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.fix_symmetric"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF.fix_symmetric()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.get_artifact_segments"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF.get_artifact_segments()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF.parse_dict_keys()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.sort_evd"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF.sort_evd()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.html#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.stack_delayed"><code class="docutils literal notranslate"><span class="pre">ArtifactRemovalMWF.stack_delayed()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts.html">brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts.html#brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts"><code class="docutils literal notranslate"><span class="pre">InterpolateArtifacts</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts.html#brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts.__init__"><code class="docutils literal notranslate"><span class="pre">InterpolateArtifacts.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts.html#brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">InterpolateArtifacts.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.html">brain_pipe.preprocessing.brain.eeg</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.biosemi.html">brain_pipe.preprocessing.brain.eeg.biosemi</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.biosemi.biosemi_trigger_processing_fn.html">brain_pipe.preprocessing.brain.eeg.biosemi.biosemi_trigger_processing_fn</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.biosemi.biosemi_trigger_processing_fn.html#brain_pipe.preprocessing.brain.eeg.biosemi.biosemi_trigger_processing_fn"><code class="docutils literal notranslate"><span class="pre">biosemi_trigger_processing_fn()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.load.html">brain_pipe.preprocessing.brain.eeg.load</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy.html">brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy.html#brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy"><code class="docutils literal notranslate"><span class="pre">LoadEEGNumpy</span></code></a><ul>
+<li class="toctree-l8"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy.html#brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy.__init__"><code class="docutils literal notranslate"><span class="pre">LoadEEGNumpy.__init__()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy.html#brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy.get_channels"><code class="docutils literal notranslate"><span class="pre">LoadEEGNumpy.get_channels()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy.html#brain_pipe.preprocessing.brain.eeg.load.LoadEEGNumpy.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">LoadEEGNumpy.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.epochs.html">brain_pipe.preprocessing.brain.epochs</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.epochs.SplitEpochs.html">brain_pipe.preprocessing.brain.epochs.SplitEpochs</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.epochs.SplitEpochs.html#brain_pipe.preprocessing.brain.epochs.SplitEpochs"><code class="docutils literal notranslate"><span class="pre">SplitEpochs</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.epochs.SplitEpochs.html#brain_pipe.preprocessing.brain.epochs.SplitEpochs.__init__"><code class="docutils literal notranslate"><span class="pre">SplitEpochs.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.epochs.SplitEpochs.html#brain_pipe.preprocessing.brain.epochs.SplitEpochs.data_dict_copy"><code class="docutils literal notranslate"><span class="pre">SplitEpochs.data_dict_copy()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.epochs.SplitEpochs.html#brain_pipe.preprocessing.brain.epochs.SplitEpochs.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">SplitEpochs.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.html">brain_pipe.preprocessing.brain.link</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.default_multiprocessing_key_fn.html">brain_pipe.preprocessing.brain.link.default_multiprocessing_key_fn</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.default_multiprocessing_key_fn.html#brain_pipe.preprocessing.brain.link.default_multiprocessing_key_fn"><code class="docutils literal notranslate"><span class="pre">default_multiprocessing_key_fn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.BIDSStimulusInfoExtractor.html">brain_pipe.preprocessing.brain.link.BIDSStimulusInfoExtractor</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.BIDSStimulusInfoExtractor.html#brain_pipe.preprocessing.brain.link.BIDSStimulusInfoExtractor"><code class="docutils literal notranslate"><span class="pre">BIDSStimulusInfoExtractor</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.BIDSStimulusInfoExtractor.html#brain_pipe.preprocessing.brain.link.BIDSStimulusInfoExtractor.__init__"><code class="docutils literal notranslate"><span class="pre">BIDSStimulusInfoExtractor.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.BIDSStimulusInfoExtractor.html#brain_pipe.preprocessing.brain.link.BIDSStimulusInfoExtractor.read_events"><code class="docutils literal notranslate"><span class="pre">BIDSStimulusInfoExtractor.read_events()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.BasenameComparisonFn.html">brain_pipe.preprocessing.brain.link.BasenameComparisonFn</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.BasenameComparisonFn.html#brain_pipe.preprocessing.brain.link.BasenameComparisonFn"><code class="docutils literal notranslate"><span class="pre">BasenameComparisonFn</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.BasenameComparisonFn.html#brain_pipe.preprocessing.brain.link.BasenameComparisonFn.__init__"><code class="docutils literal notranslate"><span class="pre">BasenameComparisonFn.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.BasenameComparisonFn.html#brain_pipe.preprocessing.brain.link.BasenameComparisonFn.process_path"><code class="docutils literal notranslate"><span class="pre">BasenameComparisonFn.process_path()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.LinkStimulusToBrainResponse.html">brain_pipe.preprocessing.brain.link.LinkStimulusToBrainResponse</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.LinkStimulusToBrainResponse.html#brain_pipe.preprocessing.brain.link.LinkStimulusToBrainResponse"><code class="docutils literal notranslate"><span class="pre">LinkStimulusToBrainResponse</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.LinkStimulusToBrainResponse.html#brain_pipe.preprocessing.brain.link.LinkStimulusToBrainResponse.__init__"><code class="docutils literal notranslate"><span class="pre">LinkStimulusToBrainResponse.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.link.LinkStimulusToBrainResponse.html#brain_pipe.preprocessing.brain.link.LinkStimulusToBrainResponse.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">LinkStimulusToBrainResponse.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.load.html">brain_pipe.preprocessing.brain.load</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.load.MNELoader.html">brain_pipe.preprocessing.brain.load.MNELoader</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.load.MNELoader.html#brain_pipe.preprocessing.brain.load.MNELoader"><code class="docutils literal notranslate"><span class="pre">MNELoader</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.load.MNELoader.html#brain_pipe.preprocessing.brain.load.MNELoader.__init__"><code class="docutils literal notranslate"><span class="pre">MNELoader.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.load.MNELoader.html#brain_pipe.preprocessing.brain.load.MNELoader.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">MNELoader.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.rereference.html">brain_pipe.preprocessing.brain.rereference</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.rereference.CommonAverageRereference.html">brain_pipe.preprocessing.brain.rereference.CommonAverageRereference</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.rereference.CommonAverageRereference.html#brain_pipe.preprocessing.brain.rereference.CommonAverageRereference"><code class="docutils literal notranslate"><span class="pre">CommonAverageRereference</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.rereference.CommonAverageRereference.html#brain_pipe.preprocessing.brain.rereference.CommonAverageRereference.__init__"><code class="docutils literal notranslate"><span class="pre">CommonAverageRereference.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.rereference.CommonAverageRereference.html#brain_pipe.preprocessing.brain.rereference.CommonAverageRereference.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">CommonAverageRereference.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.trigger.html">brain_pipe.preprocessing.brain.trigger</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.trigger.default_drift_correction.html">brain_pipe.preprocessing.brain.trigger.default_drift_correction</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.trigger.default_drift_correction.html#brain_pipe.preprocessing.brain.trigger.default_drift_correction"><code class="docutils literal notranslate"><span class="pre">default_drift_correction()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.html">brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.html#brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers"><code class="docutils literal notranslate"><span class="pre">AlignPeriodicBlockTriggers</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.html#brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.__init__"><code class="docutils literal notranslate"><span class="pre">AlignPeriodicBlockTriggers.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.html#brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.get_trigger_indices"><code class="docutils literal notranslate"><span class="pre">AlignPeriodicBlockTriggers.get_trigger_indices()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.html#brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">AlignPeriodicBlockTriggers.parse_dict_keys()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.html#brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.split_epochs"><code class="docutils literal notranslate"><span class="pre">AlignPeriodicBlockTriggers.split_epochs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.filter.html">brain_pipe.preprocessing.filter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.filter.SosFiltFilt.html">brain_pipe.preprocessing.filter.SosFiltFilt</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.filter.SosFiltFilt.html#brain_pipe.preprocessing.filter.SosFiltFilt"><code class="docutils literal notranslate"><span class="pre">SosFiltFilt</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.filter.SosFiltFilt.html#brain_pipe.preprocessing.filter.SosFiltFilt.__init__"><code class="docutils literal notranslate"><span class="pre">SosFiltFilt.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.filter.SosFiltFilt.html#brain_pipe.preprocessing.filter.SosFiltFilt.get_matlab_arguments"><code class="docutils literal notranslate"><span class="pre">SosFiltFilt.get_matlab_arguments()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.filter.SosFiltFilt.html#brain_pipe.preprocessing.filter.SosFiltFilt.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">SosFiltFilt.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.resample.html">brain_pipe.preprocessing.resample</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.resample.ResamplePoly.html">brain_pipe.preprocessing.resample.ResamplePoly</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.resample.ResamplePoly.html#brain_pipe.preprocessing.resample.ResamplePoly"><code class="docutils literal notranslate"><span class="pre">ResamplePoly</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.resample.ResamplePoly.html#brain_pipe.preprocessing.resample.ResamplePoly.__init__"><code class="docutils literal notranslate"><span class="pre">ResamplePoly.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.resample.ResamplePoly.html#brain_pipe.preprocessing.resample.ResamplePoly.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">ResamplePoly.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.html">brain_pipe.preprocessing.stimulus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.html">brain_pipe.preprocessing.stimulus.audio</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.html">brain_pipe.preprocessing.stimulus.audio.envelope</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.html">brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.html#brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone"><code class="docutils literal notranslate"><span class="pre">EnvelopeFromGammatone</span></code></a><ul>
+<li class="toctree-l8"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.html#brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.__init__"><code class="docutils literal notranslate"><span class="pre">EnvelopeFromGammatone.__init__()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.html#brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.duration"><code class="docutils literal notranslate"><span class="pre">EnvelopeFromGammatone.duration</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.html#brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.process"><code class="docutils literal notranslate"><span class="pre">EnvelopeFromGammatone.process()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.html#brain_pipe.preprocessing.stimulus.audio.envelope.EnvelopeFromGammatone.source"><code class="docutils literal notranslate"><span class="pre">EnvelopeFromGammatone.source</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.GammatoneEnvelope.html">brain_pipe.preprocessing.stimulus.audio.envelope.GammatoneEnvelope</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.GammatoneEnvelope.html#brain_pipe.preprocessing.stimulus.audio.envelope.GammatoneEnvelope"><code class="docutils literal notranslate"><span class="pre">GammatoneEnvelope</span></code></a><ul>
+<li class="toctree-l8"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.GammatoneEnvelope.html#brain_pipe.preprocessing.stimulus.audio.envelope.GammatoneEnvelope.__init__"><code class="docutils literal notranslate"><span class="pre">GammatoneEnvelope.__init__()</span></code></a></li>
+<li class="toctree-l8"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.audio.envelope.GammatoneEnvelope.html#brain_pipe.preprocessing.stimulus.audio.envelope.GammatoneEnvelope.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">GammatoneEnvelope.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.load.html">brain_pipe.preprocessing.stimulus.load</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.load.LoadStimuli.html">brain_pipe.preprocessing.stimulus.load.LoadStimuli</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.load.LoadStimuli.html#brain_pipe.preprocessing.stimulus.load.LoadStimuli"><code class="docutils literal notranslate"><span class="pre">LoadStimuli</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.load.LoadStimuli.html#brain_pipe.preprocessing.stimulus.load.LoadStimuli.__init__"><code class="docutils literal notranslate"><span class="pre">LoadStimuli.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.stimulus.load.LoadStimuli.html#brain_pipe.preprocessing.stimulus.load.LoadStimuli.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">LoadStimuli.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.transpose.html">brain_pipe.preprocessing.transpose</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.transpose.Transpose.html">brain_pipe.preprocessing.transpose.Transpose</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.transpose.Transpose.html#brain_pipe.preprocessing.transpose.Transpose"><code class="docutils literal notranslate"><span class="pre">Transpose</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.transpose.Transpose.html#brain_pipe.preprocessing.transpose.Transpose.__init__"><code class="docutils literal notranslate"><span class="pre">Transpose.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.preprocessing.transpose.Transpose.html#brain_pipe.preprocessing.transpose.Transpose.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">Transpose.parse_dict_keys()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/brain_pipe.runner.html">brain_pipe.runner</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.runner.base.html">brain_pipe.runner.base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.runner.base.Runner.html">brain_pipe.runner.base.Runner</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.runner.base.Runner.html#brain_pipe.runner.base.Runner"><code class="docutils literal notranslate"><span class="pre">Runner</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.runner.base.Runner.html#brain_pipe.runner.base.Runner.__init__"><code class="docutils literal notranslate"><span class="pre">Runner.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.runner.base.Runner.html#brain_pipe.runner.base.Runner.run"><code class="docutils literal notranslate"><span class="pre">Runner.run()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.runner.default.html">brain_pipe.runner.default</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.runner.default.DefaultRunner.html">brain_pipe.runner.default.DefaultRunner</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.runner.default.DefaultRunner.html#brain_pipe.runner.default.DefaultRunner"><code class="docutils literal notranslate"><span class="pre">DefaultRunner</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.runner.default.DefaultRunner.html#brain_pipe.runner.default.DefaultRunner.__init__"><code class="docutils literal notranslate"><span class="pre">DefaultRunner.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.runner.default.DefaultRunner.html#brain_pipe.runner.default.DefaultRunner.run"><code class="docutils literal notranslate"><span class="pre">DefaultRunner.run()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/brain_pipe.save.html">brain_pipe.save</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.save.base.html">brain_pipe.save.base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.base.Save.html">brain_pipe.save.base.Save</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.base.Save.html#brain_pipe.save.base.Save"><code class="docutils literal notranslate"><span class="pre">Save</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.base.Save.html#brain_pipe.save.base.Save.__init__"><code class="docutils literal notranslate"><span class="pre">Save.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.base.Save.html#brain_pipe.save.base.Save.is_already_done"><code class="docutils literal notranslate"><span class="pre">Save.is_already_done()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.base.Save.html#brain_pipe.save.base.Save.is_reloadable"><code class="docutils literal notranslate"><span class="pre">Save.is_reloadable()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.base.Save.html#brain_pipe.save.base.Save.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">Save.parse_dict_keys()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.base.Save.html#brain_pipe.save.base.Save.reload"><code class="docutils literal notranslate"><span class="pre">Save.reload()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.save.default.html">brain_pipe.save.default</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.default_filename_fn.html">brain_pipe.save.default.default_filename_fn</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.default_filename_fn.html#brain_pipe.save.default.default_filename_fn"><code class="docutils literal notranslate"><span class="pre">default_filename_fn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.default_metadata_key_fn.html">brain_pipe.save.default.default_metadata_key_fn</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.default_metadata_key_fn.html#brain_pipe.save.default.default_metadata_key_fn"><code class="docutils literal notranslate"><span class="pre">default_metadata_key_fn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSave.html">brain_pipe.save.default.DefaultSave</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSave.html#brain_pipe.save.default.DefaultSave"><code class="docutils literal notranslate"><span class="pre">DefaultSave</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSave.html#brain_pipe.save.default.DefaultSave.__init__"><code class="docutils literal notranslate"><span class="pre">DefaultSave.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSave.html#brain_pipe.save.default.DefaultSave.is_already_done"><code class="docutils literal notranslate"><span class="pre">DefaultSave.is_already_done()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSave.html#brain_pipe.save.default.DefaultSave.is_reloadable"><code class="docutils literal notranslate"><span class="pre">DefaultSave.is_reloadable()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSave.html#brain_pipe.save.default.DefaultSave.overwrite"><code class="docutils literal notranslate"><span class="pre">DefaultSave.overwrite</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSave.html#brain_pipe.save.default.DefaultSave.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">DefaultSave.parse_dict_keys()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSave.html#brain_pipe.save.default.DefaultSave.reload"><code class="docutils literal notranslate"><span class="pre">DefaultSave.reload()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/brain_pipe.split.html">brain_pipe.split</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.split.base.html">brain_pipe.split.base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.split.base.Splitter.html">brain_pipe.split.base.Splitter</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.split.base.Splitter.html#brain_pipe.split.base.Splitter"><code class="docutils literal notranslate"><span class="pre">Splitter</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.base.Splitter.html#brain_pipe.split.base.Splitter.__init__"><code class="docutils literal notranslate"><span class="pre">Splitter.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.base.Splitter.html#brain_pipe.split.base.Splitter.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">Splitter.parse_dict_keys()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.base.Splitter.html#brain_pipe.split.base.Splitter.split"><code class="docutils literal notranslate"><span class="pre">Splitter.split()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.split.mid.html">brain_pipe.split.mid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.split.mid.MidSplit.html">brain_pipe.split.mid.MidSplit</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.split.mid.MidSplit.html#brain_pipe.split.mid.MidSplit"><code class="docutils literal notranslate"><span class="pre">MidSplit</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.mid.MidSplit.html#brain_pipe.split.mid.MidSplit.__init__"><code class="docutils literal notranslate"><span class="pre">MidSplit.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.mid.MidSplit.html#brain_pipe.split.mid.MidSplit.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">MidSplit.parse_dict_keys()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.mid.MidSplit.html#brain_pipe.split.mid.MidSplit.split"><code class="docutils literal notranslate"><span class="pre">MidSplit.split()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.html">brain_pipe.split.operations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.base.html">brain_pipe.split.operations.base</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.base.SplitterOperation.html">brain_pipe.split.operations.base.SplitterOperation</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.base.SplitterOperation.html#brain_pipe.split.operations.base.SplitterOperation"><code class="docutils literal notranslate"><span class="pre">SplitterOperation</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.base.SplitterOperation.html#brain_pipe.split.operations.base.SplitterOperation.__init__"><code class="docutils literal notranslate"><span class="pre">SplitterOperation.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.base.SplitterOperation.html#brain_pipe.split.operations.base.SplitterOperation.reset"><code class="docutils literal notranslate"><span class="pre">SplitterOperation.reset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.normalize.html">brain_pipe.split.operations.normalize</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.normalize.Standardize.html">brain_pipe.split.operations.normalize.Standardize</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.normalize.Standardize.html#brain_pipe.split.operations.normalize.Standardize"><code class="docutils literal notranslate"><span class="pre">Standardize</span></code></a><ul>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.normalize.Standardize.html#brain_pipe.split.operations.normalize.Standardize.__init__"><code class="docutils literal notranslate"><span class="pre">Standardize.__init__()</span></code></a></li>
+<li class="toctree-l7"><a class="reference internal" href="_autosummary/brain_pipe.split.operations.normalize.Standardize.html#brain_pipe.split.operations.normalize.Standardize.reset"><code class="docutils literal notranslate"><span class="pre">Standardize.reset()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.split.sequential.html">brain_pipe.split.sequential</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.split.sequential.SequentialSplit.html">brain_pipe.split.sequential.SequentialSplit</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.split.sequential.SequentialSplit.html#brain_pipe.split.sequential.SequentialSplit"><code class="docutils literal notranslate"><span class="pre">SequentialSplit</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.sequential.SequentialSplit.html#brain_pipe.split.sequential.SequentialSplit.__init__"><code class="docutils literal notranslate"><span class="pre">SequentialSplit.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.sequential.SequentialSplit.html#brain_pipe.split.sequential.SequentialSplit.parse_dict_keys"><code class="docutils literal notranslate"><span class="pre">SequentialSplit.parse_dict_keys()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.split.sequential.SequentialSplit.html#brain_pipe.split.sequential.SequentialSplit.split"><code class="docutils literal notranslate"><span class="pre">SequentialSplit.split()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/brain_pipe.utils.html">brain_pipe.utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.utils.ObjectsWithConfig.html">brain_pipe.utils.ObjectsWithConfig</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.ObjectsWithConfig.html#brain_pipe.utils.ObjectsWithConfig"><code class="docutils literal notranslate"><span class="pre">ObjectsWithConfig</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.ObjectsWithConfig.html#brain_pipe.utils.ObjectsWithConfig.__init__"><code class="docutils literal notranslate"><span class="pre">ObjectsWithConfig.__init__()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.ObjectsWithConfig.html#brain_pipe.utils.ObjectsWithConfig.apply_config"><code class="docutils literal notranslate"><span class="pre">ObjectsWithConfig.apply_config()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.utils.find.html">brain_pipe.utils.find</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.find.Finder.html">brain_pipe.utils.find.Finder</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.find.Finder.html#brain_pipe.utils.find.Finder"><code class="docutils literal notranslate"><span class="pre">Finder</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.find.Finder.html#brain_pipe.utils.find.Finder.__init__"><code class="docutils literal notranslate"><span class="pre">Finder.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.find.Finder.html#brain_pipe.utils.find.Finder.filter"><code class="docutils literal notranslate"><span class="pre">Finder.filter()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.find.Finder.html#brain_pipe.utils.find.Finder.filter_fn"><code class="docutils literal notranslate"><span class="pre">Finder.filter_fn()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.find.Finder.html#brain_pipe.utils.find.Finder.load_from_path"><code class="docutils literal notranslate"><span class="pre">Finder.load_from_path()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.find.Finder.html#brain_pipe.utils.find.Finder.predicate_fn"><code class="docutils literal notranslate"><span class="pre">Finder.predicate_fn()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.utils.list.html">brain_pipe.utils.list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.list.flatten.html">brain_pipe.utils.list.flatten</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.list.flatten.html#brain_pipe.utils.list.flatten"><code class="docutils literal notranslate"><span class="pre">flatten()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.html">brain_pipe.utils.log</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.default_logging.html">brain_pipe.utils.log.default_logging</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.default_logging.html#brain_pipe.utils.log.default_logging"><code class="docutils literal notranslate"><span class="pre">default_logging()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.ColorFormatter.html">brain_pipe.utils.log.ColorFormatter</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.ColorFormatter.html#brain_pipe.utils.log.ColorFormatter"><code class="docutils literal notranslate"><span class="pre">ColorFormatter</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.ColorFormatter.html#brain_pipe.utils.log.ColorFormatter.__init__"><code class="docutils literal notranslate"><span class="pre">ColorFormatter.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.ColorFormatter.html#brain_pipe.utils.log.ColorFormatter.converter"><code class="docutils literal notranslate"><span class="pre">ColorFormatter.converter()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.ColorFormatter.html#brain_pipe.utils.log.ColorFormatter.format"><code class="docutils literal notranslate"><span class="pre">ColorFormatter.format()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.ColorFormatter.html#brain_pipe.utils.log.ColorFormatter.formatException"><code class="docutils literal notranslate"><span class="pre">ColorFormatter.formatException()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.ColorFormatter.html#brain_pipe.utils.log.ColorFormatter.formatStack"><code class="docutils literal notranslate"><span class="pre">ColorFormatter.formatStack()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.ColorFormatter.html#brain_pipe.utils.log.ColorFormatter.formatTime"><code class="docutils literal notranslate"><span class="pre">ColorFormatter.formatTime()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.ColorFormatter.html#brain_pipe.utils.log.ColorFormatter.usesTime"><code class="docutils literal notranslate"><span class="pre">ColorFormatter.usesTime()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.DefaultFormatter.html">brain_pipe.utils.log.DefaultFormatter</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.DefaultFormatter.html#brain_pipe.utils.log.DefaultFormatter"><code class="docutils literal notranslate"><span class="pre">DefaultFormatter</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.DefaultFormatter.html#brain_pipe.utils.log.DefaultFormatter.__init__"><code class="docutils literal notranslate"><span class="pre">DefaultFormatter.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.DefaultFormatter.html#brain_pipe.utils.log.DefaultFormatter.converter"><code class="docutils literal notranslate"><span class="pre">DefaultFormatter.converter()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.DefaultFormatter.html#brain_pipe.utils.log.DefaultFormatter.format"><code class="docutils literal notranslate"><span class="pre">DefaultFormatter.format()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.DefaultFormatter.html#brain_pipe.utils.log.DefaultFormatter.formatException"><code class="docutils literal notranslate"><span class="pre">DefaultFormatter.formatException()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.DefaultFormatter.html#brain_pipe.utils.log.DefaultFormatter.formatStack"><code class="docutils literal notranslate"><span class="pre">DefaultFormatter.formatStack()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.DefaultFormatter.html#brain_pipe.utils.log.DefaultFormatter.formatTime"><code class="docutils literal notranslate"><span class="pre">DefaultFormatter.formatTime()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.DefaultFormatter.html#brain_pipe.utils.log.DefaultFormatter.usesTime"><code class="docutils literal notranslate"><span class="pre">DefaultFormatter.usesTime()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.html">brain_pipe.utils.multiprocess</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html">brain_pipe.utils.multiprocess.MultiprocessingSingleton</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html#brain_pipe.utils.multiprocess.MultiprocessingSingleton"><code class="docutils literal notranslate"><span class="pre">MultiprocessingSingleton</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html#brain_pipe.utils.multiprocess.MultiprocessingSingleton.__init__"><code class="docutils literal notranslate"><span class="pre">MultiprocessingSingleton.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html#brain_pipe.utils.multiprocess.MultiprocessingSingleton.clean"><code class="docutils literal notranslate"><span class="pre">MultiprocessingSingleton.clean()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html#brain_pipe.utils.multiprocess.MultiprocessingSingleton.get_map_fn"><code class="docutils literal notranslate"><span class="pre">MultiprocessingSingleton.get_map_fn()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.SimpleCallbackFn.html">brain_pipe.utils.multiprocess.SimpleCallbackFn</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.SimpleCallbackFn.html#brain_pipe.utils.multiprocess.SimpleCallbackFn"><code class="docutils literal notranslate"><span class="pre">SimpleCallbackFn</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.SimpleCallbackFn.html#brain_pipe.utils.multiprocess.SimpleCallbackFn.__init__"><code class="docutils literal notranslate"><span class="pre">SimpleCallbackFn.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.utils.path.html">brain_pipe.utils.path</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.path.BIDSPathGenerator.html">brain_pipe.utils.path.BIDSPathGenerator</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.path.BIDSPathGenerator.html#brain_pipe.utils.path.BIDSPathGenerator"><code class="docutils literal notranslate"><span class="pre">BIDSPathGenerator</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.path.BIDSPathGenerator.html#brain_pipe.utils.path.BIDSPathGenerator.__init__"><code class="docutils literal notranslate"><span class="pre">BIDSPathGenerator.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.path.BIDSPathGenerator.html#brain_pipe.utils.path.BIDSPathGenerator.select_paths"><code class="docutils literal notranslate"><span class="pre">BIDSPathGenerator.select_paths()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.path.BIDSStimulusGrouper.html">brain_pipe.utils.path.BIDSStimulusGrouper</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.path.BIDSStimulusGrouper.html#brain_pipe.utils.path.BIDSStimulusGrouper"><code class="docutils literal notranslate"><span class="pre">BIDSStimulusGrouper</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.path.BIDSStimulusGrouper.html#brain_pipe.utils.path.BIDSStimulusGrouper.__init__"><code class="docutils literal notranslate"><span class="pre">BIDSStimulusGrouper.__init__()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.utils.serialization.html">brain_pipe.utils.serialization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.serialization.pickle_dump_wrapper.html">brain_pipe.utils.serialization.pickle_dump_wrapper</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.serialization.pickle_dump_wrapper.html#brain_pipe.utils.serialization.pickle_dump_wrapper"><code class="docutils literal notranslate"><span class="pre">pickle_dump_wrapper()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.serialization.pickle_load_wrapper.html">brain_pipe.utils.serialization.pickle_load_wrapper</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.serialization.pickle_load_wrapper.html#brain_pipe.utils.serialization.pickle_load_wrapper"><code class="docutils literal notranslate"><span class="pre">pickle_load_wrapper()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="_autosummary/brain_pipe.utils.serialization.pickle_load_wrapper.html" title="brain_pipe.utils.serialization.pickle_load_wrapper"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> brain_pipe.utils.serialization.pickle_load_wrapper </span>
+              </div>
+            </a>
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2023, Bernd Accou, ExpORL.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

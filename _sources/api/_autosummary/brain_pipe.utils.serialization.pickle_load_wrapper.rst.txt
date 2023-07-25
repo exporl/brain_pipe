@@ -1,0 +1,6 @@
+brain\_pipe.utils.serialization.pickle\_load\_wrapper
+=====================================================
+
+.. currentmodule:: brain_pipe.utils.serialization
+
+.. autofunction:: pickle_load_wrapper
