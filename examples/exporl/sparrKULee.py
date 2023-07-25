@@ -13,7 +13,6 @@ from typing import Any, Dict, Union, Sequence
 import librosa
 import numpy as np
 import scipy.signal
-from bids import BIDSLayout
 
 from brain_pipe.dataloaders.path import GlobLoader
 from brain_pipe.pipeline.default import DefaultPipeline
