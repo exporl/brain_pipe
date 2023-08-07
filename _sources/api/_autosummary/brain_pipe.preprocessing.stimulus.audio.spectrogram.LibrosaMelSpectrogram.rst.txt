@@ -1,0 +1,34 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.stimulus.audio.spectrogram.LibrosaMelSpectrogram
+==========================================================================
+
+.. currentmodule:: brain_pipe.preprocessing.stimulus.audio.spectrogram
+
+.. autoclass:: LibrosaMelSpectrogram
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~LibrosaMelSpectrogram.__init__
+      ~LibrosaMelSpectrogram.parse_dict_keys
+      ~LibrosaMelSpectrogram.parse_librosa_kwargs
+
+   
+   
+

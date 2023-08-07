@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.preprocessing.stimulus.audio.spectrogram
+====================================================
+
+.. automodule:: brain_pipe.preprocessing.stimulus.audio.spectrogram
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      LibrosaMelSpectrogram
+   
+   
+
+   
+   
+   
+
+
+

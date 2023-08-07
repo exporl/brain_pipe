@@ -31,4 +31,5 @@ brain\_pipe.preprocessing.stimulus.audio
    :recursive:
 
    brain_pipe.preprocessing.stimulus.audio.envelope
+   brain_pipe.preprocessing.stimulus.audio.spectrogram
 
