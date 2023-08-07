@@ -280,7 +280,7 @@ def bids_filename_fn(data_dict, feature_name, set_name=None):
     return os.path.join(subject, session, filename + ".npy")
 
 
-class SparKULeeSpectrogramKwargs:
+class SparrKULeeSpectrogramKwargs:
     """Default function to generate the kwargs for the librosa spectrogram."""
 
     def __init__(
@@ -409,7 +409,7 @@ def run_exporl_auditory_eeg_pipeline(
             GammatoneEnvelope(),
             ResamplePoly(64, "envelope_data", "stimulus_sr"),
             # Uncomment the next line to also use mel
-            # LibrosaMelSpectrogram(power_factor=0.6, SparKULeeSpectrogramKwargs()),
+            # LibrosaMelSpectrogram(power_factor=0.6, SparrKULeeSpectrogramKwargs()),
             DefaultSave(stimuli_dir, overwrite=overwrite),
         ],
         on_error=DefaultPipeline.RAISE,
