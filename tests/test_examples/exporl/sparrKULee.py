@@ -3,11 +3,14 @@ import os
 import tempfile
 import unittest
 
+import librosa
 import numpy as np
 
+from brain_pipe.preprocessing.stimulus.audio.spectrogram import LibrosaMelSpectrogram
 from examples.exporl.sparrKULee import (
     default_librosa_load_fn,
     default_npz_load_fn,
+    SparKULeeSpectrogramKwargs,
 )
 
 test_data_path = os.path.join(
@@ -24,7 +27,7 @@ class DefaultLibrosaLoadFnTest(unittest.TestCase):
         self.assertEqual(data["data"].shape, (268985,))
 
 
-class defaultNpzLoadFnTest(unittest.TestCase):
+class DefaultNpzLoadFnTest(unittest.TestCase):
     def setUp(self) -> None:
         np.random.seed(42)
         self.temp_file = tempfile.NamedTemporaryFile(delete=False)
@@ -42,3 +45,21 @@ class defaultNpzLoadFnTest(unittest.TestCase):
     def tearDown(self) -> None:
         if os.path.exists(self.temp_file.name):
             os.remove(self.temp_file.name)
+
+
+class SparKULeeSpectrogramKwargsTest(unittest.TestCase):
+    data_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+        "test_data",
+        "OSR_us_000_0010_8k_mel_challenge.npy",
+    )
+
+    def test_sparkulee(self):
+        kwargs = SparKULeeSpectrogramKwargs()
+        data, sr = librosa.load(test_wav_path, sr=None)
+        output = LibrosaMelSpectrogram(power_factor=0.6, librosa_kwargs=kwargs)(
+            {"stimulus_data": data, "stimulus_sr": sr}
+        )
+        self.assertTrue(
+            np.allclose(output["spectrogram_data"], np.load(self.data_path))
+        )
