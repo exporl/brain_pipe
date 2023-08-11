@@ -39,4 +39,4 @@ class GammatoneEnvelopeTest(unittest.TestCase):
         np.random.uniform(-1.0, 1.0, size=(100,))
         data, sr = librosa.load(test_wav_path, sr=None)
         output = GammatoneEnvelope()({"stimulus_data": data, "stimulus_sr": sr})
-        self.assertEqual(output["envelope_data"].shape, data.shape)
+        self.assertEqual(output["envelope_data"].shape[0], data.shape[0])

@@ -17,6 +17,24 @@ class PreprocessingPipelineTest(unittest.TestCase):
                 data_dict[key] = value
             return data_dict
 
+    class MockSave(Save):
+        def __init__(self, done, reloadable):
+            super().__init__()
+            self.done = done
+            self.reloadable = reloadable
+
+        def is_already_done(self, data_dict: Dict[str, Any]) -> bool:
+            return self.done
+
+        def is_reloadable(self, data_dict: Dict[str, Any]) -> bool:
+            return self.reloadable
+
+        def reload(self, data_dict: Dict[str, Any]) -> Dict[str, Any]:
+            return {"reloaded": True}
+
+        def __call__(self, data_dict: Dict[str, Any]) -> Dict[str, Any]:
+            return data_dict
+
     def setUp(self) -> None:
         self.pipeline_step = self.MockPipelineStep({"a": 3})
         self.pipeline = DefaultPipeline(
@@ -189,33 +207,20 @@ class PreprocessingPipelineTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.pipeline.on_error = "invalid"
 
-    def test_save_step(self):
-        class MockSave(Save):
-            def __init__(self, done, reloadable):
-                super().__init__()
-                self.done = done
-                self.reloadable = reloadable
-
-            def is_already_done(self, data_dict: Dict[str, Any]) -> bool:
-                return self.done
-
-            def is_reloadable(self, data_dict: Dict[str, Any]) -> bool:
-                return self.reloadable
-
-            def reload(self, data_dict: Dict[str, Any]) -> Dict[str, Any]:
-                return {"reloaded": True}
-
-            def __call__(self, data_dict: Dict[str, Any]) -> Dict[str, Any]:
-                return data_dict
-
+    def test_save_step_done_and_reloadable(self):
+        # Reload a reloadable step
         step = self.MockPipelineStep({"a": 3})
         pipeline = DefaultPipeline(
-            [step, MockSave(True, True)],
+            [step, self.MockSave(True, True)],
         )
         self.assertEqual(pipeline({"b": 1}), [{"reloaded": True}])
 
+    def test_save_step_not_done_and_reloadable(self):
+        step = self.MockPipelineStep({"a": 3})
+        # A step that is reloadable but not done
+        # Shouldn't happen in practice, but still
         pipeline = DefaultPipeline(
-            [step, MockSave(False, True)],
+            [step, self.MockSave(False, True)],
         )
         self.assertEqual(
             pipeline({"b": 1}),
@@ -243,13 +248,44 @@ class PreprocessingPipelineTest(unittest.TestCase):
             ],
         )
 
+    def test_save_step_done_and_not_reloadable(self):
+        step = self.MockPipelineStep({"a": 3})
+        # A step that is done but not reloadable
         pipeline = DefaultPipeline(
-            [step, MockSave(True, False)],
+            [step, self.MockSave(True, False)],
         )
-        self.assertEqual(pipeline({"b": 1}), [])
+        # No reload: True in the output
+        self.assertEqual(
+            pipeline({"b": 1}),
+            [
+                {
+                    "a": 3,
+                    "b": 1,
+                    "previous_steps": [
+                        {
+                            "copy_data_dict": False,
+                            "d": {"a": 3},
+                            "step_index": 0,
+                            "step_name": "MockPipelineStep",
+                        },
+                        {
+                            "clear_output": False,
+                            "copy_data_dict": False,
+                            "done": True,
+                            "reloadable": False,
+                            "step_index": 1,
+                            "step_name": "MockSave",
+                        },
+                    ],
+                }
+            ],
+        )
 
+    def test_save_step_not_done_nor_reloadable(self):
+        step = self.MockPipelineStep({"a": 3})
+        # A step that is neither done nor reloadable
         pipeline = DefaultPipeline(
-            [step, MockSave(False, False)],
+            [step, self.MockSave(False, False)],
         )
         self.assertEqual(
             pipeline({"b": 1}),
@@ -276,3 +312,50 @@ class PreprocessingPipelineTest(unittest.TestCase):
                 }
             ],
         )
+
+    def test_check_reload_multiple_saves_one_valid(self):
+        step = self.MockPipelineStep({"a": 3})
+
+        # Check multiple save steps, reload from 2nd
+        pipeline = DefaultPipeline([])
+        steps, dicts = pipeline.check_reload(
+            [
+                step,
+                self.MockSave(True, True),
+                self.MockSave(True, False),
+                self.MockSave(False, False),
+            ],
+            {"b": 1},
+        )
+        self.assertEqual(len(steps), 2)
+        self.assertTrue(steps[0].done)
+        self.assertFalse(steps[1].reloadable)
+        self.assertEqual(dicts, [{"reloaded": True}])
+
+    def test_check_reload_multiple_saves_multiple_valid(self):
+        # Check multiple save steps, reload from 2nd
+        pipeline = DefaultPipeline([])
+        steps, dicts = pipeline.check_reload(
+            [
+                self.MockSave(True, True),
+                self.MockSave(True, False),
+                self.MockSave(True, True),
+            ],
+            {"b": 1},
+        )
+        self.assertEqual(len(steps), 0)
+        self.assertEqual(dicts, [{"reloaded": True}])
+
+    def test_check_reload_multiple_saves_none_valid(self):
+        # Check multiple save steps, reload from 2nd
+        pipeline = DefaultPipeline([])
+        steps, dicts = pipeline.check_reload(
+            [
+                self.MockSave(False, True),
+                self.MockSave(True, False),
+                self.MockSave(False, True),
+            ],
+            {"b": 1},
+        )
+        self.assertEqual(len(steps), 3)
+        self.assertNotIn("reloaded", {"b": 1})

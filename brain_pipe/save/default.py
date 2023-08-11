@@ -1,6 +1,8 @@
 """Default save class."""
+import abc
 import gc
 import json
+import logging
 import os
 from typing import Any, Dict
 
@@ -78,6 +80,159 @@ def default_filename_fn(data_dict, feature_name, set_name=None, separator="_-_")
     return separator.join(keys) + ".npy"
 
 
+class CheckFunctor(abc.ABC):
+    """Functor to use with DefaultSave to check something about of a metadata item."""
+
+    def __init__(self):
+        """Create a new CheckFunctor."""
+        self.saver = None
+
+    @abc.abstractmethod
+    def __call__(self, metadata_item, feature_name):
+        """Check something about the metadata item.
+
+        Parameters
+        ----------
+        metadata_item: Dict[str, Any]
+            The metadata item. Will have keys :attr:`DefaultSave.FILENAME_STR`,
+            :attr:`DefaultSave.FEATURE_NAME_STR`, :attr:`DefaultSave.SET_NAME_STR` and
+            optionally :attr:`DefaultSave.OLD_FORMAT_STR`
+        feature_name: Optional[str]
+            The name of the feature.
+
+        Returns
+        -------
+        Optional[str]
+            This value will normally be passed to
+            :meth:`DefaultSave._iterate_over_metadata_item`. If this value is
+            :attr:`DefaultSave.STOP_ITERATING`, the iteration will stop immediately.
+        """
+        pass
+
+    @abc.abstractmethod
+    def clear(self, *args, **kwargs):
+        """Clear the state of the CheckFunctor.
+
+        Parameters
+        ----------
+        args: List[Any]
+            Additional positional arguments.
+        kwargs: Dict[str, Any]
+            Additional keyword arguments.
+        """
+        pass
+
+
+class IsDoneCheck(CheckFunctor):
+    """Check if data has already been saved."""
+
+    def __init__(self):
+        """Create a new IsDoneCheck."""
+        super().__init__()
+        self.is_done = []
+
+    def __call__(self, metadata_item, feature_name):
+        """Check if data has already been saved.
+
+        Parameters
+        ----------
+        metadata_item: Dict[str, Any]
+            The metadata item. Will have keys :attr:`DefaultSave.FILENAME_STR`,
+            :attr:`DefaultSave.FEATURE_NAME_STR`, :attr:`DefaultSave.SET_NAME_STR` and
+            optionally :attr:`DefaultSave.OLD_FORMAT_STR`
+        feature_name: Optional[str]
+            The name of the feature.
+
+        Returns
+        -------
+        Optional[str]
+            This value will normally be passed to
+            :meth:`DefaultSave._iterate_over_metadata_item`. If this value is
+            :attr:`DefaultSave.STOP_ITERATING`, the iteration will stop immediately.
+
+        """
+        if metadata_item[self.saver.FEATURE_NAME_STR] is feature_name:
+            path = os.path.join(
+                self.saver.root_dir, metadata_item[self.saver.FILENAME_STR]
+            )
+            path_is_done = os.path.exists(path)
+            self.is_done.append(path_is_done)
+            if not path_is_done:
+                return self.saver.STOP_ITERATION
+
+    def clear(self, *args, **kwargs):
+        """Clear the state of the CheckFunctor.
+
+        Parameters
+        ----------
+        args: List[Any]
+            Additional positional arguments.
+        kwargs: Dict[str, Any]
+            Additional keyword arguments.
+        """
+        self.is_done.clear()
+
+
+class IsReloadableCheck(CheckFunctor):
+    """Check if data has already been saved and is reloadable."""
+
+    def __init__(self):
+        """Create a new ReloadableCheck."""
+        super().__init__()
+        self.reloadable = None
+        self.expected_filename = None
+
+    def __call__(self, metadata_item, feature_name):
+        """Check if data has already been saved and is reloadable.
+
+        Parameters
+        ----------
+        metadata_item: Dict[str, Any]
+            The metadata item. Will have keys :attr:`DefaultSave.FILENAME_STR`,
+            :attr:`DefaultSave.FEATURE_NAME_STR`, :attr:`DefaultSave.SET_NAME_STR` and
+            optionally :attr:`DefaultSave.OLD_FORMAT_STR`.
+        feature_name: Optional[str]
+            The name of the feature.
+
+        Returns
+        -------
+        Optional[str]
+            This value will normally be passed to
+            :meth:`DefaultSave._iterate_over_metadata_item`. If this value is
+            :attr:`DefaultSave.STOP_ITERATING`, the iteration will stop immediately.
+
+        """
+        if metadata_item[self.saver.FEATURE_NAME_STR] is None:
+            is_old_format = metadata_item.get(self.saver.OLD_FORMAT_STR, False)
+            filename = metadata_item[self.saver.FILENAME_STR]
+            # If old format and not the expected filename to be reloadable
+            # then skip
+            if is_old_format and filename != self.expected_filename:
+                return
+
+            path = os.path.join(
+                self.saver.root_dir, metadata_item[self.saver.FILENAME_STR]
+            )
+            if os.path.exists(path):
+                self.reloadable = path
+                return self.saver.STOP_ITERATION
+
+    def clear(self, expected_filename, *args, **kwargs):
+        """Clear the state of the CheckFunctor.
+
+        Parameters
+        ----------
+        expected_filename: str
+            The expected filename of the data.
+        args: List[Any]
+            Additional positional arguments.
+        kwargs: Dict[str, Any]
+            Additional keyword arguments.
+        """
+        self.reloadable = None
+        self.expected_filename = expected_filename
+
+
 class DefaultSave(Save):
     """Default save class.
 
@@ -101,6 +256,15 @@ class DefaultSave(Save):
         "data_dict": pickle_load_wrapper,
     }
 
+    FEATURE_NAME_STR = "feature_name"
+    FILENAME_STR = "filename"
+    SET_NAME_STR = "set_name"
+    OLD_FORMAT_STR = "old_format"
+
+    STOP_ITERATION = "stop_iteration"
+
+    _metadata_deprecation_warning_logged = False
+
     def __init__(
         self,
         root_dir,
@@ -112,6 +276,8 @@ class DefaultSave(Save):
         reload_fn=None,
         metadata_filename=".save_metadata.json",
         metadata_key_fn=default_metadata_key_fn,
+        check_done: IsDoneCheck = IsDoneCheck(),
+        check_reloadable: IsReloadableCheck = IsReloadableCheck(),
     ):
         """Create a Save step.
 
@@ -121,8 +287,8 @@ class DefaultSave(Save):
             The root directory where the data should be saved.
         to_save: Optional[Mapping[str, Any]]
             The data to save. If None, the data_dict is saved entirely. If a mapping
-            between feature names and data is given, only the data for the given
-            features is saved.
+            between feature names and the key of the data in the data_dict is given,
+            only the data for the provided features is saved.
         overwrite: bool
             Whether to overwrite existing files.
         clear_output: bool
@@ -150,6 +316,10 @@ class DefaultSave(Save):
             A function to generate a key for the metadata. The function should take
             the data_dict as input and return a key. This key will be used to check
             whether the data has already been saved.
+        check_done: IsDoneCheck
+            A functor to check whether the data has already been saved.
+        check_reloadable: IsReloadableCheck
+            A functor to check whether the data can be reloaded.
         """
         super().__init__(clear_output=clear_output)
         self.root_dir = root_dir
@@ -164,6 +334,10 @@ class DefaultSave(Save):
         self.metadata_filename = metadata_filename
         self.metadata_key_fn = metadata_key_fn
         self.overwrite = overwrite
+        self.check_done = check_done
+        self.check_reload = check_reloadable
+        self.check_done.saver = self
+        self.check_reload.saver = self
 
     @property
     def overwrite(self):
@@ -214,11 +388,39 @@ class DefaultSave(Save):
         key = self.metadata_key_fn(data_dict)
         if key not in metadata:
             return False
-        is_done = True
-        found_filenames = self._single_obj_to_list(metadata[key])
-        for filename in found_filenames:
-            is_done = is_done and os.path.exists(os.path.join(self.root_dir, filename))
-        return is_done
+        self.check_done.clear()
+        self._iterate_over_metadata_item(metadata[key], self.check_done)
+
+        return all(self.check_done.is_done)
+
+    def _iterate_over_metadata_item(self, metadata_item, callback):
+        file_infos = self._single_obj_to_list(metadata_item)
+        feature_names = [None] if self.to_save is None else self.to_save.keys()
+        for info in file_infos:
+            if isinstance(info, str):
+                # Only log this if it hasn't been logged before.
+                if not self._metadata_deprecation_warning_logged:
+                    logging.warning(
+                        "Found previously saved data with the old metadata format "
+                        "(version <= 0.0.2). DefaultSave will attempt to reload the "
+                        "data, but it is recommended to delete the old data and "
+                        f"{os.path.join(self.root_dir, self.metadata_filename)} if "
+                        f"possible."
+                    )
+                    self._metadata_deprecation_warning_logged = True
+                info = {
+                    self.FILENAME_STR: info,
+                    self.FEATURE_NAME_STR: None,
+                    self.SET_NAME_STR: None,
+                    self.OLD_FORMAT_STR: True,
+                }
+
+            for feature_name in feature_names:
+                status = callback(info, feature_name)
+                # If the callback returns STOP_ITERATION, we stop iterating over the
+                # metadata immediately.
+                if status == self.STOP_ITERATION:
+                    return
 
     def _clear_metadata(self):
         self.lock.acquire()
@@ -237,16 +439,20 @@ class DefaultSave(Save):
         self.lock.release()
         return metadata
 
-    def _add_metadata(self, data_dict, filepath):
+    def _add_metadata(self, data_dict, filepath, feature_name, set_name):
         metadata = self._get_metadata()
         key = self.metadata_key_fn(data_dict)
         if key not in metadata:
             metadata[key] = []
         all_filepaths = self._single_obj_to_list(filepath)
         for path in all_filepaths:
-            filename = os.path.relpath(path, self.root_dir)
-            if filename not in metadata[key]:
-                metadata[key] += [filename]
+            metadata_for_path = {
+                self.FILENAME_STR: os.path.relpath(path, self.root_dir),
+                self.FEATURE_NAME_STR: feature_name,
+                self.SET_NAME_STR: set_name,
+            }
+            if metadata_for_path not in metadata[key]:
+                metadata[key] += [metadata_for_path]
         self._write_metadata(metadata)
 
     def _write_metadata(self, metadata):
@@ -269,27 +475,33 @@ class DefaultSave(Save):
         return fn[suffix](filepath, *args, **kwargs)
 
     def _apply_to_data(self, data_dict, fn):
+        # Save in .data_dict
         if self.to_save is None:
             path = os.path.join(self.root_dir, self.filename_fn(data_dict, None, None))
             self._serialization_wrapper(fn, path, data_dict, action="save")
-            self._add_metadata(data_dict, [path])
+            self._add_metadata(data_dict, [path], None, None)
             return
 
+        # Save singular features
         paths = []
         for feature_name, feature_loc in self.to_save.items():
             data = data_dict[feature_loc]
+            # Per set
             if isinstance(data, dict):
                 for set_name, set_data in data.items():
                     filename = self.filename_fn(data_dict, feature_name, set_name)
                     path = os.path.join(self.root_dir, filename)
                     self._serialization_wrapper(fn, path, set_data, action="save")
                     paths += [path]
+                    self._add_metadata(data_dict, paths, feature_name, set_name)
+
+            # In full
             else:
                 filename = self.filename_fn(data_dict, feature_name)
                 path = os.path.join(self.root_dir, filename)
                 self._serialization_wrapper(fn, path, data, action="save")
                 paths += [path]
-        self._add_metadata(data_dict, paths)
+                self._add_metadata(data_dict, paths, feature_name, None)
 
     def is_reloadable(self, data_dict: Dict[str, Any]) -> bool:
         """Check whether an already processed data_dict can be reloaded.
@@ -309,14 +521,18 @@ class DefaultSave(Save):
         key = self.metadata_key_fn(data_dict)
         if key not in metadata:
             return False
-        # TODO: implement reload for multiple files
-        if len(metadata[key]) != 1:
+
+        # No support to reload singular features
+        if self.to_save is not None:
             return False
-        path = os.path.join(self.root_dir, metadata[key][0])
-        if os.path.exists(path) and not self.overwrite:
-            return True
-        else:
-            return False
+
+        expected_filename = os.path.relpath(
+            self.filename_fn(data_dict, None, None), self.root_dir
+        )
+        self.check_reload.clear(expected_filename)
+        self._iterate_over_metadata_item(metadata[key], self.check_reload)
+
+        return self.check_reload.reloadable is not None
 
     def reload(self, data_dict: Dict[str, Any]) -> Dict[str, Any]:
         """Reload the data_dict from the saved file.
@@ -333,11 +549,17 @@ class DefaultSave(Save):
         """
         metadata = self._get_metadata()
         key = self.metadata_key_fn(data_dict)
-        all_filepaths = self._single_obj_to_list(metadata[key])
+        expected_filename = os.path.relpath(
+            self.filename_fn(data_dict, None, None), self.root_dir
+        )
+        self.check_reload.clear(expected_filename)
+        self._iterate_over_metadata_item(metadata[key], self.check_reload)
+        if self.check_reload.reloadable is None:
+            raise ValueError("Didn't find any file that can be reloaded.")
 
         return self._serialization_wrapper(
             self.reload_fn,
-            os.path.join(self.root_dir, all_filepaths[0]),
+            self.check_reload.reloadable,
             action="reload",
         )
 

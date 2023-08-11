@@ -188,6 +188,60 @@ class DefaultPipeline(Pipeline):
         data_dict[self.previous_steps_key] += [step_information]
         return data_dict
 
+    def check_reload(
+        self, steps: Sequence[PipelineStep], data_dicts: Sequence[Dict[str, Any]]
+    ):
+        """Check if we can reload data from a step.
+
+        Parameters
+        ----------
+        steps: Sequence[PipelineStep]
+            The steps that are applied to the data_dicts
+        data_dicts: Sequence[Dict[str, Any]]
+            The data_dicts that are passed through the pipeline
+
+        Returns
+        -------
+        Tuple[Sequence[PipelineStep], Sequence[Dict[str, Any]]]
+            The steps and data_dicts that can be used. If reloaded, the steps
+            are truncated to the step that was reloaded.
+
+        Notes
+        -----
+        This will check steps from the end of the pipeline to the beginning, and reload
+        the first step that is reloadable.
+        """
+        # Iterate backwards over the steps to find a checkpoint to reload
+        for reverse_index, step in enumerate(reversed(steps)):
+            step_index = len(steps) - reverse_index - 1
+            # Check if the step is a Save step
+            if isinstance(step, Save):
+                reloaded_data_dicts = []
+                # Check for all data_dicts that we can reload
+                for data_dict in data_dicts:
+                    # Do we have data saved?
+                    if step.is_already_done(data_dict):
+                        logging.info("Found previously saved data")
+                        # Can we reload it?
+                        if (
+                            step.is_reloadable(data_dict)
+                            and not step.clear_output  # noqa: W503
+                        ):
+                            logging.info("Reloading previously saved data")
+                            reloaded_data_dicts += [step.reload(data_dict)]
+                        else:
+                            logging.info("Previously saved data is not reloadable...")
+                            break
+                if len(reloaded_data_dicts) == len(data_dicts):
+                    new_steps = steps[step_index + 1 :]
+                    logging.info(
+                        f"Successfully reloaded data from the output of step "
+                        f"{step_index} ({step.__class__.__name__}). Running remaining "
+                        f"{len(new_steps)} steps..."
+                    )
+                    return new_steps, reloaded_data_dicts
+        return steps, data_dicts
+
     def iterate_over_steps(
         self,
         steps: Sequence[PipelineStep],
@@ -212,25 +266,8 @@ class DefaultPipeline(Pipeline):
         else:
             current_data_dicts = [data_dict]
 
-        # Check if the last step is a save step
-        reloaded_data_dicts = []
-        if isinstance(steps[-1], Save):
-            new_current_data_dicts = []
-            for data_dict in current_data_dicts:
-                if steps[-1].is_already_done(data_dict):
-                    logging.info("Already found output")
-                    # Reload if reloadable and the output should not be cleared
-                    if (
-                        steps[-1].is_reloadable(data_dict)
-                        and not steps[-1].clear_output  # noqa: W503
-                    ):
-                        logging.info("Reloading output")
-                        reloaded_data_dicts += [steps[-1].reload(data_dict)]
-                    else:
-                        logging.info("Output is not reloadable, skipping...")
-                else:
-                    new_current_data_dicts += [data_dict]
-            current_data_dicts = new_current_data_dicts
+        # Check if we can reload data from a checkpoint
+        steps, current_data_dicts = self.check_reload(steps, current_data_dicts)
 
         for step_index, step in enumerate(steps):
             new_data_dicts = []
@@ -238,7 +275,7 @@ class DefaultPipeline(Pipeline):
                 new_data_dicts += [self.run_step(step, data_dict, step_index)]
             current_data_dicts = flatten(new_data_dicts)
 
-        return current_data_dicts + reloaded_data_dicts
+        return current_data_dicts
 
     def __call__(
         self, data_dict: Union[Sequence[Dict[str, Any]], Dict[str, Any]]

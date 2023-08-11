@@ -5,7 +5,7 @@ import librosa
 import numpy as np
 
 from brain_pipe.preprocessing.stimulus.audio.spectrogram import LibrosaMelSpectrogram
-from examples.exporl.sparrKULee import SparKULeeSpectrogramKwargs
+from examples.exporl.sparrKULee import SparrKULeeSpectrogramKwargs
 
 test_data_path = os.path.join(
     os.path.dirname(
