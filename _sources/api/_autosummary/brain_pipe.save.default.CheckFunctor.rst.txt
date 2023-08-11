@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.save.default.CheckFunctor
+=====================================
+
+.. currentmodule:: brain_pipe.save.default
+
+.. autoclass:: CheckFunctor
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~CheckFunctor.__init__
+      ~CheckFunctor.clear
+
+   
+   
+

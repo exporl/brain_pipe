@@ -36,6 +36,7 @@ brain\_pipe.pipeline.default.DefaultPipeline
    .. autosummary::
    
       ~DefaultPipeline.__init__
+      ~DefaultPipeline.check_reload
       ~DefaultPipeline.iterate_over_steps
       ~DefaultPipeline.parse_dict_keys
       ~DefaultPipeline.run_step

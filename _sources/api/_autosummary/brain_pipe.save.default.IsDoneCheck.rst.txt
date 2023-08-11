@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.save.default.IsDoneCheck
+====================================
+
+.. currentmodule:: brain_pipe.save.default
+
+.. autoclass:: IsDoneCheck
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~IsDoneCheck.__init__
+      ~IsDoneCheck.clear
+
+   
+   
+

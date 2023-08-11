@@ -29,7 +29,10 @@ brain\_pipe.save.default
       :toctree:
       :template: custom-class-template.rst
    
+      CheckFunctor
       DefaultSave
+      IsDoneCheck
+      IsReloadableCheck
    
    
 

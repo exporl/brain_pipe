@@ -57,8 +57,8 @@
     <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="brain_pipe.split" href="brain_pipe.split.html" />
-    <link rel="prev" title="brain_pipe.save.default.default_metadata_key_fn" href="brain_pipe.save.default.default_metadata_key_fn.html" />
+    <link rel="next" title="brain_pipe.save.default.IsDoneCheck" href="brain_pipe.save.default.IsDoneCheck.html" />
+    <link rel="prev" title="brain_pipe.save.default.CheckFunctor" href="brain_pipe.save.default.CheckFunctor.html" />
   
     <link rel="apple-touch-icon" href="../../_static/_images/brain_pipe.svg"/>
   
@@ -370,7 +370,7 @@
 <h1 id="api-autosummary-brain-pipe-save-default-defaultsave--page-root">brain_pipe.save.default.DefaultSave<a class="headerlink" href="#api-autosummary-brain-pipe-save-default-defaultsave--page-root" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="brain_pipe.save.default.DefaultSave">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DefaultSave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_save=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_output=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename_fn=&lt;function</span> <span class="pre">default_filename_fn&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_fn=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reload_fn=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_filename='.save_metadata.json'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_key_fn=&lt;function</span> <span class="pre">default_metadata_key_fn&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.save.default.DefaultSave" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DefaultSave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_save=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_output=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename_fn=&lt;function</span> <span class="pre">default_filename_fn&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_fn=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reload_fn=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_filename='.save_metadata.json'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_key_fn=&lt;function</span> <span class="pre">default_metadata_key_fn&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_done:</span> <span class="pre">~brain_pipe.save.default.IsDoneCheck</span> <span class="pre">=</span> <span class="pre">&lt;brain_pipe.save.default.IsDoneCheck</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_reloadable:</span> <span class="pre">~brain_pipe.save.default.IsReloadableCheck</span> <span class="pre">=</span> <span class="pre">&lt;brain_pipe.save.default.IsReloadableCheck</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.save.default.DefaultSave" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="brain_pipe.save.base.Save.html#brain_pipe.save.base.Save" title="brain_pipe.save.base.Save"><code class="xref py py-class docutils literal notranslate"><span class="pre">Save</span></code></a></p>
 <p>Default save class.</p>
 <p>This class will save data_dicts to disk, but also keep a metadata file
@@ -385,25 +385,40 @@ between an unprocessed input filename and multiple possible output filenames.</p
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULT_SAVE_FUNCTIONS</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">FEATURE_NAME_STR</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#brain_pipe.save.default.DefaultSave.overwrite" title="brain_pipe.save.default.DefaultSave.overwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overwrite</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">FILENAME_STR</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">OLD_FORMAT_STR</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">SET_NAME_STR</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">STOP_ITERATION</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#brain_pipe.save.default.DefaultSave.overwrite" title="brain_pipe.save.default.DefaultSave.overwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overwrite</span></code></a></p></td>
 <td><p>Whether to overwrite existing files.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.save.default.DefaultSave.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_save=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_output=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename_fn=&lt;function</span> <span class="pre">default_filename_fn&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_fn=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reload_fn=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_filename='.save_metadata.json'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_key_fn=&lt;function</span> <span class="pre">default_metadata_key_fn&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.save.default.DefaultSave.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_save=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_output=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename_fn=&lt;function</span> <span class="pre">default_filename_fn&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_fn=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reload_fn=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_filename='.save_metadata.json'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata_key_fn=&lt;function</span> <span class="pre">default_metadata_key_fn&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_done:</span> <span class="pre">~brain_pipe.save.default.IsDoneCheck</span> <span class="pre">=</span> <span class="pre">&lt;brain_pipe.save.default.IsDoneCheck</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_reloadable:</span> <span class="pre">~brain_pipe.save.default.IsReloadableCheck</span> <span class="pre">=</span> <span class="pre">&lt;brain_pipe.save.default.IsReloadableCheck</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.save.default.DefaultSave.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Save step.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>root_dir</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The root directory where the data should be saved.</p></li>
 <li><p><strong>to_save</strong> (<em>Optional</em><em>[</em><em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em><em>]</em>) – The data to save. If None, the data_dict is saved entirely. If a mapping
-between feature names and data is given, only the data for the given
-features is saved.</p></li>
+between feature names and the key of the data in the data_dict is given,
+only the data for the provided features is saved.</p></li>
 <li><p><strong>overwrite</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – Whether to overwrite existing files.</p></li>
 <li><p><strong>clear_output</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – Whether to clear the output data_dict after saving. This can save space
 when save is the last step in a pipeline.</p></li>
@@ -424,6 +439,8 @@ self.DEFAULT_RELOAD_FUNCTIONS) are used.</p></li>
 <li><p><strong>metadata_key_fn</strong> (<em>Callable</em><em>[</em><em>[</em><em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em><em>]</em><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – A function to generate a key for the metadata. The function should take
 the data_dict as input and return a key. This key will be used to check
 whether the data has already been saved.</p></li>
+<li><p><strong>check_done</strong> (<a class="reference internal" href="brain_pipe.save.default.IsDoneCheck.html#brain_pipe.save.default.IsDoneCheck" title="brain_pipe.save.default.IsDoneCheck"><em>IsDoneCheck</em></a>) – A functor to check whether the data has already been saved.</p></li>
+<li><p><strong>check_reloadable</strong> (<a class="reference internal" href="brain_pipe.save.default.IsReloadableCheck.html#brain_pipe.save.default.IsReloadableCheck" title="brain_pipe.save.default.IsReloadableCheck"><em>IsReloadableCheck</em></a>) – A functor to check whether the data can be reloaded.</p></li>
 </ul>
 </dd>
 </dl>
@@ -551,7 +568,7 @@ also be an ordinary dict.</p></li>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
           
-            <a href="brain_pipe.save.default.default_metadata_key_fn.html" title="brain_pipe.save.default.default_metadata_key_fn"
+            <a href="brain_pipe.save.default.CheckFunctor.html" title="brain_pipe.save.default.CheckFunctor"
                class="md-flex md-footer-nav__link md-footer-nav__link--prev"
                rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
@@ -560,17 +577,17 @@ also be an ordinary dict.</p></li>
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.save.default.default_metadata_key_fn </span>
+                      class="md-footer-nav__direction"> Previous </span> brain_pipe.save.default.CheckFunctor </span>
               </div>
             </a>
           
           
-            <a href="brain_pipe.split.html" title="brain_pipe.split"
+            <a href="brain_pipe.save.default.IsDoneCheck.html" title="brain_pipe.save.default.IsDoneCheck"
                class="md-flex md-footer-nav__link md-footer-nav__link--next"
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.split </span>
+                class="md-footer-nav__direction"> Next </span> brain_pipe.save.default.IsDoneCheck </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>

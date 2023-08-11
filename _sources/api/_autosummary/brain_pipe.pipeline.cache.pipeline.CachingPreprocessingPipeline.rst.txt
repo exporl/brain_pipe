@@ -36,6 +36,7 @@ brain\_pipe.pipeline.cache.pipeline.CachingPreprocessingPipeline
    .. autosummary::
    
       ~CachingPreprocessingPipeline.__init__
+      ~CachingPreprocessingPipeline.check_reload
       ~CachingPreprocessingPipeline.iterate_over_steps
       ~CachingPreprocessingPipeline.parse_dict_keys
       ~CachingPreprocessingPipeline.run_step
