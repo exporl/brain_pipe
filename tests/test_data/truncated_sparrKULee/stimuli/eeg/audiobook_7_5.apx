@@ -1,0 +1,277 @@
+<apex:apex xmlns:apex="http://med.kuleuven.be/exporl/apex/3.1.4/experiment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://med.kuleuven.be/exporl/apex/3.1.4/experiment https://exporl.med.kuleuven.be/apex/schemas/3.1.4/experiment.xsd">
+    <procedure xsi:type="apex:constantProcedure">
+        <parameters>
+            <presentations>1</presentations>
+            <skip>0</skip>
+            <order>sequential</order>
+            <time_before_first_trial>0</time_before_first_trial>
+            <input_during_stimulus>false</input_during_stimulus>
+        </parameters>
+        <trials>
+            <trial id="trial_pre_story6">
+                <answer>1</answer>
+                <screen id="screen_pre_story6" />
+                <stimulus id="stim_silence_story6" />
+            </trial>
+            <trial id="trial_story6">
+                <answer>1</answer>
+                <screen id="screenEmpty" />
+                <stimulus id="stim_story6" />
+            </trial>
+            <trial id="trial_post_story6">
+                <answer>1</answer>
+                <screen id="screen_post_story6" />
+                <stimulus id="stim_silence_story6" />
+            </trial>
+        </trials>
+    </procedure>
+    
+    <screens>
+        <general>
+            <repeatbutton>false</repeatbutton>
+            <showpanel>true</showpanel>
+            <showmenu>true</showmenu>
+            <fullscreen>false</fullscreen>
+        </general>
+        <reinforcement>
+            <progressbar>true</progressbar>
+            <feedback>false</feedback>
+        </reinforcement>
+                <style>
+            QPushButton:checked {background-color: lightgreen}
+            QPushButton:disabled {background-color: red}
+            QPushButton {background-color: green}
+
+
+        </style>
+        <screen id="screenEmpty">
+            <gridLayout height="3" width="1">
+                <button id="up" x="1" y="2">
+                    <text>+</text>  
+                </button>
+            </gridLayout>
+            <buttongroup id="buttongroup1">
+                <button id="up" />
+            </buttongroup>
+            <default_answer_element>buttongroup1</default_answer_element>
+        </screen>
+        <screen id="screen_pre_story6">
+                <gridLayout height="3" id="main" width="1">
+                <label col="1" id="question" row="1">
+                    <text>Het verhaaltje gaat zo dadelijk beginnen.  
+                    
+Ben je er klaar voor? </text>
+                </label>
+                <textEdit col="1" id="questionEdit" row="2" />
+                <button id="button" row="3">
+                    <text>Volgende</text>
+                </button>
+            </gridLayout>
+            <default_answer_element>button</default_answer_element>
+        </screen>
+        <screen id="screen_post_story6">
+                <gridLayout height="3" id="main" width="1">
+                <label col="1" id="question" row="1">
+                    <text>Dit was het vijfde deeltje. </text>
+                </label>
+                <textEdit col="1" id="questionEdit" row="2" />
+                <button id="button" row="3">
+                    <text>Volgende</text>
+                </button>
+            </gridLayout>
+            <default_answer_element>button</default_answer_element>
+        </screen>
+    </screens>
+    
+    <datablocks>
+        <prefix>C:\Bernd\2021\stimuli</prefix>
+        <datablock id="datablock_story6">
+            <device>soundcard</device>
+            <file>n/audiobook_7_5.npz</file>
+        </datablock>
+        <datablock id="datablock_story6_noise">
+            <device>soundcard</device>
+            <file>swn_n/audiobook_7_1.npz</file>
+        </datablock>   
+        <datablock id="datablock_silence1000">
+            <description>soundcard</description>
+            <file>silence:1000</file>
+        </datablock>
+        <datablock id="datablock_silence">
+            <description>soundcard</description>
+            <file>silence:10</file>
+        </datablock>
+        <datablock id="tdatablock_story6">
+            <device>soundcard</device>
+            <file>t_n/audiobook_7_5.npz</file>
+        </datablock>
+        <datablock id="tdatablock_silence1000">
+            <description>soundcard</description>
+            <file>silence:1000</file>
+        </datablock>
+    </datablocks>
+    
+    <devices>
+        <master>soundcard</master>
+        <device id="soundcard" xsi:type="apex:wavDeviceType">
+            
+            <driver>asio</driver>
+            <card>default</card>
+            
+            <channels>4</channels>
+            
+            
+            <gain channel="2" id="gainL">0</gain>
+            <gain channel="3" id="gainR">0</gain>
+            <samplerate>48000</samplerate>
+            <padzero>0</padzero>
+        </device>
+    </devices>
+    
+    <filters>       
+        <filter id="calibration" xsi:type="apex:amplifier">
+            <device>soundcard</device>
+            <channels>1</channels>
+            <basegain>0</basegain>
+            <invertgain>false</invertgain>
+            <gain id="gain">0</gain>
+        </filter>
+        <filter id="dataloop_channel1" xsi:type="apex:dataloop">
+            <device>soundcard</device>
+            <channels>1</channels>
+            <continuous>true</continuous>
+            <datablock>datablock_story6_noise</datablock>
+            <basegain>0</basegain>
+            <invertgain>true</invertgain>
+            <gain id="noisegain">0</gain>
+            <randomjump>true</randomjump>
+            <jump>0</jump>
+        </filter>
+    </filters>
+    
+    <stimuli>
+        <stimulus id="stim_story6">
+            <datablocks>
+                <simultaneous>
+                    <sequential>
+                        <datablock id="datablock_silence1000" />
+                        <datablock id="datablock_story6" />
+                        <datablock id="datablock_silence1000" />
+                    </sequential>
+                    <sequential>
+                        <datablock id="tdatablock_silence1000" />
+                        <datablock id="tdatablock_story6" />
+                    </sequential>
+                </simultaneous>
+            </datablocks>
+            <variableParameters>
+                <parameter id="noisegain">-4</parameter>
+            </variableParameters>
+        </stimulus>
+        
+        <stimulus id="stim_silence_story6">
+            <datablocks>
+                <datablock id="datablock_silence" />
+            </datablocks>
+            <variableParameters>
+                <parameter id="noisegain">100.00</parameter>
+            </variableParameters>         
+        </stimulus>
+        <stimulus id="calibrationstimulus">
+            <datablocks>
+                <datablock id="datablock_silence1000" />
+            </datablocks>
+        </stimulus>
+    </stimuli>
+    
+    <connections>
+        <connection>
+            <from>
+                <id mode="wildcard">datablock*</id>
+                <channel>0</channel>
+            </from>
+            <to>
+                <id>calibration</id>
+                <channel>0</channel>
+            </to>
+        </connection>
+        <connection>
+            <from>
+                <id>dataloop_channel1</id>
+                <channel>0</channel>
+            </from>
+            <to>
+                <id>calibration</id>
+                <channel>0</channel>
+            </to>
+        </connection> 
+        <connection>
+            <from>
+                <id>calibration</id>
+                <channel>0</channel>
+            </from>
+            <to>
+                <id>soundcard</id>
+                
+                <channel>2</channel>  
+            </to>
+        </connection>
+        <connection>
+            <from>
+                <id>calibration</id>
+                <channel>0</channel>
+            </from>
+            <to>
+                <id>soundcard</id>
+                
+                <channel>3</channel>   
+            </to>
+        </connection>
+        <connection>
+            <from>
+                <id mode="wildcard">tdatablock*</id>
+                <channel>0</channel>
+            </from>
+            <to>
+                <id>soundcard</id>
+                <channel>1</channel>
+            </to>
+        </connection>
+    </connections>
+    
+    <calibration profile="DYSCO_C1_consolidatie">
+        <stimuli>
+            <stimulus id="calibrationstimulus" />
+        </stimuli>
+        <parameters>
+            <parameter id="gainL">
+                <targetamplitude>60</targetamplitude> 
+                <calibrationamplitude>80</calibrationamplitude>
+                <mute>-150</mute>
+                <min>-50</min>
+                <max>10</max>
+            </parameter>
+            <parameter id="gainR">
+                <targetamplitude>60</targetamplitude> 
+                <calibrationamplitude>80</calibrationamplitude>
+                <mute>-150</mute>
+                <min>-50</min>
+                <max>10</max>
+            </parameter>
+        </parameters>
+    </calibration>
+    
+    <results>
+        <page>apex:resultsviewer.html</page>
+        <subject />
+    </results>
+    
+    <interactive>
+        <entry default="" description="subject" expression="apex:apex/results[1]/subject[1]" type="string" />
+    </interactive>
+    
+    <general>
+        <allowskip>true</allowskip>
+    </general>
+    
+</apex:apex>

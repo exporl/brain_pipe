@@ -305,6 +305,7 @@ class DefaultPipeline(Pipeline):
                 # self.STOP
                 self.error_handler_fn(error, data_dict)
                 processed_data_dict = data_dict
+                # Clear output on error
                 if isinstance(self.steps[-1], Save) and self.steps[-1].clear_output:
                     processed_data_dict = None
                     gc.collect()

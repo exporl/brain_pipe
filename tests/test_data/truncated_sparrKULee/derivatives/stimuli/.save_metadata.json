@@ -1,0 +1,1 @@
+{"audiobook_7_5.npz.gz": [{"filename": "audiobook_7_5_-_envelope.npy", "feature_name": "envelope", "set_name": null}, {"filename": "audiobook_7_5_-_envelope.npy", "feature_name": "mel", "set_name": null}, {"filename": "audiobook_7_5_-_mel.npy", "feature_name": "mel", "set_name": null}, {"filename": "audiobook_7_5.data_dict", "feature_name": null, "set_name": null}]}

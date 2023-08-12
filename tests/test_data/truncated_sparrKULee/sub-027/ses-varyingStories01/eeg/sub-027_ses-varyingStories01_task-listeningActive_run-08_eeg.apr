@@ -1,0 +1,90 @@
+<apex:results xmlns:apex="http://med.kuleuven.be/exporl/apex/result" experiment_file="5_audiobook_7_5.apx">
+  <general>
+    <apex_version>4.1.2</apex_version>
+    <apex_version_git>(c3f56e) -   Fri Sep 27 19:03:49 2019 +0200</apex_version_git>
+    <hostname>GBW-L-W1571</hostname>
+    <device_id>{5802da0c-59e6-4799-b3fd-5cd964a726d9}</device_id>
+    <startdate>2021-02-22T17:20:49</startdate>
+    <enddate>2021-02-22T17:23:11</enddate>
+    <duration unit="seconds">142</duration>
+    <jscript>apex:resultsviewer.html</jscript>
+    <subject>095</subject>
+    <interactive>
+      <entry>
+        <expression>apex:apex/results[1]/subject[1]</expression>
+        <new_value>095</new_value>
+        <succeeded>true</succeeded>
+        <description>subject</description>
+      </entry>
+    </interactive>
+    <stopped_by>procedure</stopped_by>
+  </general>
+  <trial id="trial_pre_story6">
+    <procedure type="apex:constantProcedure">
+      <answer />
+      <correct_answer>1</correct_answer>
+      <stimulus>stim_silence_story6</stimulus>
+      <correct>false</correct>
+    </procedure>
+    <screenresult>
+      <element id="button" />
+      <element id="questionEdit" />
+    </screenresult>
+    <output>
+      <device id="soundcard">
+        <buffer underruns="0" />
+      </device>
+    </output>
+    <responsetime unit="ms">2650</responsetime>
+    <randomgenerators />
+    <trial_start_time>2021-02-22T17:20:49</trial_start_time>
+  </trial>
+  <trial id="trial_story6">
+    <procedure type="apex:constantProcedure">
+      <answer>up</answer>
+      <correct_answer>1</correct_answer>
+      <stimulus>stim_story6</stimulus>
+      <correct>false</correct>
+    </procedure>
+    <screenresult>
+      <element id="buttongroup1">up</element>
+      <element id="up" />
+    </screenresult>
+    <output>
+      <device id="soundcard">
+        <buffer underruns="0" />
+      </device>
+    </output>
+    <responsetime unit="ms">11461</responsetime>
+    <randomgenerators />
+    <trial_start_time>2021-02-22T17:20:52</trial_start_time>
+  </trial>
+  <trial id="trial_post_story6">
+    <procedure type="apex:constantProcedure">
+      <answer />
+      <correct_answer>1</correct_answer>
+      <stimulus>stim_silence_story6</stimulus>
+      <correct>false</correct>
+    </procedure>
+    <screenresult>
+      <element id="button" />
+      <element id="questionEdit" />
+    </screenresult>
+    <output>
+      <device id="soundcard">
+        <buffer underruns="0" />
+      </device>
+    </output>
+    <responsetime unit="ms">3073</responsetime>
+    <randomgenerators />
+    <trial_start_time>2021-02-22T17:23:06</trial_start_time>
+  </trial>
+  <calibration>
+    <profile>DYSCO_C1_consolidatie</profile>
+    <hardware_setup>C2DNN</hardware_setup>
+    <parameters>
+      <parameter id="gainL">-32.8</parameter>
+      <parameter id="gainR">-32.8</parameter>
+    </parameters>
+  </calibration>
+</apex:results>

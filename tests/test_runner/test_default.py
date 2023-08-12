@@ -9,6 +9,7 @@ from brain_pipe.utils.multiprocess import MultiprocessingSingleton
 class DefaultRunnerTest(unittest.TestCase):
     def setUp(self) -> None:
         logging.shutdown()
+        logging.getLogger().handlers = []
 
     def test_default_options(self):
         runner = DefaultRunner()
