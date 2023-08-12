@@ -13,7 +13,7 @@ def pickle_dump_wrapper(path, obj):
         The object to dump.
     """
     with open(path, "wb") as f:
-        pickle.dump(obj, f, protocol=pickle.HIGHEST_PROTOCOL)
+        pickle.dump(obj, f)
 
 
 def pickle_load_wrapper(path):
