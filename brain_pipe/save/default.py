@@ -321,7 +321,7 @@ class DefaultSave(Save):
         check_reloadable: IsReloadableCheck
             A functor to check whether the data can be reloaded.
         """
-        super().__init__(clear_output=clear_output)
+        super().__init__(clear_output=clear_output, overwrite=overwrite)
         self.root_dir = root_dir
         self.to_save = to_save
         self.filename_fn = filename_fn
@@ -333,7 +333,6 @@ class DefaultSave(Save):
             self.reload_fn = self.DEFAULT_RELOAD_FUNCTIONS
         self.metadata_filename = metadata_filename
         self.metadata_key_fn = metadata_key_fn
-        self.overwrite = overwrite
         self.check_done = check_done
         self.check_reload = check_reloadable
         self.check_done.saver = self
@@ -424,6 +423,10 @@ class DefaultSave(Save):
 
     def _clear_metadata(self):
         self.lock.acquire()
+        if not hasattr(self, "root_dir"):
+            # If the instance is not initialized
+            self.lock.release()
+            return
         metadata_path = os.path.join(self.root_dir, self.metadata_filename)
         if os.path.exists(metadata_path):
             os.remove(metadata_path)
@@ -526,6 +529,10 @@ class DefaultSave(Save):
         if self.to_save is not None:
             return False
 
+        # If overwrite is True, no reloading is possible
+        if self.overwrite:
+            return False
+
         expected_filename = os.path.relpath(
             self.filename_fn(data_dict, None, None), self.root_dir
         )
@@ -573,8 +580,8 @@ class DefaultSave(Save):
 
         Returns
         -------
-        Optional[Dict[str, Any]]
-            The data_dict if :attr:`clear_output` is False, None otherwise.
+        Dict[str, Any]
+            The data_dict if :attr:`clear_output` is False, an empty dict otherwise.
         """
         os.makedirs(self.root_dir, exist_ok=True)
         self._apply_to_data(data_dict, self.save_fn)
@@ -582,5 +589,5 @@ class DefaultSave(Save):
         if self.clear_output:
             # Explicitly clean up
             gc.collect()
-            return None
+            return {}
         return data_dict

@@ -5,6 +5,7 @@ import os
 import pickle
 import sys
 import tempfile
+import time
 import unittest
 
 import librosa
@@ -85,13 +86,29 @@ class TruncatedSparrKULeeTest(unittest.TestCase):
     def test_script(self):
         eeg_folder = os.path.join(self.tmp_dir.name, "eeg")
         stimuli_folder = os.path.join(self.tmp_dir.name, "stimuli")
+        start_time = time.time()
         run_preprocessing_pipeline(
             self.dataset_folder,
             stimuli_folder,
             eeg_folder,
             log_path=os.path.join(self.tmp_dir.name, "log.txt"),
         )
+        time_0 = time.time() - start_time
         self._check_output()
+
+        # TODO improve this, this is test is based on timing: i.e.
+        #   if the data is reloaded, it will take less long than if it is
+        #   reprocessed
+        start_time = time.time()
+        run_preprocessing_pipeline(
+            self.dataset_folder,
+            stimuli_folder,
+            eeg_folder,
+            log_path=os.path.join(self.tmp_dir.name, "log.txt"),
+        )
+        time_1 = time.time() - start_time
+        self._check_output()
+        self.assertGreater(time_0, time_1)
 
     def _check_output(self):
         # TODO check if no extra files are created
@@ -138,6 +155,7 @@ class TruncatedSparrKULeeTest(unittest.TestCase):
             "exporl",
             "sparrKULee.yaml",
         )
+        start_time = time.time()
         cli.run(
             [
                 yaml_path,
@@ -147,7 +165,25 @@ class TruncatedSparrKULeeTest(unittest.TestCase):
                 self.tmp_dir.name,
             ]
         )
+        time_0 = time.time() - start_time
         self._check_output()
+
+        # TODO improve this, this is test is based on timing: i.e.
+        #   if the data is reloaded, it will take less long than if it is
+        #   reprocessed
+        start_time = time.time()
+        cli.run(
+            [
+                yaml_path,
+                "--dataset_dir",
+                self.dataset_folder,
+                "--output_dir",
+                self.tmp_dir.name,
+            ]
+        )
+        time_1 = time.time() - start_time
+        self._check_output()
+        self.assertGreater(time_0, time_1)
 
     def tearDown(self) -> None:
         if self.tmp_dir is not None:

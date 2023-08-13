@@ -8,7 +8,7 @@ from brain_pipe.pipeline.base import PipelineStep
 class Save(PipelineStep, abc.ABC):
     """Base class for all save steps."""
 
-    def __init__(self, clear_output=False, *args, **kwargs):
+    def __init__(self, clear_output=False, overwrite=False, *args, **kwargs):
         """Create a new Save instance.
 
         Parameters
@@ -16,6 +16,8 @@ class Save(PipelineStep, abc.ABC):
         clear_output: bool
             Whether to clear the output data_dict after saving. This can save space
             when save is the last step in a pipeline.
+        overwrite: bool
+            Whether to overwrite existing files.
         args: Sequence[Any]
             Additional positional arguments for PipelineStep.
         kwargs: Dict[Any, Any]
@@ -23,6 +25,7 @@ class Save(PipelineStep, abc.ABC):
         """
         super().__init__(*args, **kwargs)
         self.clear_output = clear_output
+        self.overwrite = overwrite
 
     @abc.abstractmethod
     def is_already_done(self, data_dict: Dict[str, Any]) -> bool:
