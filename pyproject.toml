@@ -7,7 +7,7 @@ find={}
 
 [project]
 name = "brain_pipe"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 keywords = ["Brain imaging processing", "EEG", "SparrKULee", "BIDS"]
 dependencies = [
     "brian2",
@@ -18,7 +18,6 @@ dependencies = [
     "librosa",
     "pyyaml",
     "jinja2",
-    'pickle5; python_version<"3.8"'
 ]
 version = "0.0.2"
 dynamic = ["readme", "description"]

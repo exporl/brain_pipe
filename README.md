@@ -3,7 +3,7 @@ Brain Pipe
 ==========
 
 [![PyPI](https://img.shields.io/pypi/v/brain_pipe)](https://pypi.org/project/brain-pipe/)
-![Python versions](https://img.shields.io/badge/Python%20version-3.7%2C%203.8%2C%203.9%2C%203.10%2C%203.11-orange)
+![Python versions](https://img.shields.io/badge/Python%20version-3.8%2C%203.9%2C%203.10%2C%203.11-orange)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/exporl/brain_pipe/LICENSE)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://black.readthedocs.io/en/stable/)
 [![flake8 code style](https://img.shields.io/badge/code%20style-flake8-blue.svg)](https://flake8.pycqa.org/en/latest/)
@@ -55,7 +55,7 @@ brain_pipe config_file.extension
 Requirements
 ------------
 
-Python >= 3.7
+Python >= 3.8
 
 Contributing
 ------------
