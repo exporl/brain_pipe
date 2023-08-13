@@ -6,3 +6,4 @@ mne>=1.3.0
 librosa
 pyyaml
 jinja2
+pickle5; python_version<"3.8"

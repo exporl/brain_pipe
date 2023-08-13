@@ -1,5 +1,6 @@
 """Serialization utilities."""
 import pickle
+import sys
 
 
 def pickle_dump_wrapper(path, obj):
@@ -12,8 +13,12 @@ def pickle_dump_wrapper(path, obj):
     obj: Any
         The object to dump.
     """
+    pickle_mod = pickle
+    if sys.version_info < (3, 8):
+        import pickle5
+        pickle_mod = pickle5
     with open(path, "wb") as f:
-        pickle.dump(obj, f)
+        pickle_mod.dump(obj, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def pickle_load_wrapper(path):
@@ -29,5 +34,9 @@ def pickle_load_wrapper(path):
     Any
         The loaded object.
     """
+    pickle_mod = pickle
+    if sys.version_info < (3, 8):
+        import pickle5
+        pickle_mod = pickle5
     with open(path, "rb") as f:
-        return pickle.load(f)
+        return pickle_mod.load(f)
