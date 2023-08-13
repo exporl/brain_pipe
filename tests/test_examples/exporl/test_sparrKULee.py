@@ -114,7 +114,8 @@ class TruncatedSparrKULeeTest(unittest.TestCase):
                     self.assertEqual(correct_json, found_json)
                 elif found_path.endswith(".data_dict.gz"):
                     # Compare data_dict files
-                    correct_dict = pickle.load(f)
+                    with gzip.open(correct_path, "rb") as f:
+                        correct_dict = pickle.load(f)
                     found_dict = pickle_load_wrapper(found_path[:-3])
                     for key in ["envelope_data", "spectrogram_data", "trigger_data"]:
                         self.assertTrue(np.allclose(correct_dict[key], found_dict[key]))

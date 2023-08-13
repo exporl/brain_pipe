@@ -30,4 +30,4 @@ def pickle_load_wrapper(path):
         The loaded object.
     """
     with open(path, "rb") as f:
-        return pickle_mod.load(f)
+        return pickle.load(f)
