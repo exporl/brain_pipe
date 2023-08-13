@@ -305,7 +305,7 @@ class SaveTest(unittest.TestCase):
             metadata_key_fn=self.MockupMetadataKeyFn(),
             clear_output=True,
         )
-        self.assertIsNone(saver(data_dict))
+        self.assertEqual(saver(data_dict), {})
 
     def test_multiple_savers(self):
         saver1 = DefaultSave(

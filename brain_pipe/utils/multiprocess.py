@@ -1,27 +1,42 @@
 """Multiprocessing utilities."""
+import abc
 import logging
 
 import multiprocessing
 
 
-class SimpleCallbackFn:
+class ProgressCallbackFn(abc.ABC):
+    """Callback function for multiprocessing to track the progress."""
+
+    def __init__(self, total=None, current_count=0):
+        """Create a new SimpleCallbackFn instance."""
+        self.total = total
+        self.current_count = current_count
+
+    @abc.abstractmethod
+    def __call__(self, result):
+        """Process the result of the multiprocessing.
+
+        Parameters
+        ----------
+        result: Any
+            Single result of the multiprocessing.
+        """
+
+
+class SimpleCallbackFn(ProgressCallbackFn):
     """Simple callback function for multiprocessing.
 
     Is used to track the progress of the multiprocessing.
     """
 
-    def __init__(self):
-        """Create a new SimpleCallbackFn instance."""
-        self.total = None
-        self.current_count = 0
-
-    def __call__(self, x):
+    def __call__(self, result):
         """Call the SimpleCallbackFn instance.
 
         Parameters
         ----------
-        x: Any
-            Dummy parameter.
+        result: Any
+            Single result of the multiprocessing.
         """
         self.current_count += 1
         logging.info(f"Progress {self.current_count}/{self.total}.")
@@ -36,7 +51,10 @@ class MultiprocessingSingleton:
 
     @classmethod
     def get_map_fn(
-        cls, nb_processes, callback=SimpleCallbackFn(), maxtasksperchild=None
+        cls,
+        nb_processes,
+        callback: ProgressCallbackFn = SimpleCallbackFn(),
+        maxtasksperchild=None,
     ):
         """Create a map function for multiprocessing.
 
@@ -45,7 +63,7 @@ class MultiprocessingSingleton:
         nb_processes: int
             Number of processes to use. If -1, use all available cores.
             If 0, do not use multiprocessing.
-        callback: Callable
+        callback: ProgressCallbackFn
             Callback function to track the progress of the multiprocessing.
         maxtasksperchild: Optional[int]
             Maximum number of tasks per child process.
@@ -62,6 +80,8 @@ class MultiprocessingSingleton:
             cls.to_clean += [pool]
 
             def dummy_map_fn(fn, iterable):
+                # Reset the current count
+                callback.current_count = 0
                 try:
                     callback.total = len(iterable)
                 except TypeError:

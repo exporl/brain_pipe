@@ -217,6 +217,7 @@ class DefaultPipeline(Pipeline):
             # Check if the step is a Save step
             if isinstance(step, Save):
                 reloaded_data_dicts = []
+                done_but_not_reloadable_counter = 0
                 # Check for all data_dicts that we can reload
                 for data_dict in data_dicts:
                     # Do we have data saved?
@@ -231,7 +232,30 @@ class DefaultPipeline(Pipeline):
                             reloaded_data_dicts += [step.reload(data_dict)]
                         else:
                             logging.info("Previously saved data is not reloadable...")
-                            break
+                            if reverse_index == 0:
+                                done_but_not_reloadable_counter += 1
+
+                # If data is done but not reloadable, we can stop here
+                if done_but_not_reloadable_counter == len(data_dicts):
+                    logging.info(
+                        "All data is already done, but not reloadable. "
+                        "Skipping remaining steps..."
+                    )
+                    # Check if output needed to be cleared
+                    if step.clear_output:
+                        return [], [{} for _ in range(len(data_dicts))]
+                    logging.warning(
+                        "The output of the pipeline will be the same as the input, "
+                        "as the last step is a Save that is not reloadable and all "
+                        "information that had to be saved is present. To avoid this, "
+                        "either set clear_output=True in the Save step to obtain empty "
+                        "dictionaries as output, or set overwrite=True in the Save to "
+                        "overwrite the output of the previous run."
+                    )
+                    return [], data_dicts
+
+                # If we reloaded data, we can resume the pipeline from the step after
+                # the step that was reloaded
                 if len(reloaded_data_dicts) == len(data_dicts):
                     new_steps = steps[step_index + 1 :]
                     logging.info(
