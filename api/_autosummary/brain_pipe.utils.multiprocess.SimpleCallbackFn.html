@@ -58,7 +58,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="brain_pipe.utils.path" href="brain_pipe.utils.path.html" />
-    <link rel="prev" title="brain_pipe.utils.multiprocess.MultiprocessingSingleton" href="brain_pipe.utils.multiprocess.MultiprocessingSingleton.html" />
+    <link rel="prev" title="brain_pipe.utils.multiprocess.ProgressCallbackFn" href="brain_pipe.utils.multiprocess.ProgressCallbackFn.html" />
   
     <link rel="apple-touch-icon" href="../../_static/_images/brain_pipe.svg"/>
   
@@ -360,19 +360,19 @@
 <h1 id="api-autosummary-brain-pipe-utils-multiprocess-simplecallbackfn--page-root">brain_pipe.utils.multiprocess.SimpleCallbackFn<a class="headerlink" href="#api-autosummary-brain-pipe-utils-multiprocess-simplecallbackfn--page-root" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="brain_pipe.utils.multiprocess.SimpleCallbackFn">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SimpleCallbackFn</span></span><a class="headerlink" href="#brain_pipe.utils.multiprocess.SimpleCallbackFn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SimpleCallbackFn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">total</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.multiprocess.SimpleCallbackFn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="brain_pipe.utils.multiprocess.ProgressCallbackFn.html#brain_pipe.utils.multiprocess.ProgressCallbackFn" title="brain_pipe.utils.multiprocess.ProgressCallbackFn"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProgressCallbackFn</span></code></a></p>
 <p>Simple callback function for multiprocessing.</p>
 <p>Is used to track the progress of the multiprocessing.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.multiprocess.SimpleCallbackFn.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.multiprocess.SimpleCallbackFn.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">total</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.multiprocess.SimpleCallbackFn.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new SimpleCallbackFn instance.</p>
 </dd></dl>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#brain_pipe.utils.multiprocess.SimpleCallbackFn.__init__" title="brain_pipe.utils.multiprocess.SimpleCallbackFn.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#brain_pipe.utils.multiprocess.SimpleCallbackFn.__init__" title="brain_pipe.utils.multiprocess.SimpleCallbackFn.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([total, current_count])</p></td>
 <td><p>Create a new SimpleCallbackFn instance.</p></td>
 </tr>
 </tbody>
@@ -390,7 +390,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
           
-            <a href="brain_pipe.utils.multiprocess.MultiprocessingSingleton.html" title="brain_pipe.utils.multiprocess.MultiprocessingSingleton"
+            <a href="brain_pipe.utils.multiprocess.ProgressCallbackFn.html" title="brain_pipe.utils.multiprocess.ProgressCallbackFn"
                class="md-flex md-footer-nav__link md-footer-nav__link--prev"
                rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
@@ -399,7 +399,7 @@
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.utils.multiprocess.MultiprocessingSingleton </span>
+                      class="md-footer-nav__direction"> Previous </span> brain_pipe.utils.multiprocess.ProgressCallbackFn </span>
               </div>
             </a>
           

@@ -22,6 +22,7 @@ brain\_pipe.utils.multiprocess
       :template: custom-class-template.rst
    
       MultiprocessingSingleton
+      ProgressCallbackFn
       SimpleCallbackFn
    
    

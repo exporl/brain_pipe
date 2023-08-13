@@ -1,0 +1,32 @@
+.. include:: /macros.hrst
+
+brain\_pipe.utils.multiprocess.ProgressCallbackFn
+=================================================
+
+.. currentmodule:: brain_pipe.utils.multiprocess
+
+.. autoclass:: ProgressCallbackFn
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~ProgressCallbackFn.__init__
+
+   
+   
+

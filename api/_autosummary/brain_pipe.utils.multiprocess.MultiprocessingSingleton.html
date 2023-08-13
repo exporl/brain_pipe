@@ -57,7 +57,7 @@
     <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="brain_pipe.utils.multiprocess.SimpleCallbackFn" href="brain_pipe.utils.multiprocess.SimpleCallbackFn.html" />
+    <link rel="next" title="brain_pipe.utils.multiprocess.ProgressCallbackFn" href="brain_pipe.utils.multiprocess.ProgressCallbackFn.html" />
     <link rel="prev" title="brain_pipe.utils.multiprocess" href="brain_pipe.utils.multiprocess.html" />
   
     <link rel="apple-touch-icon" href="../../_static/_images/brain_pipe.svg"/>
@@ -403,14 +403,14 @@
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.multiprocess.MultiprocessingSingleton.get_map_fn">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_map_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nb_processes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback=&lt;brain_pipe.utils.multiprocess.SimpleCallbackFn</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxtasksperchild=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.multiprocess.MultiprocessingSingleton.get_map_fn" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_map_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nb_processes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback:</span> <span class="pre">~brain_pipe.utils.multiprocess.ProgressCallbackFn</span> <span class="pre">=</span> <span class="pre">&lt;brain_pipe.utils.multiprocess.SimpleCallbackFn</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxtasksperchild=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.multiprocess.MultiprocessingSingleton.get_map_fn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a map function for multiprocessing.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nb_processes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – Number of processes to use. If -1, use all available cores.
 If 0, do not use multiprocessing.</p></li>
-<li><p><strong>callback</strong> (<em>Callable</em>) – Callback function to track the progress of the multiprocessing.</p></li>
+<li><p><strong>callback</strong> (<a class="reference internal" href="brain_pipe.utils.multiprocess.ProgressCallbackFn.html#brain_pipe.utils.multiprocess.ProgressCallbackFn" title="brain_pipe.utils.multiprocess.ProgressCallbackFn"><em>ProgressCallbackFn</em></a>) – Callback function to track the progress of the multiprocessing.</p></li>
 <li><p><strong>maxtasksperchild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em>]</em>) – Maximum number of tasks per child process.</p></li>
 </ul>
 </dd>
@@ -449,12 +449,12 @@ If 0, do not use multiprocessing.</p></li>
             </a>
           
           
-            <a href="brain_pipe.utils.multiprocess.SimpleCallbackFn.html" title="brain_pipe.utils.multiprocess.SimpleCallbackFn"
+            <a href="brain_pipe.utils.multiprocess.ProgressCallbackFn.html" title="brain_pipe.utils.multiprocess.ProgressCallbackFn"
                class="md-flex md-footer-nav__link md-footer-nav__link--next"
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.utils.multiprocess.SimpleCallbackFn </span>
+                class="md-footer-nav__direction"> Next </span> brain_pipe.utils.multiprocess.ProgressCallbackFn </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
