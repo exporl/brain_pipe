@@ -3,6 +3,7 @@ import gzip
 import json
 import os
 import pickle
+import sys
 import tempfile
 import unittest
 
@@ -114,7 +115,12 @@ class TruncatedSparrKULeeTest(unittest.TestCase):
                 elif found_path.endswith(".data_dict.gz"):
                     # Compare data_dict files
                     with gzip.open(correct_path, "rb") as f:
-                        correct_dict = pickle.load(f)
+                        pickle_mod = pickle
+                        if sys.version_info < (3, 8):
+                            import pickle5
+
+                            pickle_mod = pickle5
+                        correct_dict = pickle_mod.load(f)
                     found_dict = pickle_load_wrapper(found_path[:-3])
                     for key in ["envelope_data", "spectrogram_data", "trigger_data"]:
                         self.assertTrue(np.allclose(correct_dict[key], found_dict[key]))
