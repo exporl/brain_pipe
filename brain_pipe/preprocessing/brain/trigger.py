@@ -89,10 +89,12 @@ def default_drift_correction(
                 ),
                 axis=0,
             )
-    elif len(brain_trigger_indices) == len(stimulus_trigger_indices) + 1:
+    elif (
+        len(brain_trigger_indices) == len(stimulus_trigger_indices) + 1
+        and brain_trigger_indices[0] == 0  # noqa: W503
+    ):
         # Check if there is an erroneous trigger at the beginning
-        if brain_trigger_indices[0] == 0:
-            brain_trigger_indices = brain_trigger_indices[1:]
+        brain_trigger_indices = brain_trigger_indices[1:]
 
     stimulus_diff = stimulus_trigger_indices[-1] - stimulus_trigger_indices[0]
     expected_length = int(np.ceil(stimulus_diff / stimulus_fs * brain_fs))
