@@ -1,4 +1,4 @@
-"""Run the default preprocessing pipeline on soarrKULee."""
+"""Run the default preprocessing pipeline on sparrKULee."""
 import argparse
 import datetime
 import gzip
