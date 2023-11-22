@@ -1,17 +1,18 @@
 """List utilities."""
+from typing import Union, Any, List, Tuple
 
 
-def flatten(lst):
-    """Flatten a list.
+def flatten(lst: Union[List[Any], Tuple[Any]]) -> List[Any]:
+    """Flatten a list or tuple (recursively).
 
     Parameters
     ----------
-    lst: Union[list, tuple]
-        A list to be flattened.
+    lst: Union[List[Any], Tuple[Any]]
+        A list to be flattened. Sublists and tuples are also flattened.
 
     Returns
     -------
-    list
+    List[Any]
         A flattened list.
     """
     result = []
@@ -21,3 +22,22 @@ def flatten(lst):
     else:
         result.append(lst)
     return result
+
+
+def wrap_in_list(obj: Any) -> List[Any]:
+    """Wrap an object in a list if it is not already a list.
+
+    Parameters
+    ----------
+    obj: Any
+        An object to be wrapped in a list. If it is already a list, it is returned
+        as is.
+
+    Returns
+    -------
+    List[Any]
+        A list containing the object.
+    """
+    if not isinstance(obj, (list, tuple)):
+        obj = [obj]
+    return obj

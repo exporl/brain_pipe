@@ -46,6 +46,7 @@ class MultiprocessingSingleton:
     """Singleton class for multiprocessing."""
 
     manager = multiprocessing.Manager()
+    locks = {}
 
     to_clean = []
 
@@ -115,3 +116,21 @@ class MultiprocessingSingleton:
             pool.close()
             pool.join()
         cls.to_clean = []
+
+    @classmethod
+    def get_lock(cls, id_str):
+        """Create or get a lock for multiprocessing.
+
+        Parameters
+        ----------
+        id_str: str
+            Identifier for the lock. If the lock does not already exist in self.locks,
+            it will be created and added to self.locks.
+
+        Returns
+        -------
+        multiprocessing.Lock
+        """
+        if id_str not in cls.locks:
+            cls.locks[id_str] = cls.manager.Lock()
+        return cls.locks[id_str]
