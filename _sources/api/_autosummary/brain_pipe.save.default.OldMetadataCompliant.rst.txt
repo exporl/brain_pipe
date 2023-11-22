@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.save.default.OldMetadataCompliant
+=============================================
+
+.. currentmodule:: brain_pipe.save.default
+
+.. autoclass:: OldMetadataCompliant
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~OldMetadataCompliant.__init__
+      ~OldMetadataCompliant.convert_old_format
+
+   
+   
+

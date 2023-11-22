@@ -26,7 +26,7 @@ brain\_pipe.save.default.CheckFunctor
    .. autosummary::
    
       ~CheckFunctor.__init__
-      ~CheckFunctor.clear
+      ~CheckFunctor.attach_saver
 
    
    

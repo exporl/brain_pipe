@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=59a2fb49" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="brain_pipe.pipeline" href="brain_pipe.pipeline.html" />
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -330,7 +330,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#api-autosummary-brain-pipe-parser-yaml-yamltextparser--page-root" class="md-nav__link">YAMLTextParser</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -373,10 +373,10 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="brain-pipe-parser-yaml-yamltextparser">
-<h1 id="api-autosummary-brain-pipe-parser-yaml-yamltextparser--page-root">brain_pipe.parser.yaml.YAMLTextParser<a class="headerlink" href="#api-autosummary-brain-pipe-parser-yaml-yamltextparser--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="api-autosummary-brain-pipe-parser-yaml-yamltextparser--page-root">brain_pipe.parser.yaml.YAMLTextParser<a class="headerlink" href="#api-autosummary-brain-pipe-parser-yaml-yamltextparser--page-root" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">YAMLTextParser</span></span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">YAMLTextParser</span></span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="brain_pipe.parser.yaml.YAMLMixin.html#brain_pipe.parser.yaml.YAMLMixin" title="brain_pipe.parser.yaml.YAMLMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">YAMLMixin</span></code></a>, <a class="reference internal" href="brain_pipe.parser.text.TextParser.html#brain_pipe.parser.text.TextParser" title="brain_pipe.parser.text.TextParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextParser</span></code></a></p>
 <p>Parser based on TextParser that can parse YAML text.</p>
 <p class="rubric">Attributes</p>
@@ -422,7 +422,7 @@
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize the parser.</p>
 </dd></dl>
 <p class="rubric">Methods</p>
@@ -459,25 +459,25 @@
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser.apply_config">
-<span class="sig-name descname"><span class="pre">apply_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.11)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.apply_config" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">apply_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.apply_config" title="Link to this definition">¶</a></dt>
 <dd><p>Apply the configuration to the parser.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>config</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The configuration to apply.</p>
+<dd class="field-odd"><p><strong>config</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The configuration to apply.</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser.get_additional_kwargs">
-<span class="sig-name descname"><span class="pre">get_additional_kwargs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.11)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.11)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.get_additional_kwargs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_additional_kwargs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.get_additional_kwargs" title="Link to this definition">¶</a></dt>
 <dd><p>Find the additional arguments that should be passed to the parser.</p>
 <p>This function identifies additional arguments that should be passed to the
 parser by e.g. a CLI.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>input</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The input for the parser.</p></li>
-<li><p><strong>info</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – A dictionary containing available info, such as e.g. parsed CLI arguments.
+<li><p><strong>input</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The input for the parser.</p></li>
+<li><p><strong>info</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – A dictionary containing available info, such as e.g. parsed CLI arguments.
 This information can be used to determine the additional arguments.</p></li>
 </ul>
 </dd>
@@ -486,17 +486,17 @@ This information can be used to determine the additional arguments.</p></li>
 (kwargs) for a (CLI) argument parser as values.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a>, Any]</p>
+<dd class="field-odd"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>, Any]</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser.get_runner_from_parsed_config">
-<span class="sig-name descname"><span class="pre">get_runner_from_parsed_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parsed_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.11)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.get_runner_from_parsed_config" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_runner_from_parsed_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parsed_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.get_runner_from_parsed_config" title="Link to this definition">¶</a></dt>
 <dd><p>Construct a runner from the configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>parsed_config</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The already parsed configuration.</p>
+<dd class="field-odd"><p><strong>parsed_config</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The already parsed configuration.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="brain_pipe.runner.base.Runner.html#brain_pipe.runner.base.Runner" title="brain_pipe.runner.base.Runner">Runner</a></p>
@@ -505,14 +505,14 @@ This information can be used to determine the additional arguments.</p></li>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser.link_loader_to_pipeline">
-<span class="sig-name descname"><span class="pre">link_loader_to_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipelines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.11)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.11)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><span class="pre">Pipeline</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loaders</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.11)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><span class="pre">DataLoader</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.link_loader_to_pipeline" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">link_loader_to_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipelines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.12)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.12)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><span class="pre">Pipeline</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loaders</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><span class="pre">DataLoader</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.link_loader_to_pipeline" title="Link to this definition">¶</a></dt>
 <dd><p>Pair pipelines with their corresponding dataloaders.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>pipelines</strong> (<em>Sequence</em><em>[</em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference internal" href="brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><em>Pipeline</em></a><em>]</em><em>]</em>) – A dictionary containing a mapping between the name of a loader and
+<li><p><strong>pipelines</strong> (<em>Sequence</em><em>[</em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><a class="reference internal" href="brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><em>Pipeline</em></a><em>]</em><em>]</em>) – A dictionary containing a mapping between the name of a loader and
 the Pipeline object</p></li>
-<li><p><strong>loaders</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference internal" href="brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><em>DataLoader</em></a><em>]</em>) – A dictionary containing a mapping between the name of a loader and
+<li><p><strong>loaders</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><a class="reference internal" href="brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><em>DataLoader</em></a><em>]</em>) – A dictionary containing a mapping between the name of a loader and
 the DataLoader object</p></li>
 </ul>
 </dd>
@@ -526,11 +526,11 @@ the DataLoader object</p></li>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser.parse_all">
-<span class="sig-name descname"><span class="pre">parse_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.11)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.parse_all" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">parse_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.parse_all" title="Link to this definition">¶</a></dt>
 <dd><p>Parse all information in the text dictionary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>all_info</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The text dictionary to parse.</p>
+<dd class="field-odd"><p><strong>all_info</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The text dictionary to parse.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A runner and a list of tuples containing a Pipeline and its DataLoader.</p>
@@ -542,43 +542,43 @@ the DataLoader object</p></li>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser.parse_text_to_dict">
-<span class="sig-name descname"><span class="pre">parse_text_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.parse_text_to_dict" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">parse_text_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.parse_text_to_dict" title="Link to this definition">¶</a></dt>
 <dd><p>Parse YAML text to a dictionary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The YAML text to parse.</p>
+<dd class="field-odd"><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The YAML text to parse.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The parsed dictionary.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a>, Any]</p>
+<dd class="field-odd"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>, Any]</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser.recursive_parse">
-<span class="sig-name descname"><span class="pre">recursive_parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.11)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.recursive_parse" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">recursive_parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.recursive_parse" title="Link to this definition">¶</a></dt>
 <dd><p>Parse the configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>text_dict</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The text dictionary to parse.</p>
+<dd class="field-odd"><p><strong>text_dict</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The text dictionary to parse.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The parsed dictionary (i.e. with objects).</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Union[Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a>, Any], Tuple[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a>, Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a>, Any]]]</p>
+<dd class="field-odd"><p>Union[Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>, Any], Tuple[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>, Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>, Any]]]</p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.parser.yaml.YAMLTextParser.set_additional_kwargs">
-<span class="sig-name descname"><span class="pre">set_additional_kwargs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.11)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.set_additional_kwargs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_additional_kwargs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.12)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.12)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.parser.yaml.YAMLTextParser.set_additional_kwargs" title="Link to this definition">¶</a></dt>
 <dd><p>Set the additional arguments defined in <a class="reference internal" href="#brain_pipe.parser.yaml.YAMLTextParser.get_additional_kwargs" title="brain_pipe.parser.yaml.YAMLTextParser.get_additional_kwargs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_additional_kwargs()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The additional arguments.</p>
+<dd class="field-odd"><p><strong>args</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – The additional arguments.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
@@ -607,7 +607,7 @@ can also be specified in the dictionary itself under the parser configuration.</
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.parser.yaml.YAMLTemplateFileParser </span>
+                      class="md-footer-nav__direction"> "Previous" </span> brain_pipe.parser.yaml.YAMLTemplateFileParser </span>
               </div>
             </a>
           
@@ -617,7 +617,7 @@ can also be specified in the dictionary itself under the parser configuration.</
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.pipeline </span>
+                class="md-footer-nav__direction"> "Next" </span> brain_pipe.pipeline </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -635,7 +635,7 @@ can also be specified in the dictionary itself under the parser configuration.</
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

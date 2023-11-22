@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=59a2fb49" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="brain_pipe.utils.multiprocess" href="brain_pipe.utils.multiprocess.html" />
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -330,7 +330,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#api-autosummary-brain-pipe-utils-log-defaultformatter--page-root" class="md-nav__link">DefaultFormatter</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -369,11 +369,11 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="brain-pipe-utils-log-defaultformatter">
-<h1 id="api-autosummary-brain-pipe-utils-log-defaultformatter--page-root">brain_pipe.utils.log.DefaultFormatter<a class="headerlink" href="#api-autosummary-brain-pipe-utils-log-defaultformatter--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="api-autosummary-brain-pipe-utils-log-defaultformatter--page-root">brain_pipe.utils.log.DefaultFormatter<a class="headerlink" href="#api-autosummary-brain-pipe-utils-log-defaultformatter--page-root" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="brain_pipe.utils.log.DefaultFormatter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DefaultFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%(asctime)s</span> <span class="pre">|</span> <span class="pre">%(process)-3d</span> <span class="pre">|</span> <span class="pre">%(levelname)-8s</span> <span class="pre">|</span> <span class="pre">%(message)s'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/logging.html#logging.Formatter" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DefaultFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%(asctime)s</span> <span class="pre">|</span> <span class="pre">%(process)-3d</span> <span class="pre">|</span> <span class="pre">%(levelname)-8s</span> <span class="pre">|</span> <span class="pre">%(message)s'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/logging.html#logging.Formatter" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a></p>
 <p>Default formatter for the brain_pipe package.</p>
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
@@ -391,14 +391,14 @@
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.log.DefaultFormatter.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%(asctime)s</span> <span class="pre">|</span> <span class="pre">%(process)-3d</span> <span class="pre">|</span> <span class="pre">%(levelname)-8s</span> <span class="pre">|</span> <span class="pre">%(message)s'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%(asctime)s</span> <span class="pre">|</span> <span class="pre">%(process)-3d</span> <span class="pre">|</span> <span class="pre">%(levelname)-8s</span> <span class="pre">|</span> <span class="pre">%(message)s'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Create a new DefaultFormatter instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Additional positional arguments to be passed to logging.Formatter.</p></li>
-<li><p><strong>fmt</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The format string to be used.</p></li>
-<li><p><strong>kwargs</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – Additional keyword arguments to be passed to logging.Formatter.</p></li>
+<li><p><strong>fmt</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The format string to be used.</p></li>
+<li><p><strong>kwargs</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – Additional keyword arguments to be passed to logging.Formatter.</p></li>
 </ul>
 </dd>
 </dl>
@@ -434,7 +434,7 @@
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.log.DefaultFormatter.converter">
-<span class="sig-name descname"><span class="pre">converter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.converter" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">converter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.converter" title="Link to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>localtime([seconds]) -&gt; (tm_year,tm_mon,tm_mday,tm_hour,tm_min,</dt><dd><p>tm_sec,tm_wday,tm_yday,tm_isdst)</p>
 </dd>
@@ -444,7 +444,7 @@ When ‘seconds’ is not passed in, convert the current time instead.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.log.DefaultFormatter.format">
-<span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.format" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.format" title="Link to this definition">¶</a></dt>
 <dd><p>Format the specified record as text.</p>
 <p>The record’s attribute dictionary is used as the operand to a
 string formatting operation which yields the returned string.
@@ -457,24 +457,24 @@ it is formatted using formatException() and appended to the message.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.log.DefaultFormatter.formatException">
-<span class="sig-name descname"><span class="pre">formatException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ei</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.formatException" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">formatException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ei</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.formatException" title="Link to this definition">¶</a></dt>
 <dd><p>Format and return the specified exception information as a string.</p>
 <p>This default implementation just uses
 traceback.print_exception()</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.log.DefaultFormatter.formatStack">
-<span class="sig-name descname"><span class="pre">formatStack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.formatStack" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">formatStack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stack_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.formatStack" title="Link to this definition">¶</a></dt>
 <dd><p>This method is provided as an extension point for specialized
 formatting of stack information.</p>
 <p>The input data is a string as returned from a call to
-<a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.print_stack" title="(in Python v3.11)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.print_stack()</span></code></a>, but with the last trailing newline
+<a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.print_stack" title="(in Python v3.12)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.print_stack()</span></code></a>, but with the last trailing newline
 removed.</p>
 <p>The base implementation just returns the value passed in.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.log.DefaultFormatter.formatTime">
-<span class="sig-name descname"><span class="pre">formatTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.formatTime" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">formatTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.formatTime" title="Link to this definition">¶</a></dt>
 <dd><p>Return the creation time of the specified LogRecord as formatted text.</p>
 <p>This method should be called from format() by a formatter which
 wants to make use of a formatted time. This method can be overridden
@@ -492,7 +492,7 @@ set the ‘converter’ attribute in the Formatter class.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.log.DefaultFormatter.usesTime">
-<span class="sig-name descname"><span class="pre">usesTime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.usesTime" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">usesTime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.log.DefaultFormatter.usesTime" title="Link to this definition">¶</a></dt>
 <dd><p>Check if the format uses the creation time of the record.</p>
 </dd></dl>
 </dd></dl>
@@ -517,7 +517,7 @@ set the ‘converter’ attribute in the Formatter class.</p>
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.utils.log.ColorFormatter </span>
+                      class="md-footer-nav__direction"> "Previous" </span> brain_pipe.utils.log.ColorFormatter </span>
               </div>
             </a>
           
@@ -527,7 +527,7 @@ set the ‘converter’ attribute in the Formatter class.</p>
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.utils.multiprocess </span>
+                class="md-footer-nav__direction"> "Next" </span> brain_pipe.utils.multiprocess </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -545,7 +545,7 @@ set the ‘converter’ attribute in the Formatter class.</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

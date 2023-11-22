@@ -1,0 +1,52 @@
+.. include:: /macros.hrst
+
+brain\_pipe.save.default.DefaultSaveMetadata
+============================================
+
+.. currentmodule:: brain_pipe.save.default
+
+.. autoclass:: DefaultSaveMetadata
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DefaultSaveMetadata.FEATURE_NAME_STR
+      ~DefaultSaveMetadata.FILENAME_STR
+      ~DefaultSaveMetadata.OLD_FORMAT_STR
+      ~DefaultSaveMetadata.SET_NAME_STR
+      ~DefaultSaveMetadata.lock
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~DefaultSaveMetadata.__init__
+      ~DefaultSaveMetadata.add
+      ~DefaultSaveMetadata.attach_saver
+      ~DefaultSaveMetadata.clear
+      ~DefaultSaveMetadata.convert_old_format
+      ~DefaultSaveMetadata.get
+      ~DefaultSaveMetadata.get_metadata_for_savepath
+      ~DefaultSaveMetadata.get_path
+      ~DefaultSaveMetadata.get_relpath
+      ~DefaultSaveMetadata.is_old_format
+      ~DefaultSaveMetadata.write
+
+   
+   
+

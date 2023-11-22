@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=59a2fb49" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts" href="brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts.html" />
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -331,7 +331,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#api-autosummary-brain-pipe-preprocessing-brain-artifact-artifactremovalmwf--page-root" class="md-nav__link">ArtifactRemovalMWF</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -374,10 +374,10 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="brain-pipe-preprocessing-brain-artifact-artifactremovalmwf">
-<h1 id="api-autosummary-brain-pipe-preprocessing-brain-artifact-artifactremovalmwf--page-root">brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF<a class="headerlink" href="#api-autosummary-brain-pipe-preprocessing-brain-artifact-artifactremovalmwf--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="api-autosummary-brain-pipe-preprocessing-brain-artifact-artifactremovalmwf--page-root">brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF<a class="headerlink" href="#api-autosummary-brain-pipe-preprocessing-brain-artifact-artifactremovalmwf--page-root" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ArtifactRemovalMWF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data_fs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">32,</span> <span class="pre">33,</span> <span class="pre">34,</span> <span class="pre">35,</span> <span class="pre">36)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ArtifactRemovalMWF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data_fs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">32,</span> <span class="pre">33,</span> <span class="pre">34,</span> <span class="pre">35,</span> <span class="pre">36)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a></p>
 <p>Remove (eyeblink) artifacts with an MWF.</p>
 <p>This code was based on the excellent library of Somers et al. <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The matlab
@@ -393,16 +393,16 @@ removal algorithm based on the multi-channel Wiener filter. J. Neural Eng. 15
 </aside>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data_fs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">32,</span> <span class="pre">33,</span> <span class="pre">34,</span> <span class="pre">35,</span> <span class="pre">36)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data_fs'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">32,</span> <span class="pre">33,</span> <span class="pre">34,</span> <span class="pre">35,</span> <span class="pre">36)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Create an ArtifactRemovalMWF object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – Key in the data_dict for the brain data</p></li>
-<li><p><strong>fs_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – Key in the data_dict for the brain data sampling frequency.</p></li>
-<li><p><strong>reference_channels</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em>]</em>) – List of channel indices to use as reference channels. By default, the
+<li><p><strong>data_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Key in the data_dict for the brain data</p></li>
+<li><p><strong>fs_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Key in the data_dict for the brain data sampling frequency.</p></li>
+<li><p><strong>reference_channels</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a><em>]</em>) – List of channel indices to use as reference channels. By default, the
 frontal channels of a Biosemi64 channel system are used.</p></li>
-<li><p><strong>delay</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – Delay that has to be taken into account.</p></li>
+<li><p><strong>delay</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Delay that has to be taken into account.</p></li>
 </ul>
 </dd>
 </dl>
@@ -441,7 +441,7 @@ frontal channels of a Biosemi64 channel system are used.</p></li>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.apply_mwf">
-<span class="sig-name descname"><span class="pre">apply_mwf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mwf_weights</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.apply_mwf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">apply_mwf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mwf_weights</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.apply_mwf" title="Link to this definition">¶</a></dt>
 <dd><p>Apply the MWF.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -461,27 +461,27 @@ shape of (channels, time).</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.check_symmetric">
-<span class="sig-name descname"><span class="pre">check_symmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.check_symmetric" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">check_symmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.check_symmetric" title="Link to this definition">¶</a></dt>
 <dd><p>Check whether a matrix is symmetric.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>np.ndarray</em>) – Matrix to check</p></li>
-<li><p><strong>rtol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Relative tolerance</p></li>
-<li><p><strong>atol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Absolute tolerance</p></li>
+<li><p><strong>rtol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – Relative tolerance</p></li>
+<li><p><strong>atol</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – Absolute tolerance</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if the matrix is symmetric, False otherwise.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)">bool</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.compute_mwf">
-<span class="sig-name descname"><span class="pre">compute_mwf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.compute_mwf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_mwf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.compute_mwf" title="Link to this definition">¶</a></dt>
 <dd><p>Compute the MWF.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -500,7 +500,7 @@ shape of (channels, time).</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.fix_symmetric">
-<span class="sig-name descname"><span class="pre">fix_symmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.fix_symmetric" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fix_symmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.fix_symmetric" title="Link to this definition">¶</a></dt>
 <dd><p>Fix a matrix to be symmetric.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -516,13 +516,13 @@ shape of (channels, time).</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.get_artifact_segments">
-<span class="sig-name descname"><span class="pre">get_artifact_segments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.get_artifact_segments" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_artifact_segments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.get_artifact_segments" title="Link to this definition">¶</a></dt>
 <dd><p>Create a mask to select segments of data where artifacts are.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>np.ndarray</em>) – Brain response data with shape of (time, channels)</p></li>
-<li><p><strong>fs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – Sampling frequency of the data</p></li>
+<li><p><strong>fs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Sampling frequency of the data</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -535,14 +535,14 @@ shape of (channels, time).</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.parse_dict_keys">
-<span class="sig-name descname"><span class="pre">parse_dict_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.11)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.11)"><span class="pre">Mapping</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'key'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">require_ordered_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.OrderedDict" title="(in Python v3.11)"><span class="pre">OrderedDict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.parse_dict_keys" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">parse_dict_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.12)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Mapping" title="(in Python v3.12)"><span class="pre">Mapping</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'key'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">require_ordered_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.OrderedDict" title="(in Python v3.12)"><span class="pre">OrderedDict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.parse_dict_keys" title="Link to this definition">¶</a></dt>
 <dd><p>Parse a key or a sequence of keys.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em><em>, </em><em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>,</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em><em>]</em>) – A key or a sequence of keys.</p></li>
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The name of the key. Used for error messages.</p></li>
-<li><p><strong>require_ordered_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – If True, the key must be an OrderedDict. If False, the key can
+<li><p><strong>key</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>, </em><em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>,</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em><em>]</em>) – A key or a sequence of keys.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The name of the key. Used for error messages.</p></li>
+<li><p><strong>require_ordered_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – If True, the key must be an OrderedDict. If False, the key can
 also be an ordinary dict.</p></li>
 </ul>
 </dd>
@@ -550,10 +550,10 @@ also be an ordinary dict.</p></li>
 <dd class="field-even"><p>A mapping of input keys to output keys.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>OrderedDict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)">str</a>]</p>
+<dd class="field-odd"><p>OrderedDict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.11)"><strong>TypeError</strong></a> – If the key is not a string, a sequence of strings or a mapping of
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.12)"><strong>TypeError</strong></a> – If the key is not a string, a sequence of strings or a mapping of
     strings.
     If the key is a mapping but require_ordered_dict is True and the
     mapping is not an OrderedDict.</p>
@@ -562,7 +562,7 @@ also be an ordinary dict.</p></li>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.sort_evd">
-<span class="sig-name descname"><span class="pre">sort_evd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eig_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eig_vectors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.sort_evd" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">sort_evd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eig_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eig_vectors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.sort_evd" title="Link to this definition">¶</a></dt>
 <dd><p>Sort the eigenvalues and eigenvectors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -581,7 +581,7 @@ also be an ordinary dict.</p></li>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.stack_delayed">
-<span class="sig-name descname"><span class="pre">stack_delayed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.stack_delayed" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stack_delayed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.artifact.ArtifactRemovalMWF.stack_delayed" title="Link to this definition">¶</a></dt>
 <dd><p>Stack delayed versions of the data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -595,7 +595,7 @@ also be an ordinary dict.</p></li>
 number of channels in the stacked data.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Tuple[np.ndarray, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a>]</p>
+<dd class="field-odd"><p>Tuple[np.ndarray, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -621,7 +621,7 @@ number of channels in the stacked data.</p>
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.preprocessing.brain.artifact </span>
+                      class="md-footer-nav__direction"> "Previous" </span> brain_pipe.preprocessing.brain.artifact </span>
               </div>
             </a>
           
@@ -631,7 +631,7 @@ number of channels in the stacked data.</p>
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts </span>
+                class="md-footer-nav__direction"> "Next" </span> brain_pipe.preprocessing.brain.artifact.InterpolateArtifacts </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -649,7 +649,7 @@ number of channels in the stacked data.</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

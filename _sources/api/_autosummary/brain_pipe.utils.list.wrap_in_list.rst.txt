@@ -1,0 +1,6 @@
+brain\_pipe.utils.list.wrap\_in\_list
+=====================================
+
+.. currentmodule:: brain_pipe.utils.list
+
+.. autofunction:: wrap_in_list

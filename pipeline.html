@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=59a2fb49" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Defining and running Pipelines through configuration files" href="configuration.html" />
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -219,7 +219,7 @@
       
         
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#pipeline--page-root" class="md-nav__link">Overview</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -357,7 +357,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#pipeline--page-root" class="md-nav__link">Overview</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -392,24 +392,24 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="overview">
-<span id="pipeline"></span><h1 id="pipeline--page-root">Overview<a class="headerlink" href="#pipeline--page-root" title="Permalink to this heading">¶</a></h1>
+<span id="pipeline"></span><h1 id="pipeline--page-root">Overview<a class="headerlink" href="#pipeline--page-root" title="Link to this heading">¶</a></h1>
 <p>In the BIDS preprocessing package, we use a pipeline structure to organize the
 processing steps in a way that is customizable and extensible. A simple example is shown in <a class="reference internal" href="#pipeline-figure"><span class="std std-numref">Fig. 2</span></a>.</p>
 <figure class="align-center" id="id1">
 <span id="pipeline-figure"></span><a class="reference internal image-reference" href="_images/simple_pipeline.svg"><img alt="_images/simple_pipeline.svg" src="_images/simple_pipeline.svg" width="100%"/></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text"><strong>Simple pipeline structure</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text"><strong>Simple pipeline structure</strong></span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
 <div class="legend">
 <p>A <a class="reference internal" href="api/_autosummary/brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataLoader</span></code></a> is used to load data from a source (e.g. files, data generated on the fly)
-and structured in a Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>. This <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> is then passed to a <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a>,
+and structured in a Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>. This <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> is then passed to a <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a>,
 which will sequentially run all its <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a> s on the data. After all steps have been
-completed, the <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a> will return the final <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> to the user.</p>
+completed, the <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a> will return the final <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> to the user.</p>
 </div>
 </figcaption>
 </figure>
 <p>The relevant classes here are the <a class="reference internal" href="api/_autosummary/brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataLoader</span></code></a>, <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a> and <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a>.</p>
 <section id="concept">
-<h2 id="concept">Concept<a class="headerlink" href="#concept" title="Permalink to this heading">¶</a></h2>
+<h2 id="concept">Concept<a class="headerlink" href="#concept" title="Link to this heading">¶</a></h2>
 <p>The goal we try to accomplish is to preprocess brain imaging data
 in an efficient but extensible manner. Most of the time, this means that we should:</p>
 <ol class="arabic simple">
@@ -431,15 +431,15 @@ For more information about configuration files, see <a class="reference internal
 <span id="pipeline-figure-multiple"></span><a class="reference internal image-reference" href="_images/multiple_pipeline.svg"><img alt="_images/multiple_pipeline.svg" src="_images/multiple_pipeline.svg" width="100%"/></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3 </span><span class="caption-text"><strong>More elaborate pipeline</strong>
-Multiple <a class="reference internal" href="api/_autosummary/brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataLoader</span></code></a> and <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a> s can be run sequentially.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+Multiple <a class="reference internal" href="api/_autosummary/brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataLoader</span></code></a> and <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a> s can be run sequentially.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <section id="the-data-dict">
-<h3 id="the-data-dict">The <code class="docutils literal notranslate"><span class="pre">data_dict</span></code><a class="headerlink" href="#the-data-dict" title="Permalink to this heading">¶</a></h3>
+<h3 id="the-data-dict">The <code class="docutils literal notranslate"><span class="pre">data_dict</span></code><a class="headerlink" href="#the-data-dict" title="Link to this heading">¶</a></h3>
 <p>To be able to pass both data and metadata between steps, we use a simple Python
-<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> object (commonly called the <code class="docutils literal notranslate"><span class="pre">data_dict</span></code> in the documentation or code).
+<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> object (commonly called the <code class="docutils literal notranslate"><span class="pre">data_dict</span></code> in the documentation or code).
 Practically, each <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a> is just a functor (i.e. a class that implements the <code class="docutils literal notranslate"><span class="pre">__call__</span></code> method)
-that takes such a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> as input and returns a new <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> with preprocessed data as an output.</p>
+that takes such a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> as input and returns a new <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> with preprocessed data as an output.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This makes it also possible for a step to use data generated by steps that
@@ -455,24 +455,24 @@ need it again in a later step.</p>
 </section>
 </section>
 <section id="convenient-classes">
-<h2 id="convenient-classes">Convenient classes<a class="headerlink" href="#convenient-classes" title="Permalink to this heading">¶</a></h2>
+<h2 id="convenient-classes">Convenient classes<a class="headerlink" href="#convenient-classes" title="Link to this heading">¶</a></h2>
 <p>In the <a class="reference internal" href="api/_autosummary/brain_pipe.html#module-brain_pipe" title="brain_pipe"><code class="xref py py-mod docutils literal notranslate"><span class="pre">brain_pipe</span></code></a> module, a lot a <code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep`s</span> <span class="pre">are</span> <span class="pre">already</span> <span class="pre">defined</span>
 <span class="pre">for</span> <span class="pre">you.</span> <span class="pre">Additionally,</span> <span class="pre">there</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">:class:</span></code>.DefaultPipeline` class that can be used
 to easily create a pipeline without worrying about the specific implementation.</p>
 </section>
 <section id="additional-considerations">
-<h2 id="additional-considerations">Additional considerations<a class="headerlink" href="#additional-considerations" title="Permalink to this heading">¶</a></h2>
+<h2 id="additional-considerations">Additional considerations<a class="headerlink" href="#additional-considerations" title="Link to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a> will work on a datapoint by datapoint basis, i.e. it will
 receive a datapoint from the <a class="reference internal" href="api/_autosummary/brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataLoader</span></code></a> and run all steps sequentially on the
 file before starting with the next datapoint.</p>
-<p>It is possbile to parallelize this process using modeules like <a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing" title="(in Python v3.11)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a>.
+<p>It is possbile to parallelize this process using modeules like <a class="reference external" href="https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing" title="(in Python v3.12)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">multiprocessing</span></code></a>.
 This will allow for multiple datapoints to be processed at the same time.</p>
 <p>A default implementation of this is provided in <code class="xref py py-mod docutils literal notranslate"><span class="pre">bids_preprocessing/utils/multiprocessing</span></code>.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>Most multiprocessing libraries require the data in the initial <code class="docutils literal notranslate"><span class="pre">data_dict</span></code>
 and data stored in the <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a>/ <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a>
-to be picklable. For the default <a class="reference external" href="https://docs.python.org/3/library/pickle.html#module-pickle" title="(in Python v3.11)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module, this means that the
+to be picklable. For the default <a class="reference external" href="https://docs.python.org/3/library/pickle.html#module-pickle" title="(in Python v3.12)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> module, this means that the
 use of non-picklable objects (e.g. <cite>lambda</cite> functions) will probably cause an error.</p>
 </div>
 <div class="admonition warning">
@@ -499,20 +499,20 @@ that is fine by me ;).</p>
 <p>The <a class="reference internal" href="api/_autosummary/brain_pipe.runner.base.Runner.html#brain_pipe.runner.base.Runner" title="brain_pipe.runner.base.Runner"><code class="xref py py-class docutils literal notranslate"><span class="pre">Runner</span></code></a> class can be used to run multiple <code class="xref py py-class docutils literal notranslate"><span class="pre">Pipelines</span></code> sequentially.</p>
 </section>
 <section id="writing-your-own-pipelinestep">
-<h2 id="writing-your-own-pipelinestep">Writing your own <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a><a class="headerlink" href="#writing-your-own-pipelinestep" title="Permalink to this heading">¶</a></h2>
+<h2 id="writing-your-own-pipelinestep">Writing your own <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a><a class="headerlink" href="#writing-your-own-pipelinestep" title="Link to this heading">¶</a></h2>
 <p>Following the recommendations above, you can easily write your own <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a>
 by subclassing it and implementing the <code class="docutils literal notranslate"><span class="pre">__call__</span></code> method. This method should take
-a single <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> (the <code class="docutils literal notranslate"><span class="pre">data_dict</span></code>) as input, and return a single <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> as output.</p>
+a single <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> (the <code class="docutils literal notranslate"><span class="pre">data_dict</span></code>) as input, and return a single <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> as output.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Strictly speaking, the subclassing isn’t necessary, but it is recommended
 as some helper functions are provided in the <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a> class.</p>
-<p>In theory, any function that takes a single <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> as input and returns a
-single <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> as output can be used in lieu of a <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a>.</p>
+<p>In theory, any function that takes a single <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> as input and returns a
+single <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> as output can be used in lieu of a <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.PipelineStep.html#brain_pipe.pipeline.base.PipelineStep" title="brain_pipe.pipeline.base.PipelineStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">PipelineStep</span></code></a>.</p>
 </div>
 </section>
 <section id="small-example">
-<h2 id="small-example">Small Example<a class="headerlink" href="#small-example" title="Permalink to this heading">¶</a></h2>
+<h2 id="small-example">Small Example<a class="headerlink" href="#small-example" title="Link to this heading">¶</a></h2>
 <p>We will show in a toy example how to create a simple <code class="xref py py-class docutils literal notranslate"><span class="pre">DataLoader</span></code> and a
 <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.default.DefaultPipeline.html#brain_pipe.pipeline.default.DefaultPipeline" title="brain_pipe.pipeline.default.DefaultPipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefaultPipeline</span></code></a> with 2 steps. The <code class="xref py py-class docutils literal notranslate"><span class="pre">DataLoader</span></code> will generate some data.
 The first step will add a bit of data, and the second one will remove the mean from the data.</p>
@@ -585,7 +585,7 @@ The first step will add a bit of data, and the second one will remove the mean f
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> Welcome to Brain Pipe’s documentation! </span>
+                      class="md-footer-nav__direction"> "Previous" </span> Welcome to Brain Pipe’s documentation! </span>
               </div>
             </a>
           
@@ -595,7 +595,7 @@ The first step will add a bit of data, and the second one will remove the mean f
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> Defining and running Pipelines through configuration files </span>
+                class="md-footer-nav__direction"> "Next" </span> Defining and running Pipelines through configuration files </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -613,7 +613,7 @@ The first step will add a bit of data, and the second one will remove the mean f
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

@@ -26,7 +26,7 @@ brain\_pipe.save.default.IsReloadableCheck
    .. autosummary::
    
       ~IsReloadableCheck.__init__
-      ~IsReloadableCheck.clear
+      ~IsReloadableCheck.attach_saver
 
    
    

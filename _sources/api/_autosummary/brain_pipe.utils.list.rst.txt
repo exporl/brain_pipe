@@ -17,6 +17,7 @@ brain\_pipe.utils.list
       :toctree:
    
       flatten
+      wrap_in_list
    
    
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=59a2fb49" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Overview" href="pipeline.html" />
@@ -106,7 +106,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -325,7 +325,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#index--page-root" class="md-nav__link">Welcome to Brain Pipe’s documentation!</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -362,15 +362,15 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="welcome-to-brain-pipe-s-documentation">
-<h1 id="index--page-root">Welcome to Brain Pipe’s documentation!<a class="headerlink" href="#index--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="index--page-root">Welcome to Brain Pipe’s documentation!<a class="headerlink" href="#index--page-root" title="Link to this heading">¶</a></h1>
 <figure class="align-center" id="id1">
 <span id="brain-pipe-figure"></span><a class="reference internal image-reference" href="_images/brain_pipe_github.svg"><img alt="_images/brain_pipe_github.svg" src="_images/brain_pipe_github.svg" width="100%"/></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text"><strong>Brain pipe</strong> : Preprocess brain imaging datasets efficiently and extensibly in Python3.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text"><strong>Brain pipe</strong> : Preprocess brain imaging datasets efficiently and extensibly in Python3.</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <section id="motivation">
-<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">¶</a></h2>
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Link to this heading">¶</a></h2>
 <p>This repository contains code to efficiently preprocess BIDS datasets in python3.
 The initial main goal of this code is to use
 it for the public EEG dataset of the <a class="reference external" href="https://exporl.github.io/auditory-eeg-challenge-2023/">ICASSP 2023 Auditory EEG challenge</a>,
@@ -379,12 +379,12 @@ and possibly further extend to other EEG/brain datasets where efficient preproce
 <p>Currently, only EEG datasets are supported.</p>
 </section>
 <section id="internal-structure">
-<h2 id="internal-structure">Internal structure<a class="headerlink" href="#internal-structure" title="Permalink to this heading">¶</a></h2>
+<h2 id="internal-structure">Internal structure<a class="headerlink" href="#internal-structure" title="Link to this heading">¶</a></h2>
 <p>Most of the code relies on a pipeline structure which is explained in more detail in
 <a class="reference internal" href="pipeline.html#pipeline"><span class="std std-ref">Overview</span></a> and <a class="reference internal" href="configuration.html#configuration"><span class="std std-ref">Defining and running Pipelines through configuration files</span></a></p>
 </section>
 <section id="installation">
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
 <p>You can install this repository as a <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> package:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">bash</span>
 </pre></div>
@@ -394,25 +394,25 @@ and possibly further extend to other EEG/brain datasets where efficient preproce
 </div></blockquote>
 </section>
 <section id="running">
-<h2 id="running">Running<a class="headerlink" href="#running" title="Permalink to this heading">¶</a></h2>
+<h2 id="running">Running<a class="headerlink" href="#running" title="Link to this heading">¶</a></h2>
 <p>You can create your own script to run the pipeline (see also <a class="reference internal" href="pipeline.html#pipeline"><span class="std std-ref">Overview</span></a>), or you
 can use the command line interface (see also <a class="reference internal" href="cli.html#cli"><span class="std std-ref">Command Line Interface</span></a> and <a class="reference internal" href="configuration.html#configuration"><span class="std std-ref">Defining and running Pipelines through configuration files</span></a>) with a configuration file.</p>
 </section>
 <section id="requirements">
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
 <p>Python &gt;= 3.8</p>
 </section>
 <section id="contributing">
-<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">¶</a></h2>
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Link to this heading">¶</a></h2>
 <p>Contributions are welcome. Please open an issue or a pull request.
 For more information, see <a class="reference external" href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
 </section>
 <section id="api-reference">
-<h2 id="api-reference">API reference<a class="headerlink" href="#api-reference" title="Permalink to this heading">¶</a></h2>
+<h2 id="api-reference">API reference<a class="headerlink" href="#api-reference" title="Link to this heading">¶</a></h2>
 <p>See <a class="reference internal" href="api/api.html#api"><span class="std std-ref">API Reference</span></a></p>
 </section>
 <section id="go-to">
-<h2 id="go-to">Go to<a class="headerlink" href="#go-to" title="Permalink to this heading">¶</a></h2>
+<h2 id="go-to">Go to<a class="headerlink" href="#go-to" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pipeline.html">Overview</a></li>
@@ -442,7 +442,7 @@ For more information, see <a class="reference external" href="CONTRIBUTING.md">C
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> Overview </span>
+                class="md-footer-nav__direction"> "Next" </span> Overview </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -460,7 +460,7 @@ For more information, see <a class="reference external" href="CONTRIBUTING.md">C
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

@@ -16,7 +16,6 @@ brain\_pipe.save.default
    .. autosummary::
       :toctree:
    
-      default_filename_fn
       default_metadata_key_fn
    
    
@@ -29,10 +28,15 @@ brain\_pipe.save.default
       :toctree:
       :template: custom-class-template.rst
    
+      AttachSave
       CheckFunctor
+      DefaultFilenameFn
       DefaultSave
+      DefaultSaveMetadata
       IsDoneCheck
       IsReloadableCheck
+      OldMetadataCompliant
+      SaveMetadata
    
    
 

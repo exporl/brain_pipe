@@ -1,0 +1,38 @@
+.. include:: /macros.hrst
+
+brain\_pipe.save.default.DefaultFilenameFn
+==========================================
+
+.. currentmodule:: brain_pipe.save.default
+
+.. autoclass:: DefaultFilenameFn
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DefaultFilenameFn.SPLIT_CHAR
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~DefaultFilenameFn.__init__
+
+   
+   
+

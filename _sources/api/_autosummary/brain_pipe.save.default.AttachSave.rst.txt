@@ -1,0 +1,33 @@
+.. include:: /macros.hrst
+
+brain\_pipe.save.default.AttachSave
+===================================
+
+.. currentmodule:: brain_pipe.save.default
+
+.. autoclass:: AttachSave
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+    
+   
+   
+
+
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+
+   .. autosummary::
+   
+      ~AttachSave.__init__
+      ~AttachSave.attach_saver
+
+   
+   
+

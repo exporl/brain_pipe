@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=59a2fb49" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="brain_pipe.utils.serialization.pickle_load_wrapper" href="_autosummary/brain_pipe.utils.serialization.pickle_load_wrapper.html" />
@@ -106,7 +106,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -341,7 +341,7 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="full-tree">
-<span id="api-full-tree"></span><h1 id="api-full-tree--page-root">Full Tree<a class="headerlink" href="#api-full-tree--page-root" title="Permalink to this heading">¶</a></h1>
+<span id="api-full-tree"></span><h1 id="api-full-tree--page-root">Full Tree<a class="headerlink" href="#api-full-tree--page-root" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">BIDS preprocessing</span></p>
 <ul>
@@ -965,18 +965,29 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.save.default.html">brain_pipe.save.default</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.default_filename_fn.html">brain_pipe.save.default.default_filename_fn</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.default_filename_fn.html#brain_pipe.save.default.default_filename_fn"><code class="docutils literal notranslate"><span class="pre">default_filename_fn()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.default_metadata_key_fn.html">brain_pipe.save.default.default_metadata_key_fn</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.default_metadata_key_fn.html#brain_pipe.save.default.default_metadata_key_fn"><code class="docutils literal notranslate"><span class="pre">default_metadata_key_fn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.AttachSave.html">brain_pipe.save.default.AttachSave</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.AttachSave.html#brain_pipe.save.default.AttachSave"><code class="docutils literal notranslate"><span class="pre">AttachSave</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.AttachSave.html#brain_pipe.save.default.AttachSave.__init__"><code class="docutils literal notranslate"><span class="pre">AttachSave.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.AttachSave.html#brain_pipe.save.default.AttachSave.attach_saver"><code class="docutils literal notranslate"><span class="pre">AttachSave.attach_saver()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.CheckFunctor.html">brain_pipe.save.default.CheckFunctor</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.CheckFunctor.html#brain_pipe.save.default.CheckFunctor"><code class="docutils literal notranslate"><span class="pre">CheckFunctor</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.CheckFunctor.html#brain_pipe.save.default.CheckFunctor.__init__"><code class="docutils literal notranslate"><span class="pre">CheckFunctor.__init__()</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.CheckFunctor.html#brain_pipe.save.default.CheckFunctor.clear"><code class="docutils literal notranslate"><span class="pre">CheckFunctor.clear()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.CheckFunctor.html#brain_pipe.save.default.CheckFunctor.attach_saver"><code class="docutils literal notranslate"><span class="pre">CheckFunctor.attach_saver()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultFilenameFn.html">brain_pipe.save.default.DefaultFilenameFn</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultFilenameFn.html#brain_pipe.save.default.DefaultFilenameFn"><code class="docutils literal notranslate"><span class="pre">DefaultFilenameFn</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultFilenameFn.html#brain_pipe.save.default.DefaultFilenameFn.__init__"><code class="docutils literal notranslate"><span class="pre">DefaultFilenameFn.__init__()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -993,10 +1004,28 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html">brain_pipe.save.default.DefaultSaveMetadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.__init__"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.add"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.add()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.attach_saver"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.attach_saver()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.clear"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.clear()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.convert_old_format"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.convert_old_format()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.get"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.get()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.get_metadata_for_savepath"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.get_metadata_for_savepath()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.get_path"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.get_path()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.get_relpath"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.get_relpath()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.is_old_format"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.is_old_format()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.lock"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.lock</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata.write"><code class="docutils literal notranslate"><span class="pre">DefaultSaveMetadata.write()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsDoneCheck.html">brain_pipe.save.default.IsDoneCheck</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsDoneCheck.html#brain_pipe.save.default.IsDoneCheck"><code class="docutils literal notranslate"><span class="pre">IsDoneCheck</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsDoneCheck.html#brain_pipe.save.default.IsDoneCheck.__init__"><code class="docutils literal notranslate"><span class="pre">IsDoneCheck.__init__()</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsDoneCheck.html#brain_pipe.save.default.IsDoneCheck.clear"><code class="docutils literal notranslate"><span class="pre">IsDoneCheck.clear()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsDoneCheck.html#brain_pipe.save.default.IsDoneCheck.attach_saver"><code class="docutils literal notranslate"><span class="pre">IsDoneCheck.attach_saver()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1004,7 +1033,26 @@
 <li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsReloadableCheck.html">brain_pipe.save.default.IsReloadableCheck</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsReloadableCheck.html#brain_pipe.save.default.IsReloadableCheck"><code class="docutils literal notranslate"><span class="pre">IsReloadableCheck</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsReloadableCheck.html#brain_pipe.save.default.IsReloadableCheck.__init__"><code class="docutils literal notranslate"><span class="pre">IsReloadableCheck.__init__()</span></code></a></li>
-<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsReloadableCheck.html#brain_pipe.save.default.IsReloadableCheck.clear"><code class="docutils literal notranslate"><span class="pre">IsReloadableCheck.clear()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.IsReloadableCheck.html#brain_pipe.save.default.IsReloadableCheck.attach_saver"><code class="docutils literal notranslate"><span class="pre">IsReloadableCheck.attach_saver()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.OldMetadataCompliant.html">brain_pipe.save.default.OldMetadataCompliant</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.OldMetadataCompliant.html#brain_pipe.save.default.OldMetadataCompliant"><code class="docutils literal notranslate"><span class="pre">OldMetadataCompliant</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.OldMetadataCompliant.html#brain_pipe.save.default.OldMetadataCompliant.__init__"><code class="docutils literal notranslate"><span class="pre">OldMetadataCompliant.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.OldMetadataCompliant.html#brain_pipe.save.default.OldMetadataCompliant.convert_old_format"><code class="docutils literal notranslate"><span class="pre">OldMetadataCompliant.convert_old_format()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.save.default.SaveMetadata.html">brain_pipe.save.default.SaveMetadata</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.save.default.SaveMetadata.html#brain_pipe.save.default.SaveMetadata"><code class="docutils literal notranslate"><span class="pre">SaveMetadata</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.SaveMetadata.html#brain_pipe.save.default.SaveMetadata.__init__"><code class="docutils literal notranslate"><span class="pre">SaveMetadata.__init__()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.SaveMetadata.html#brain_pipe.save.default.SaveMetadata.add"><code class="docutils literal notranslate"><span class="pre">SaveMetadata.add()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.SaveMetadata.html#brain_pipe.save.default.SaveMetadata.attach_saver"><code class="docutils literal notranslate"><span class="pre">SaveMetadata.attach_saver()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.SaveMetadata.html#brain_pipe.save.default.SaveMetadata.clear"><code class="docutils literal notranslate"><span class="pre">SaveMetadata.clear()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.save.default.SaveMetadata.html#brain_pipe.save.default.SaveMetadata.is_old_format"><code class="docutils literal notranslate"><span class="pre">SaveMetadata.is_old_format()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1105,6 +1153,10 @@
 <li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.list.flatten.html#brain_pipe.utils.list.flatten"><code class="docutils literal notranslate"><span class="pre">flatten()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="_autosummary/brain_pipe.utils.list.wrap_in_list.html">brain_pipe.utils.list.wrap_in_list</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.list.wrap_in_list.html#brain_pipe.utils.list.wrap_in_list"><code class="docutils literal notranslate"><span class="pre">wrap_in_list()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/brain_pipe.utils.log.html">brain_pipe.utils.log</a><ul>
@@ -1145,6 +1197,7 @@
 <li class="toctree-l5"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html#brain_pipe.utils.multiprocess.MultiprocessingSingleton"><code class="docutils literal notranslate"><span class="pre">MultiprocessingSingleton</span></code></a><ul>
 <li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html#brain_pipe.utils.multiprocess.MultiprocessingSingleton.__init__"><code class="docutils literal notranslate"><span class="pre">MultiprocessingSingleton.__init__()</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html#brain_pipe.utils.multiprocess.MultiprocessingSingleton.clean"><code class="docutils literal notranslate"><span class="pre">MultiprocessingSingleton.clean()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html#brain_pipe.utils.multiprocess.MultiprocessingSingleton.get_lock"><code class="docutils literal notranslate"><span class="pre">MultiprocessingSingleton.get_lock()</span></code></a></li>
 <li class="toctree-l6"><a class="reference internal" href="_autosummary/brain_pipe.utils.multiprocess.MultiprocessingSingleton.html#brain_pipe.utils.multiprocess.MultiprocessingSingleton.get_map_fn"><code class="docutils literal notranslate"><span class="pre">MultiprocessingSingleton.get_map_fn()</span></code></a></li>
 </ul>
 </li>
@@ -1222,7 +1275,7 @@
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.utils.serialization.pickle_load_wrapper </span>
+                      class="md-footer-nav__direction"> "Previous" </span> brain_pipe.utils.serialization.pickle_load_wrapper </span>
               </div>
             </a>
           
@@ -1239,7 +1292,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

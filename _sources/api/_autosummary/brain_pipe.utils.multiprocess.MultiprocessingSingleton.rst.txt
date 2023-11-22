@@ -16,6 +16,7 @@ brain\_pipe.utils.multiprocess.MultiprocessingSingleton
 
    .. autosummary::
    
+      ~MultiprocessingSingleton.locks
       ~MultiprocessingSingleton.manager
       ~MultiprocessingSingleton.to_clean
    
@@ -34,6 +35,7 @@ brain\_pipe.utils.multiprocess.MultiprocessingSingleton
    
       ~MultiprocessingSingleton.__init__
       ~MultiprocessingSingleton.clean
+      ~MultiprocessingSingleton.get_lock
       ~MultiprocessingSingleton.get_map_fn
 
    

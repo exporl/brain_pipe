@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=59a2fb49" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Command Line Interface" href="cli.html" />
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -261,7 +261,7 @@
       
         
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#configuration--page-root" class="md-nav__link">Defining and running Pipelines through configuration files</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -351,7 +351,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#configuration--page-root" class="md-nav__link">Defining and running Pipelines through configuration files</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -380,20 +380,20 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="defining-and-running-pipelines-through-configuration-files">
-<span id="configuration"></span><h1 id="configuration--page-root">Defining and running Pipelines through configuration files<a class="headerlink" href="#configuration--page-root" title="Permalink to this heading">¶</a></h1>
+<span id="configuration"></span><h1 id="configuration--page-root">Defining and running Pipelines through configuration files<a class="headerlink" href="#configuration--page-root" title="Link to this heading">¶</a></h1>
 <p>Instead of programmatically defining your Pipeline in a script, you can
 define it through a configuration file. This allows you to run your
 Pipeline in the same way you would run a script, but without having to
 write any code.</p>
 <section id="running-pipelines-from-configuration-files">
-<h2 id="running-pipelines-from-configuration-files">Running pipelines from configuration files<a class="headerlink" href="#running-pipelines-from-configuration-files" title="Permalink to this heading">¶</a></h2>
+<h2 id="running-pipelines-from-configuration-files">Running pipelines from configuration files<a class="headerlink" href="#running-pipelines-from-configuration-files" title="Link to this heading">¶</a></h2>
 <p>You can run the pipeline in a configuration file by just using the <a class="reference internal" href="cli.html#cli"><span class="std std-ref">Command Line Interface</span></a> :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>brain_pipe<span class="w"> </span>config_file.extension
 </pre></div>
 </div>
 </section>
 <section id="background">
-<h2 id="background">Background<a class="headerlink" href="#background" title="Permalink to this heading">¶</a></h2>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Link to this heading">¶</a></h2>
 <p>A <a class="reference internal" href="api/_autosummary/brain_pipe.parser.base.Parser.html#brain_pipe.parser.base.Parser" title="brain_pipe.parser.base.Parser"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parser</span></code></a> is used to parse a configuration string into a list of tuples
 of <a class="reference internal" href="api/_autosummary/brain_pipe.dataloaders.base.DataLoader.html#brain_pipe.dataloaders.base.DataLoader" title="brain_pipe.dataloaders.base.DataLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataLoader</span></code></a> and <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a> objects. This list will then be provided
 to a <a class="reference internal" href="api/_autosummary/brain_pipe.runner.base.Runner.html#brain_pipe.runner.base.Runner" title="brain_pipe.runner.base.Runner"><code class="xref py py-class docutils literal notranslate"><span class="pre">Runner</span></code></a> to run all of the <a class="reference internal" href="api/_autosummary/brain_pipe.pipeline.base.Pipeline.html#brain_pipe.pipeline.base.Pipeline" title="brain_pipe.pipeline.base.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pipeline</span></code></a> s.</p>
@@ -429,7 +429,7 @@ will be asked for as command line arguments.</p>
 </div>
 </section>
 <section id="typical-structure-for-simpledictparsers">
-<h2 id="typical-structure-for-simpledictparsers">Typical structure for SimpleDictParsers<a class="headerlink" href="#typical-structure-for-simpledictparsers" title="Permalink to this heading">¶</a></h2>
+<h2 id="typical-structure-for-simpledictparsers">Typical structure for SimpleDictParsers<a class="headerlink" href="#typical-structure-for-simpledictparsers" title="Link to this heading">¶</a></h2>
 <p>Configuration files for <a class="reference internal" href="api/_autosummary/brain_pipe.parser.simple_dict.SimpleDictParser.html#brain_pipe.parser.simple_dict.SimpleDictParser" title="brain_pipe.parser.simple_dict.SimpleDictParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleDictParser</span></code></a> parsers (and subclasses) are dictionaries that require
 the following keys:</p>
 <ol class="arabic simple">
@@ -458,7 +458,7 @@ keyword can be used.</p>
 </div>
 </section>
 <section id="specifying-the-parser">
-<h2 id="specifying-the-parser">Specifying the parser<a class="headerlink" href="#specifying-the-parser" title="Permalink to this heading">¶</a></h2>
+<h2 id="specifying-the-parser">Specifying the parser<a class="headerlink" href="#specifying-the-parser" title="Link to this heading">¶</a></h2>
 <p>By default, the CLI (see also <a class="reference internal" href="cli.html#cli"><span class="std std-ref">Command Line Interface</span></a>) will try to use the most appropriate
 parser for the given input. Currently, the <a class="reference internal" href="api/_autosummary/brain_pipe.parser.yaml.YAMLTemplateFileParser.html#brain_pipe.parser.yaml.YAMLTemplateFileParser" title="brain_pipe.parser.yaml.YAMLTemplateFileParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">YAMLTemplateFileParser</span></code></a> is the
 most common default, as it supports <a class="reference external" href="http://yaml.org/">YAML</a> and <a class="reference external" href="http://json.org/">JSON</a>
@@ -485,7 +485,7 @@ files with or without <a class="reference external" href="http://jinja.pocoo.org
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> Overview </span>
+                      class="md-footer-nav__direction"> "Previous" </span> Overview </span>
               </div>
             </a>
           
@@ -495,7 +495,7 @@ files with or without <a class="reference external" href="http://jinja.pocoo.org
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> Command Line Interface </span>
+                class="md-footer-nav__direction"> "Next" </span> Command Line Interface </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -513,7 +513,7 @@ files with or without <a class="reference external" href="http://jinja.pocoo.org
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

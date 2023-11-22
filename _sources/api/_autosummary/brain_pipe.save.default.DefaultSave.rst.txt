@@ -18,12 +18,6 @@ brain\_pipe.save.default.DefaultSave
    
       ~DefaultSave.DEFAULT_RELOAD_FUNCTIONS
       ~DefaultSave.DEFAULT_SAVE_FUNCTIONS
-      ~DefaultSave.FEATURE_NAME_STR
-      ~DefaultSave.FILENAME_STR
-      ~DefaultSave.OLD_FORMAT_STR
-      ~DefaultSave.SET_NAME_STR
-      ~DefaultSave.STOP_ITERATION
-      ~DefaultSave.lock
       ~DefaultSave.overwrite
    
    

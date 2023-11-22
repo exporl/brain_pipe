@@ -1,6 +1,0 @@
-brain\_pipe.save.default.default\_filename\_fn
-==============================================
-
-.. currentmodule:: brain_pipe.save.default
-
-.. autofunction:: default_filename_fn

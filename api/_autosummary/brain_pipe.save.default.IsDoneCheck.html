@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,13 +52,13 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=59a2fb49" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="brain_pipe.save.default.IsReloadableCheck" href="brain_pipe.save.default.IsReloadableCheck.html" />
-    <link rel="prev" title="brain_pipe.save.default.DefaultSave" href="brain_pipe.save.default.DefaultSave.html" />
+    <link rel="prev" title="brain_pipe.save.default.DefaultSaveMetadata" href="brain_pipe.save.default.DefaultSaveMetadata.html" />
   
     <link rel="apple-touch-icon" href="../../_static/_images/brain_pipe.svg"/>
   
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -330,7 +330,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#api-autosummary-brain-pipe-save-default-isdonecheck--page-root" class="md-nav__link">IsDoneCheck</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -338,7 +338,7 @@
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#brain_pipe.save.default.IsDoneCheck.__init__" class="md-nav__link">__init__()</span></code></a>
         </li>
-        <li class="md-nav__item"><a href="#brain_pipe.save.default.IsDoneCheck.clear" class="md-nav__link">clear()</span></code></a>
+        <li class="md-nav__item"><a href="#brain_pipe.save.default.IsDoneCheck.attach_saver" class="md-nav__link">attach_saver()</span></code></a>
         </li></ul>
             </nav>
         </li></ul>
@@ -359,38 +359,41 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="brain-pipe-save-default-isdonecheck">
-<h1 id="api-autosummary-brain-pipe-save-default-isdonecheck--page-root">brain_pipe.save.default.IsDoneCheck<a class="headerlink" href="#api-autosummary-brain-pipe-save-default-isdonecheck--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="api-autosummary-brain-pipe-save-default-isdonecheck--page-root">brain_pipe.save.default.IsDoneCheck<a class="headerlink" href="#api-autosummary-brain-pipe-save-default-isdonecheck--page-root" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="brain_pipe.save.default.IsDoneCheck">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsDoneCheck</span></span><a class="headerlink" href="#brain_pipe.save.default.IsDoneCheck" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsDoneCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">saver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.save.default.IsDoneCheck" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="brain_pipe.save.default.CheckFunctor.html#brain_pipe.save.default.CheckFunctor" title="brain_pipe.save.default.CheckFunctor"><code class="xref py py-class docutils literal notranslate"><span class="pre">CheckFunctor</span></code></a></p>
 <p>Check if data has already been saved.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.save.default.IsDoneCheck.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.save.default.IsDoneCheck.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new IsDoneCheck.</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">saver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.save.default.IsDoneCheck.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize the AttachSaver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>saver</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="brain_pipe.save.base.Save.html#brain_pipe.save.base.Save" title="brain_pipe.save.base.Save"><em>Save</em></a><em>]</em>) – The saver to use. Can be attached later with <a class="reference internal" href="#brain_pipe.save.default.IsDoneCheck.attach_saver" title="brain_pipe.save.default.IsDoneCheck.attach_saver"><code class="xref py py-meth docutils literal notranslate"><span class="pre">attach_saver()</span></code></a>, but
+that will create a new object.</p>
+</dd>
+</dl>
 </dd></dl>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#brain_pipe.save.default.IsDoneCheck.__init__" title="brain_pipe.save.default.IsDoneCheck.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
-<td><p>Create a new IsDoneCheck.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#brain_pipe.save.default.IsDoneCheck.__init__" title="brain_pipe.save.default.IsDoneCheck.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([saver])</p></td>
+<td><p>Initialize the AttachSaver.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#brain_pipe.save.default.IsDoneCheck.clear" title="brain_pipe.save.default.IsDoneCheck.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>(*args, **kwargs)</p></td>
-<td><p>Clear the state of the CheckFunctor.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#brain_pipe.save.default.IsDoneCheck.attach_saver" title="brain_pipe.save.default.IsDoneCheck.attach_saver"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attach_saver</span></code></a>(saver)</p></td>
+<td><p>Initialize a new object with the saver.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
-<dt class="sig sig-object py" id="brain_pipe.save.default.IsDoneCheck.clear">
-<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.save.default.IsDoneCheck.clear" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear the state of the CheckFunctor.</p>
+<dt class="sig sig-object py" id="brain_pipe.save.default.IsDoneCheck.attach_saver">
+<span class="sig-name descname"><span class="pre">attach_saver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">saver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.save.default.IsDoneCheck.attach_saver" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize a new object with the saver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>args</strong> (<em>List</em><em>[</em><em>Any</em><em>]</em>) – Additional positional arguments.</p></li>
-<li><p><strong>kwargs</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – Additional keyword arguments.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>saver</strong> (<a class="reference internal" href="brain_pipe.save.base.Save.html#brain_pipe.save.base.Save" title="brain_pipe.save.base.Save"><em>Save</em></a>) – The saver.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -407,7 +410,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
           
-            <a href="brain_pipe.save.default.DefaultSave.html" title="brain_pipe.save.default.DefaultSave"
+            <a href="brain_pipe.save.default.DefaultSaveMetadata.html" title="brain_pipe.save.default.DefaultSaveMetadata"
                class="md-flex md-footer-nav__link md-footer-nav__link--prev"
                rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
@@ -416,7 +419,7 @@
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.save.default.DefaultSave </span>
+                      class="md-footer-nav__direction"> "Previous" </span> brain_pipe.save.default.DefaultSaveMetadata </span>
               </div>
             </a>
           
@@ -426,7 +429,7 @@
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.save.default.IsReloadableCheck </span>
+                class="md-footer-nav__direction"> "Next" </span> brain_pipe.save.default.IsReloadableCheck </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -444,7 +447,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

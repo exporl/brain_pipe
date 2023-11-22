@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=59a2fb49" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="brain_pipe.dataloaders.path" href="brain_pipe.dataloaders.path.html" />
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -330,7 +330,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#api-autosummary-brain-pipe-dataloaders-base-dataloader--page-root" class="md-nav__link">DataLoader</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -359,17 +359,17 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="brain-pipe-dataloaders-base-dataloader">
-<h1 id="api-autosummary-brain-pipe-dataloaders-base-dataloader--page-root">brain_pipe.dataloaders.base.DataLoader<a class="headerlink" href="#api-autosummary-brain-pipe-dataloaders-base-dataloader--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="api-autosummary-brain-pipe-dataloaders-base-dataloader--page-root">brain_pipe.dataloaders.base.DataLoader<a class="headerlink" href="#api-autosummary-brain-pipe-dataloaders-base-dataloader--page-root" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="brain_pipe.dataloaders.base.DataLoader">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">has_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.dataloaders.base.DataLoader" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DataLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">has_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.dataloaders.base.DataLoader" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></a></p>
 <p>Base class to load data from a source.</p>
 <p>DataLoaders are used to load data from a source (e.g. a file) and iterate over it.
 Therefore, they have an __iter__ method that should be implemented in subclasses.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.dataloaders.base.DataLoader.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">has_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.dataloaders.base.DataLoader.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">has_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.dataloaders.base.DataLoader.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize the DataLoader.</p>
 </dd></dl>
 <p class="rubric">Methods</p>
@@ -385,14 +385,14 @@ Therefore, they have an __iter__ method that should be implemented in subclasses
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.dataloaders.base.DataLoader.compute_length">
-<span class="sig-name descname"><span class="pre">compute_length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.dataloaders.base.DataLoader.compute_length" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">compute_length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.dataloaders.base.DataLoader.compute_length" title="Link to this definition">¶</a></dt>
 <dd><p>Compute the length of the DataLoader.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The length of the DataLoader.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
@@ -421,7 +421,7 @@ You can override this func</p>
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.dataloaders.base </span>
+                      class="md-footer-nav__direction"> "Previous" </span> brain_pipe.dataloaders.base </span>
               </div>
             </a>
           
@@ -431,7 +431,7 @@ You can override this func</p>
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.dataloaders.path </span>
+                class="md-footer-nav__direction"> "Next" </span> brain_pipe.dataloaders.path </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -449,7 +449,7 @@ You can override this func</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

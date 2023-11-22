@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=59a2fb49" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers" href="brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers.html" />
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -331,7 +331,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#api-autosummary-brain-pipe-preprocessing-brain-trigger-default-drift-correction--page-root" class="md-nav__link">default_drift_correction</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -354,10 +354,10 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="brain-pipe-preprocessing-brain-trigger-default-drift-correction">
-<h1 id="api-autosummary-brain-pipe-preprocessing-brain-trigger-default-drift-correction--page-root">brain_pipe.preprocessing.brain.trigger.default_drift_correction<a class="headerlink" href="#api-autosummary-brain-pipe-preprocessing-brain-trigger-default-drift-correction--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="api-autosummary-brain-pipe-preprocessing-brain-trigger-default-drift-correction--page-root">brain_pipe.preprocessing.brain.trigger.default_drift_correction<a class="headerlink" href="#api-autosummary-brain-pipe-preprocessing-brain-trigger-default-drift-correction--page-root" title="Link to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="brain_pipe.preprocessing.brain.trigger.default_drift_correction">
-<span class="sig-name descname"><span class="pre">default_drift_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">brain_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brain_trigger_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brain_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stimulus_trigger_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stimulus_fs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.trigger.default_drift_correction" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">default_drift_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">brain_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brain_trigger_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brain_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stimulus_trigger_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stimulus_fs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.preprocessing.brain.trigger.default_drift_correction" title="Link to this definition">¶</a></dt>
 <dd><p>Correct the drift between the brain response data and the stimulus.</p>
 <p>When the brain response data and the stimulus data are not recorded on
 the same system (i.e. using the same clock), clock drift may cause the
@@ -371,10 +371,10 @@ the same length as the stimulus.</p>
 shape (n_channels, n_samples).</p></li>
 <li><p><strong>brain_trigger_indices</strong> (<em>np.ndarray</em>) – The indices of the brain response data where the triggers are located.
 The data is expected to be a 1D array of integers.</p></li>
-<li><p><strong>brain_fs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – The sampling frequency of the brain response data.</p></li>
+<li><p><strong>brain_fs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The sampling frequency of the brain response data.</p></li>
 <li><p><strong>stimulus_trigger_indices</strong> (<em>np.ndarray</em>) – The indices of the stimulus data where the triggers are located.
 The data is expected to be a 1D array of integers.</p></li>
-<li><p><strong>stimulus_fs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – The sampling frequency of the stimulus data.</p></li>
+<li><p><strong>stimulus_fs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The sampling frequency of the stimulus data.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -406,7 +406,7 @@ The data is expected to be a 1D array of integers.</p></li>
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.preprocessing.brain.trigger </span>
+                      class="md-footer-nav__direction"> "Previous" </span> brain_pipe.preprocessing.brain.trigger </span>
               </div>
             </a>
           
@@ -416,7 +416,7 @@ The data is expected to be a 1D array of integers.</p></li>
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers </span>
+                class="md-footer-nav__direction"> "Next" </span> brain_pipe.preprocessing.brain.trigger.AlignPeriodicBlockTriggers </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -434,7 +434,7 @@ The data is expected to be a 1D array of integers.</p></li>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

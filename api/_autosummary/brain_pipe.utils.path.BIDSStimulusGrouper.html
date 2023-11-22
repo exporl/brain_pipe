@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,9 +52,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=59a2fb49" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="brain_pipe.utils.serialization" href="brain_pipe.utils.serialization.html" />
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -330,7 +330,7 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc"></label>
+    <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#api-autosummary-brain-pipe-utils-path-bidsstimulusgrouper--page-root" class="md-nav__link">BIDSStimulusGrouper</a><nav class="md-nav">
               <ul class="md-nav__list">
@@ -357,24 +357,24 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="brain-pipe-utils-path-bidsstimulusgrouper">
-<h1 id="api-autosummary-brain-pipe-utils-path-bidsstimulusgrouper--page-root">brain_pipe.utils.path.BIDSStimulusGrouper<a class="headerlink" href="#api-autosummary-brain-pipe-utils-path-bidsstimulusgrouper--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="api-autosummary-brain-pipe-utils-path-bidsstimulusgrouper--page-root">brain_pipe.utils.path.BIDSStimulusGrouper<a class="headerlink" href="#api-autosummary-brain-pipe-utils-path-bidsstimulusgrouper--page-root" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="brain_pipe.utils.path.BIDSStimulusGrouper">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BIDSStimulusGrouper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bids_root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'stim_file':</span> <span class="pre">'stimulus_path'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfolders</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['stimuli']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['n/a']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.path.BIDSStimulusGrouper" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BIDSStimulusGrouper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bids_root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'stim_file':</span> <span class="pre">'stimulus_path'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfolders</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['stimuli']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['n/a']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.path.BIDSStimulusGrouper" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Group stimulus files by subject, session, task and run.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="brain_pipe.utils.path.BIDSStimulusGrouper.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bids_root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'stim_file':</span> <span class="pre">'stimulus_path'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfolders</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['stimuli']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['n/a']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.path.BIDSStimulusGrouper.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bids_root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'stim_file':</span> <span class="pre">'stimulus_path'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subfolders</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['stimuli']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">na_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['n/a']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#brain_pipe.utils.path.BIDSStimulusGrouper.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Create a new BIDSStimulusGrouper.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bids_root</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The root directory of the BIDS dataset.</p></li>
-<li><p><strong>mapping</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – A mapping from the column names in the events.tsv file to the
+<li><p><strong>bids_root</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The root directory of the BIDS dataset.</p></li>
+<li><p><strong>mapping</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – A mapping from the column names in the events.tsv file to the
 column names in the stimulus dictionary.</p></li>
-<li><p><strong>subfolders</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – The subfolders in which the stimulus files are located.</p></li>
-<li><p><strong>na_values</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – The values that should be interpreted as missing values.</p></li>
+<li><p><strong>subfolders</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – The subfolders in which the stimulus files are located.</p></li>
+<li><p><strong>na_values</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>]</em>) – The values that should be interpreted as missing values.</p></li>
 </ul>
 </dd>
 </dl>
@@ -409,7 +409,7 @@ column names in the stimulus dictionary.</p></li>
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.utils.path.BIDSPathGenerator </span>
+                      class="md-footer-nav__direction"> "Previous" </span> brain_pipe.utils.path.BIDSPathGenerator </span>
               </div>
             </a>
           
@@ -419,7 +419,7 @@ column names in the stimulus dictionary.</p></li>
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.utils.serialization </span>
+                class="md-footer-nav__direction"> "Next" </span> brain_pipe.utils.serialization </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -437,7 +437,7 @@ column names in the stimulus dictionary.</p></li>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

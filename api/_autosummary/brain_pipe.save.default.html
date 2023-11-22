@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,12 +52,12 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css?v=79c92029" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=59a2fb49" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="brain_pipe.save.default.default_filename_fn" href="brain_pipe.save.default.default_filename_fn.html" />
+    <link rel="next" title="brain_pipe.save.default.default_metadata_key_fn" href="brain_pipe.save.default.default_metadata_key_fn.html" />
     <link rel="prev" title="brain_pipe.save.base.Save" href="brain_pipe.save.base.Save.html" />
   
     <link rel="apple-touch-icon" href="../../_static/_images/brain_pipe.svg"/>
@@ -107,7 +107,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" action="../../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
+      <input type="text" class="md-search__input" name="q" placeholder=""Search""
              autocapitalize="off" autocomplete="off" spellcheck="false"
              data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
@@ -345,15 +345,12 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="module-brain_pipe.save.default">
-<span id="brain-pipe-save-default"></span><h1 id="api-autosummary-brain-pipe-save-default--page-root">brain_pipe.save.default<a class="headerlink" href="#api-autosummary-brain-pipe-save-default--page-root" title="Permalink to this heading">¶</a></h1>
+<span id="brain-pipe-save-default"></span><h1 id="api-autosummary-brain-pipe-save-default--page-root">brain_pipe.save.default<a class="headerlink" href="#api-autosummary-brain-pipe-save-default--page-root" title="Link to this heading">¶</a></h1>
 <p>Default save class.</p>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="brain_pipe.save.default.default_filename_fn.html#brain_pipe.save.default.default_filename_fn" title="brain_pipe.save.default.default_filename_fn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_filename_fn</span></code></a>(data_dict, feature_name)</p></td>
-<td><p>Generate a filename for the data_dict.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="brain_pipe.save.default.default_metadata_key_fn.html#brain_pipe.save.default.default_metadata_key_fn" title="brain_pipe.save.default.default_metadata_key_fn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_metadata_key_fn</span></code></a>(data_dict)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="brain_pipe.save.default.default_metadata_key_fn.html#brain_pipe.save.default.default_metadata_key_fn" title="brain_pipe.save.default.default_metadata_key_fn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_metadata_key_fn</span></code></a>(data_dict)</p></td>
 <td><p>Generate a key for the metadata.</p></td>
 </tr>
 </tbody>
@@ -361,17 +358,32 @@
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="brain_pipe.save.default.CheckFunctor.html#brain_pipe.save.default.CheckFunctor" title="brain_pipe.save.default.CheckFunctor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CheckFunctor</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="brain_pipe.save.default.AttachSave.html#brain_pipe.save.default.AttachSave" title="brain_pipe.save.default.AttachSave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttachSave</span></code></a>([saver])</p></td>
+<td><p>Mixin class to attach a Save object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="brain_pipe.save.default.CheckFunctor.html#brain_pipe.save.default.CheckFunctor" title="brain_pipe.save.default.CheckFunctor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CheckFunctor</span></code></a>([saver])</p></td>
 <td><p>Functor to use with DefaultSave to check something about of a metadata item.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="brain_pipe.save.default.DefaultSave.html#brain_pipe.save.default.DefaultSave" title="brain_pipe.save.default.DefaultSave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultSave</span></code></a>(root_dir[, to_save, overwrite, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="brain_pipe.save.default.DefaultFilenameFn.html#brain_pipe.save.default.DefaultFilenameFn" title="brain_pipe.save.default.DefaultFilenameFn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultFilenameFn</span></code></a>([path_keys, other_keys, ...])</p></td>
+<td><p>Default filename function to create paths to save data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="brain_pipe.save.default.DefaultSave.html#brain_pipe.save.default.DefaultSave" title="brain_pipe.save.default.DefaultSave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultSave</span></code></a>(root_dir, to_save, ...)</p></td>
 <td><p>Default save class.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="brain_pipe.save.default.IsDoneCheck.html#brain_pipe.save.default.IsDoneCheck" title="brain_pipe.save.default.IsDoneCheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsDoneCheck</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="brain_pipe.save.default.DefaultSaveMetadata.html#brain_pipe.save.default.DefaultSaveMetadata" title="brain_pipe.save.default.DefaultSaveMetadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DefaultSaveMetadata</span></code></a>(key_fn, ~typing.Any]], ...)</p></td>
+<td><p>Implementation of SaveMetadata to work with DefaultSave.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="brain_pipe.save.default.IsDoneCheck.html#brain_pipe.save.default.IsDoneCheck" title="brain_pipe.save.default.IsDoneCheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsDoneCheck</span></code></a>([saver])</p></td>
 <td><p>Check if data has already been saved.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="brain_pipe.save.default.IsReloadableCheck.html#brain_pipe.save.default.IsReloadableCheck" title="brain_pipe.save.default.IsReloadableCheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsReloadableCheck</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="brain_pipe.save.default.IsReloadableCheck.html#brain_pipe.save.default.IsReloadableCheck" title="brain_pipe.save.default.IsReloadableCheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsReloadableCheck</span></code></a>([saver])</p></td>
 <td><p>Check if data has already been saved and is reloadable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="brain_pipe.save.default.OldMetadataCompliant.html#brain_pipe.save.default.OldMetadataCompliant" title="brain_pipe.save.default.OldMetadataCompliant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OldMetadataCompliant</span></code></a>()</p></td>
+<td><p>Mixin class for metadata that is compliant with the old format.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="brain_pipe.save.default.SaveMetadata.html#brain_pipe.save.default.SaveMetadata" title="brain_pipe.save.default.SaveMetadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaveMetadata</span></code></a>(key_fn, ~typing.Any]], str] =)</p></td>
+<td><p>Abstract class for metadata to use when saving/reloading.</p></td>
 </tr>
 </tbody>
 </table>
@@ -396,17 +408,17 @@
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> brain_pipe.save.base.Save </span>
+                      class="md-footer-nav__direction"> "Previous" </span> brain_pipe.save.base.Save </span>
               </div>
             </a>
           
           
-            <a href="brain_pipe.save.default.default_filename_fn.html" title="brain_pipe.save.default.default_filename_fn"
+            <a href="brain_pipe.save.default.default_metadata_key_fn.html" title="brain_pipe.save.default.default_metadata_key_fn"
                class="md-flex md-footer-nav__link md-footer-nav__link--next"
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> brain_pipe.save.default.default_filename_fn </span>
+                class="md-footer-nav__direction"> "Next" </span> brain_pipe.save.default.default_metadata_key_fn </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
@@ -424,7 +436,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>
