@@ -9,8 +9,9 @@ import numpy as np
 
 from brain_pipe.save.default import (
     default_metadata_key_fn,
-    default_filename_fn,
+    DefaultFilenameFn,
     DefaultSave,
+    DefaultSaveMetadata,
 )
 from brain_pipe.utils.serialization import pickle_load_wrapper
 
@@ -30,16 +31,17 @@ class DefaultMetadataKeyFnTest(unittest.TestCase):
 class DefaultFilenameFnTest(unittest.TestCase):
     def test_defaultFilenameFn(self):
         self.assertEqual(
-            default_filename_fn({"data_path": "a"}, "b", "c", "_-_"), "c_-_a_-_b.npy"
+            DefaultFilenameFn(path_keys=["a", "b", "c"])(
+                {"a": "c", "b": "a"}, "b", "d"
+            ),
+            "d_-_c_-_a_-_b.npy",
         )
         self.assertEqual(
-            default_filename_fn(
-                {"data_path": "a", "stimulus_path": "d"}, None, None, "_"
-            ),
+            DefaultFilenameFn(separator="_")({"data_path": "a", "stimulus_path": "d"}),
             "a_d.data_dict",
         )
         self.assertEqual(
-            default_filename_fn(
+            DefaultFilenameFn(separator="|")(
                 {
                     "data_path": "a",
                     "stimulus_path": "d",
@@ -47,7 +49,6 @@ class DefaultFilenameFnTest(unittest.TestCase):
                 },
                 "b",
                 "c",
-                "|",
             ),
             "c|a|d|123.123|b.npy",
         )
@@ -75,10 +76,11 @@ class SaveTest(unittest.TestCase):
         self.tmp_dir = tempfile.TemporaryDirectory()
 
     def test_is_already_done(self):
+        metadata_path = os.path.join(self.tmp_dir.name, ".save_metadata.json")
         saver = DefaultSave(
             self.tmp_dir.name,
             filename_fn=self.MockupFilenameFn(),
-            metadata_key_fn=self.MockupMetadataKeyFn(),
+            metadata=DefaultSaveMetadata(key_fn=self.MockupMetadataKeyFn()),
         )
         path = os.path.join(self.tmp_dir.name, "b")
         temp_dict = {"output_filename": path, "metadata_key": "d"}
@@ -86,7 +88,7 @@ class SaveTest(unittest.TestCase):
         self.assertFalse(saver.is_already_done(temp_dict))
 
         # Make manually sure the file is already done/there.
-        with open(os.path.join(self.tmp_dir.name, ".save_metadata.json"), "w") as f:
+        with open(metadata_path, "w") as f:
             json.dump({"d": os.path.basename(path)}, f)
 
         with open(path, "w") as f:
@@ -115,7 +117,7 @@ class SaveTest(unittest.TestCase):
         saver = DefaultSave(
             self.tmp_dir.name,
             filename_fn=self.MockupFilenameFn(),
-            metadata_key_fn=self.MockupMetadataKeyFn(),
+            metadata=DefaultSaveMetadata(key_fn=self.MockupMetadataKeyFn()),
         )
         path = os.path.join(self.tmp_dir.name, "b")
         temp_dict = {"output_filename": path, "metadata_key": "d"}
@@ -136,7 +138,7 @@ class SaveTest(unittest.TestCase):
         saver = DefaultSave(
             self.tmp_dir.name,
             filename_fn=self.MockupFilenameFn(),
-            metadata_key_fn=self.MockupMetadataKeyFn(),
+            metadata=DefaultSaveMetadata(key_fn=self.MockupMetadataKeyFn()),
             overwrite=True,
         )
         # When overwrite is True, it should always return False
@@ -154,7 +156,7 @@ class SaveTest(unittest.TestCase):
         saver = DefaultSave(
             self.tmp_dir.name,
             filename_fn=self.MockupFilenameFn(),
-            metadata_key_fn=self.MockupMetadataKeyFn(),
+            metadata=DefaultSaveMetadata(key_fn=self.MockupMetadataKeyFn()),
         )
         path = os.path.join(self.tmp_dir.name, "b")
         temp_dict = {"output_filename": path, "metadata_key": "d"}
@@ -200,7 +202,7 @@ class SaveTest(unittest.TestCase):
         saver = DefaultSave(
             self.tmp_dir.name,
             filename_fn=self.MockupFilenameFn(),
-            metadata_key_fn=self.MockupMetadataKeyFn(),
+            metadata=DefaultSaveMetadata(key_fn=self.MockupMetadataKeyFn()),
         )
         data_dict = {"output_filename": "a.pickle", "metadata_key": "b", "data": 123}
         output = saver(data_dict)
@@ -221,7 +223,7 @@ class SaveTest(unittest.TestCase):
         saver = DefaultSave(
             self.tmp_dir.name,
             filename_fn=self.MockupFilenameFn(),
-            metadata_key_fn=self.MockupMetadataKeyFn(),
+            metadata=DefaultSaveMetadata(key_fn=self.MockupMetadataKeyFn()),
             to_save={"envelope": "data"},
         )
         data_dict = {"output_filename": "a.npy", "metadata_key": "b", "data": 123}
@@ -302,7 +304,7 @@ class SaveTest(unittest.TestCase):
         saver = DefaultSave(
             self.tmp_dir.name,
             filename_fn=self.MockupFilenameFn(),
-            metadata_key_fn=self.MockupMetadataKeyFn(),
+            metadata=DefaultSaveMetadata(key_fn=self.MockupMetadataKeyFn()),
             clear_output=True,
         )
         self.assertEqual(saver(data_dict), {})
@@ -311,14 +313,22 @@ class SaveTest(unittest.TestCase):
         saver1 = DefaultSave(
             self.tmp_dir.name,
             filename_fn=self.MockupFilenameFn(),
-            metadata_key_fn=self.MockupMetadataKeyFn(),
+            metadata=DefaultSaveMetadata(key_fn=self.MockupMetadataKeyFn()),
         )
         saver2 = DefaultSave(
             self.tmp_dir.name,
             to_save={"envelope": "data"},
             filename_fn=self.MockupFilenameFn(output_override="a.npy"),
-            metadata_key_fn=self.MockupMetadataKeyFn(),
+            metadata=DefaultSaveMetadata(key_fn=self.MockupMetadataKeyFn()),
         )
+
+        # Do check_done, check_reloadable and metadata have the correct savers attached?
+        self.assertEqual(saver1.check_done.saver, saver1)
+        self.assertEqual(saver2.check_done.saver, saver2)
+        self.assertEqual(saver1.check_reloadable.saver, saver1)
+        self.assertEqual(saver2.check_reloadable.saver, saver2)
+        self.assertEqual(saver1.metadata.saver, saver1)
+        self.assertEqual(saver2.metadata.saver, saver2)
 
         data_dict = {
             "output_filename": "a.data_dict",
