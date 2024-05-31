@@ -18,6 +18,7 @@ dependencies = [
     "librosa",
     "pyyaml",
     "jinja2",
+    "multiprocess"
 ]
 version = "0.0.4"
 dynamic = ["readme", "description"]
