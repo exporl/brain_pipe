@@ -34,8 +34,12 @@ from brain_pipe.runner.default import DefaultRunner
 from brain_pipe.save.default import DefaultSave
 from brain_pipe.utils.log import default_logging, DefaultFormatter
 from brain_pipe.utils.path import BIDSStimulusGrouper
-from examples.exporl.utils import temp_stimulus_load_fn, SparrKULeeSpectrogramKwargs, \
-    BIDSAPRStimulusInfoExtractor, bids_filename_fn
+from examples.exporl.utils import (
+    temp_stimulus_load_fn,
+    SparrKULeeSpectrogramKwargs,
+    BIDSAPRStimulusInfoExtractor,
+    bids_filename_fn,
+)
 
 
 def run_preprocessing_pipeline(

@@ -451,9 +451,9 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
             The relative path.
         """
         if (
-                self.saver is not None
-                and isinstance(self.saver, DefaultSave)
-                and os.path.isabs(path)
+            self.saver is not None
+            and isinstance(self.saver, DefaultSave)
+            and os.path.isabs(path)
         ):
             return os.path.relpath(path, self.saver.root_dir)
         return path
@@ -480,11 +480,11 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
                 os.remove(metadata_path)
 
     def get_metadata_for_savepath(
-            self,
-            path: str,
-            feature_name: Optional[str],
-            set_name: Optional[str],
-            from_old_format=False,
+        self,
+        path: str,
+        feature_name: Optional[str],
+        set_name: Optional[str],
+        from_old_format=False,
     ):
         """Get the metadata associated for path where data is saved.
 
@@ -546,11 +546,11 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
         return metadata
 
     def add(
-            self,
-            data_dict: Dict[str, Any],
-            filepath: str,
-            feature_name: Optional[str],
-            set_name: Optional[str],
+        self,
+        data_dict: Dict[str, Any],
+        filepath: str,
+        feature_name: Optional[str],
+        set_name: Optional[str],
     ):
         """Add metadata for a file.
 
@@ -620,6 +620,7 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
         """
         with self.lock:
             return self.get()[key]
+
 
 class DefaultSave(Save):
     """Default save class.
