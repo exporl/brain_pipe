@@ -2,7 +2,7 @@
 import abc
 import logging
 
-import multiprocessing
+import multiprocess
 
 
 class ProgressCallbackFn(abc.ABC):
@@ -45,7 +45,7 @@ class SimpleCallbackFn(ProgressCallbackFn):
 class MultiprocessingSingleton:
     """Singleton class for multiprocessing."""
 
-    manager = multiprocessing.Manager()
+    manager = multiprocess.Manager()
     locks = {}
 
     to_clean = []
@@ -76,8 +76,8 @@ class MultiprocessingSingleton:
         """
         if nb_processes != 0:
             if nb_processes == -1:
-                nb_processes = multiprocessing.cpu_count()
-            pool = multiprocessing.Pool(nb_processes, maxtasksperchild=maxtasksperchild)
+                nb_processes = multiprocess.cpu_count()
+            pool = multiprocess.Pool(nb_processes, maxtasksperchild=maxtasksperchild)
             cls.to_clean += [pool]
 
             def dummy_map_fn(fn, iterable):

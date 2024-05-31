@@ -86,7 +86,7 @@ pipelines:
 config:
   parser:
     extra_paths:
-      - {{ __filedir__ }}/sparrKULee.py
+      - {{ __filedir__ }}/utils.py
   logging:
     log_path: {{ __filedir__ }}/sparrKULee_{datetime}.log
 

@@ -15,7 +15,7 @@ from brain_pipe.pipeline.cache.base import (
 )
 from brain_pipe.save.base import Save
 from brain_pipe.utils.list import wrap_in_list
-from brain_pipe.utils.multiprocess import MultiprocessingSingleton
+from brain_pipe.utils.parallellization import MultiprocessingSingleton
 
 # Shorthand interfaces.
 CheckInterface = Callable[[Dict[str, Any], str, Dict[str, Any]], Union[str, bool]]
@@ -408,6 +408,21 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
         super().__init__(key_fn=key_fn)
         self.filename = filename
         self.saver = None
+        # Make sure the lock is at least created before multiprocessing is used
+        self._get_lock()
+
+    def attach_saver(self, saver):
+        """Attach a saver to the metadata.
+
+        Parameters
+        ----------
+        saver: DefaultSave
+            The saver to attach.
+        """
+        new_metadata = super(DefaultSaveMetadata, self).attach_saver(saver)
+        # Make sure the lock is at least created before multiprocessing is used
+        new_metadata._get_lock()
+        return new_metadata
 
     def get_path(self):
         """Get the path to the metadata file.
@@ -436,12 +451,15 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
             The relative path.
         """
         if (
-            self.saver is not None
-            and isinstance(self.saver, DefaultSave)
-            and os.path.isabs(path)
+                self.saver is not None
+                and isinstance(self.saver, DefaultSave)
+                and os.path.isabs(path)
         ):
             return os.path.relpath(path, self.saver.root_dir)
         return path
+
+    def _get_lock(self):
+        return MultiprocessingSingleton.get_lock(self.get_path())
 
     @property
     def lock(self):
@@ -452,22 +470,21 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
         multiprocessing.Lock
             The lock to use for the metadata file.
         """
-        return MultiprocessingSingleton.get_lock(self.get_path())
+        return self._get_lock()
 
     def clear(self):
         """Clear the metadata."""
-        self.lock.acquire()
-        metadata_path = self.get_path()
-        if os.path.exists(metadata_path):
-            os.remove(metadata_path)
-        self.lock.release()
+        with self.lock:
+            metadata_path = self.get_path()
+            if os.path.exists(metadata_path):
+                os.remove(metadata_path)
 
     def get_metadata_for_savepath(
-        self,
-        path: str,
-        feature_name: Optional[str],
-        set_name: Optional[str],
-        from_old_format=False,
+            self,
+            path: str,
+            feature_name: Optional[str],
+            set_name: Optional[str],
+            from_old_format=False,
     ):
         """Get the metadata associated for path where data is saved.
 
@@ -524,18 +541,16 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
         metadata_path = self.get_path()
         if not os.path.exists(metadata_path):
             return {}
-        self.lock.acquire()
         with open(metadata_path) as fp:
             metadata = json.load(fp)
-        self.lock.release()
         return metadata
 
     def add(
-        self,
-        data_dict: Dict[str, Any],
-        filepath: str,
-        feature_name: Optional[str],
-        set_name: Optional[str],
+            self,
+            data_dict: Dict[str, Any],
+            filepath: str,
+            feature_name: Optional[str],
+            set_name: Optional[str],
     ):
         """Add metadata for a file.
 
@@ -550,18 +565,19 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
         set_name: Optional[str]
             The name of the set.
         """
-        metadata = self.get()
-        key = self.key_fn(data_dict)
-        if key not in metadata:
-            metadata[key] = []
-        all_filepaths = wrap_in_list(filepath)
-        for path in all_filepaths:
-            metadata_for_savepath = self.get_metadata_for_savepath(
-                path, feature_name, set_name
-            )
-            if metadata_for_savepath not in metadata[key]:
-                metadata[key] += [metadata_for_savepath]
-        self.write(metadata)
+        with self.lock:
+            metadata = self.get()
+            key = self.key_fn(data_dict)
+            if key not in metadata:
+                metadata[key] = []
+            all_filepaths = wrap_in_list(filepath)
+            for path in all_filepaths:
+                metadata_for_savepath = self.get_metadata_for_savepath(
+                    path, feature_name, set_name
+                )
+                if metadata_for_savepath not in metadata[key]:
+                    metadata[key] += [metadata_for_savepath]
+            self.write(metadata)
 
     def write(self, metadata_dict: Dict[str, Any]):
         """Write the metadata to disk.
@@ -571,10 +587,8 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
         metadata_dict: Dict[str, Any]
             A dictionary containing the metadata.
         """
-        self.lock.acquire()
         with open(self.get_path(), "w") as fp:
             json.dump(metadata_dict, fp)
-        self.lock.release()
 
     def __contains__(self, item: Any):
         """Check if the metadata contains a certain item.
@@ -588,7 +602,8 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
         bool
             Whether the item is contained.
         """
-        return item in self.get()
+        with self.lock:
+            return item in self.get()
 
     def __getitem__(self, key: Any):
         """Retrieve a metadata item.
@@ -603,8 +618,8 @@ class DefaultSaveMetadata(OldMetadataCompliant, SaveMetadata):
         Any
             The metadata item.
         """
-        return self.get()[key]
-
+        with self.lock:
+            return self.get()[key]
 
 class DefaultSave(Save):
     """Default save class.

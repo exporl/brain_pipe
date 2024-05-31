@@ -3,7 +3,7 @@ import types
 import unittest
 
 from brain_pipe.runner.default import DefaultRunner
-from brain_pipe.utils.multiprocess import MultiprocessingSingleton
+from brain_pipe.utils.parallellization import MultiprocessingSingleton
 
 
 class DefaultRunnerTest(unittest.TestCase):
