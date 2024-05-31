@@ -6,7 +6,7 @@ from brain_pipe.runner.base import Runner
 from brain_pipe.dataloaders.base import DataLoader
 from brain_pipe.pipeline.base import Pipeline
 from brain_pipe.utils.log import default_logging
-from brain_pipe.utils.multiprocess import MultiprocessingSingleton
+from brain_pipe.utils.parallellization import MultiprocessingSingleton
 
 
 class DefaultRunner(Runner):

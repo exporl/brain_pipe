@@ -15,11 +15,10 @@ from brain_pipe.cli.default import DefaultCLI
 from brain_pipe.preprocessing.stimulus.audio.spectrogram import LibrosaMelSpectrogram
 from brain_pipe.utils.serialization import pickle_load_wrapper
 from examples.exporl.sparrKULee import (
-    default_librosa_load_fn,
-    default_npz_load_fn,
     SparrKULeeSpectrogramKwargs,
     run_preprocessing_pipeline,
 )
+from examples.exporl.utils import default_npz_load_fn, default_librosa_load_fn
 
 test_data_path = os.path.join(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),

@@ -1,5 +1,5 @@
 """Serialization utilities."""
-import pickle
+import dill
 
 
 def pickle_dump_wrapper(path, obj):
@@ -13,7 +13,7 @@ def pickle_dump_wrapper(path, obj):
         The object to dump.
     """
     with open(path, "wb") as f:
-        pickle.dump(obj, f, protocol=pickle.HIGHEST_PROTOCOL)
+        dill.dump(obj, f)
 
 
 def pickle_load_wrapper(path):
@@ -30,4 +30,4 @@ def pickle_load_wrapper(path):
         The loaded object.
     """
     with open(path, "rb") as f:
-        return pickle.load(f)
+        return dill.load(f)

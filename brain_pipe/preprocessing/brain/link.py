@@ -6,7 +6,7 @@ from typing import Sequence, Dict, Any, Optional, Union, Callable
 
 from brain_pipe.pipeline.base import PipelineStep
 from brain_pipe.utils.list import flatten
-from brain_pipe.utils.multiprocess import MultiprocessingSingleton
+from brain_pipe.utils.parallellization import MultiprocessingSingleton
 from brain_pipe.utils.path import BIDSStimulusGrouper
 
 
