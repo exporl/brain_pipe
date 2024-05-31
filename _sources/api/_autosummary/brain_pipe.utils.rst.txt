@@ -41,7 +41,7 @@ brain\_pipe.utils
    brain_pipe.utils.find
    brain_pipe.utils.list
    brain_pipe.utils.log
-   brain_pipe.utils.multiprocess
+   brain_pipe.utils.parallellization
    brain_pipe.utils.path
    brain_pipe.utils.serialization
 

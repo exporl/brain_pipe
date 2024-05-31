@@ -1,9 +1,9 @@
 .. include:: /macros.hrst
 
-brain\_pipe.utils.multiprocess.MultiprocessingSingleton
-=======================================================
+brain\_pipe.utils.parallellization.MultiprocessingSingleton
+===========================================================
 
-.. currentmodule:: brain_pipe.utils.multiprocess
+.. currentmodule:: brain_pipe.utils.parallellization
 
 .. autoclass:: MultiprocessingSingleton
    :members:

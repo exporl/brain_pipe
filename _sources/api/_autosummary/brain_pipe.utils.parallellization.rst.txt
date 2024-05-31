@@ -1,9 +1,9 @@
 .. include:: /macros.hrst
 
-brain\_pipe.utils.multiprocess
-==============================
+brain\_pipe.utils.parallellization
+==================================
 
-.. automodule:: brain_pipe.utils.multiprocess
+.. automodule:: brain_pipe.utils.parallellization
 
    
    
