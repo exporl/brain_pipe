@@ -158,8 +158,8 @@ def default_multiprocessing_key_fn(data_dict):
 class LinkStimulusToBrainResponse(PipelineStep):
     """Link stimulus to Brain data."""
 
-    multiprocessing_dict = MultiprocessingSingleton.manager.dict()
-    multiprocessing_condition = MultiprocessingSingleton.manager.Condition()
+    _multiprocessing_dict = None
+    _multiprocessing_condition = None
 
     def __init__(
         self,
@@ -233,24 +233,39 @@ class LinkStimulusToBrainResponse(PipelineStep):
             for stim_info in stimulus_info_from_brain:
                 prototype_stim_dict = self.grouper(stim_info)
                 key = self.key_fn_for_multiprocessing(prototype_stim_dict)
-                with self.multiprocessing_condition:
+                with self.get_multiprocessing_condition():
                     # Check if no other processes are already running this
-                    while key in self.multiprocessing_dict:
+                    while key in self.get_multiprocessing_dict():
                         # Wait for the process to finish
-                        self.multiprocessing_condition.wait()
-                    self.multiprocessing_dict[key] = True
+                        self.get_multiprocessing_condition().wait()
+                    self.get_multiprocessing_dict()[key] = True
                 try:
                     stimulus_dicts = self.stimulus_data(prototype_stim_dict)
                 finally:
                     # Notify all waiting processes of that this is done
-                    with self.multiprocessing_condition:
+                    with self.get_multiprocessing_condition():
                         # Remove the key from the multiprocessing dict to signal that
                         # this specific stimulus is processed
-                        del self.multiprocessing_dict[key]
-                        self.multiprocessing_condition.notify_all()
+                        del self.get_multiprocessing_dict()[key]
+                        self.get_multiprocessing_condition().notify_all()
                 if isinstance(stimulus_dicts, dict):
                     stimulus_dicts = [stimulus_dicts]
                 all_stimuli += stimulus_dicts
 
         data_dict[self.stimuli_key] = all_stimuli
         return data_dict
+
+    @classmethod
+    def get_multiprocessing_dict(cls):
+        """Get the multiprocessing dict."""
+        if cls._multiprocessing_dict is None:
+            cls._multiprocessing_dict = MultiprocessingSingleton.get_manager().dict()
+        return cls._multiprocessing_dict
+
+    @classmethod
+    def get_multiprocessing_condition(cls):
+        """Get the multiprocessing condition."""
+        if cls._multiprocessing_condition is None:
+            cls._multiprocessing_condition = MultiprocessingSingleton.get_manager().Condition()
+        return cls._multiprocessing_condition
+
