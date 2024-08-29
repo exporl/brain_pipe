@@ -266,6 +266,7 @@ class LinkStimulusToBrainResponse(PipelineStep):
     def get_multiprocessing_condition(cls):
         """Get the multiprocessing condition."""
         if cls._multiprocessing_condition is None:
-            cls._multiprocessing_condition = MultiprocessingSingleton.get_manager().Condition()
+            cls._multiprocessing_condition = (
+                MultiprocessingSingleton.get_manager().Condition()
+            )
         return cls._multiprocessing_condition
-

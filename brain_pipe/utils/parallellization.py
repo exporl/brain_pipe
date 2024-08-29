@@ -141,6 +141,3 @@ class MultiprocessingSingleton:
         if cls._manager is None:
             cls._manager = multiprocess.Manager()
         return cls._manager
-
-
-
