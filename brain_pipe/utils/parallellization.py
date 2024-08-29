@@ -45,7 +45,7 @@ class SimpleCallbackFn(ProgressCallbackFn):
 class MultiprocessingSingleton:
     """Singleton class for multiprocessing."""
 
-    manager = multiprocess.Manager()
+    _manager = None
     locks = {}
 
     to_clean = []
@@ -132,5 +132,12 @@ class MultiprocessingSingleton:
         multiprocessing.Lock
         """
         if id_str not in cls.locks:
-            cls.locks[id_str] = cls.manager.Lock()
+            cls.locks[id_str] = cls.get_manager().Lock()
         return cls.locks[id_str]
+
+    @classmethod
+    def get_manager(cls):
+        """Get the multiprocessing manager."""
+        if cls._manager is None:
+            cls._manager = multiprocess.Manager()
+        return cls._manager
